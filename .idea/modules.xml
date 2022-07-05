@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Service_Parts_Managment.iml" filepath="$PROJECT_DIR$/.idea/Service_Parts_Managment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Server/SparesPlanning.iml" filepath="$PROJECT_DIR$/Server/SparesPlanning.iml" />
+    </modules>
+  </component>
+</project>

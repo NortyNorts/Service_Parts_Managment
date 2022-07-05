@@ -1,9 +1,14 @@
 package com.codeclan.com.SparesPlanning.controllers;
 
+import com.codeclan.com.SparesPlanning.models.Part;
 import com.codeclan.com.SparesPlanning.models.Unit;
 import com.codeclan.com.SparesPlanning.repositories.UnitRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -14,9 +19,23 @@ public class UnitController {
     @Autowired
     UnitRepo unitRepo;
 
-    @GetMapping(value = "/unit")
+    //get all
+    @GetMapping(value = "/units")
     public List<Unit> getAllUnits(){
         return unitRepo.findAll();
+    }
+
+    //get one
+    @GetMapping(value="/units/{id}")
+    public ResponseEntity<Unit> getUnit(@PathVariable Long id) {
+        return new ResponseEntity(unitRepo.findById(id), HttpStatus.OK);
+    }
+
+    //add one
+    @PostMapping(value="/units")
+    public ResponseEntity<Unit> postUnit(@PathVariable Unit unit){
+        unitRepo.save(unit);
+        return new ResponseEntity<>(unit, HttpStatus.CREATED);
     }
 
 }
