@@ -7,6 +7,7 @@ import lombok.*;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
@@ -48,6 +49,9 @@ public class Part {
 
     @Column(name="Priority", nullable = false)
     private int priority;
+
+    @Column(name="GetDate")
+    private LocalDate getDate;
 
     @JsonBackReference
     @ManyToMany()

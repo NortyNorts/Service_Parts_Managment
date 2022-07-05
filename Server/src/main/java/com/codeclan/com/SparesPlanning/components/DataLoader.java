@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-@Component
+//@Component
 public class DataLoader implements ApplicationRunner {
 
     @Autowired
@@ -40,8 +40,6 @@ public class DataLoader implements ApplicationRunner {
                 .siteAddress("Castle Terrace EH2 1HR")
                 .build();
 
-
-
         Unit unit1 = Unit
                 .builder()
                 .serialNumber("AB123")
@@ -66,6 +64,7 @@ public class DataLoader implements ApplicationRunner {
                 .priority(1)
                 .units(new ArrayList<>())
                 .units_history(new ArrayList<>())
+                .getDate(LocalDate.now())
                 .build();
 
         Part part2 = Part
@@ -80,6 +79,7 @@ public class DataLoader implements ApplicationRunner {
                 .units(new ArrayList<>())
                 .priority(1)
                 .units_history(new ArrayList<>())
+                .getDate(LocalDate.of(2020, 01, 01))
                 .build();
 
         customerRepo.save(customer1);
