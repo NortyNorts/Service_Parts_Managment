@@ -1,12 +1,12 @@
 import React from "react"
 import CustomerList from "./CustomerList"
 
-const Customers = ({customers, setCustomer})=>{
+const Customers = ({customers, changeCustomer})=>{
     
     
     return(
         <>
-            <CustomerList customers={customers} setCustomer={setCustomer}/>
+            <CustomerList customers={customers} changeCustomer={changeCustomer}/>
         </>
     )
 }

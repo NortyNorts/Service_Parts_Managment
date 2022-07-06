@@ -6,16 +6,21 @@ import Contracts from './containers/Contracts';
 import Service from './containers/Service';
 import CustomersService from './services/CustomersServices';
 import Customers from './components/Customers';
+import ContractsCustomerDetails from './components/ContractsCustomerDetails';
 
 function App() {
 
   const [customers, setCustomers] = useState([])
-  const [customer, setCustomer] = useState(null)
+  const [currentCustomer, setCurrentCustomer] = useState(null)
 
   useEffect(()=>{
     CustomersService.getCustomers()
     .then(customers => setCustomers(customers));
   }, []);
+
+  const changeCustomer = function(chosenCustomer){
+    setCurrentCustomer(chosenCustomer)
+  }
 
   return (
     <>
@@ -43,9 +48,17 @@ function App() {
       <Route exact path="/customers">
         <Customers
           customers={customers}
-          setCustomer={setCustomer}
+          changeCustomer={changeCustomer}
         />
       </Route>
+
+      <Route exact path ="/contractscustomerdetails">
+        <ContractsCustomerDetails
+          currentCustomer={currentCustomer}
+        />
+      </Route>
+
+
 
       </Switch>
 
