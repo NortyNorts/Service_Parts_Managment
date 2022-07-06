@@ -18,11 +18,11 @@ const Customer = ({customer, changeCustomer})=>{
     return(
         <>
             <Link to ='/contractscustomerdetails' onClick={()=>handleOnClick(customer)}>
-                Company name: {customer.companyName} 
-                Site name: {customer.siteName} 
-                Site address: {customer.siteAddress} 
-                Engineer visits per year: {customer.engineerVisitsPerYear}
+                <h3>{customer.companyName}</h3>
             </Link>
+                <p>{customer.siteName}</p> 
+                <p>{customer.siteAddress}</p> 
+                <p>Visits per year: {customer.engineerVisitsPerYear}</p>
         </>
     )
 }
