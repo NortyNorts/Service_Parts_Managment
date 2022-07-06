@@ -6,16 +6,24 @@ import Contracts from './containers/Contracts';
 import Service from './containers/Service';
 import CustomersService from './services/CustomersServices';
 import Customers from './components/Customers';
+
+import UnitServices from './services/UnitsServices';
+
 import ContractsCustomerDetails from './components/ContractsCustomerDetails';
+
 
 function App() {
 
   const [customers, setCustomers] = useState([])
   const [currentCustomer, setCurrentCustomer] = useState(null)
 
+  const [units, setUnits] = useState([])
+
   useEffect(()=>{
     CustomersService.getCustomers()
     .then(customers => setCustomers(customers));
+    UnitServices.getUnits()
+    .then(units=> setUnits(units));
   }, []);
 
   const changeCustomer = function(chosenCustomer){
@@ -57,6 +65,14 @@ function App() {
           currentCustomer={currentCustomer}
         />
       </Route>
+
+
+      {/* <Route exact path="/units">
+        <Units
+          units={units}
+          setUnits={setUnits}
+        />
+      </Route> */}
 
 
 

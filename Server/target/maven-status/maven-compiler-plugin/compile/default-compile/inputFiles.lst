@@ -1,0 +1,11 @@
+/Users/derekleafgreen/CodeClan_Work/final_project/Service_Parts_Managment/Server/src/main/java/com/codeclan/com/SparesPlanning/models/Customer.java
+/Users/derekleafgreen/CodeClan_Work/final_project/Service_Parts_Managment/Server/src/main/java/com/codeclan/com/SparesPlanning/repositories/CustomerRepo.java
+/Users/derekleafgreen/CodeClan_Work/final_project/Service_Parts_Managment/Server/src/main/java/com/codeclan/com/SparesPlanning/controllers/CustomerController.java
+/Users/derekleafgreen/CodeClan_Work/final_project/Service_Parts_Managment/Server/src/main/java/com/codeclan/com/SparesPlanning/controllers/UnitController.java
+/Users/derekleafgreen/CodeClan_Work/final_project/Service_Parts_Managment/Server/src/main/java/com/codeclan/com/SparesPlanning/models/Part.java
+/Users/derekleafgreen/CodeClan_Work/final_project/Service_Parts_Managment/Server/src/main/java/com/codeclan/com/SparesPlanning/SparesPlanningApplication.java
+/Users/derekleafgreen/CodeClan_Work/final_project/Service_Parts_Managment/Server/src/main/java/com/codeclan/com/SparesPlanning/repositories/PartRepo.java
+/Users/derekleafgreen/CodeClan_Work/final_project/Service_Parts_Managment/Server/src/main/java/com/codeclan/com/SparesPlanning/models/Unit.java
+/Users/derekleafgreen/CodeClan_Work/final_project/Service_Parts_Managment/Server/src/main/java/com/codeclan/com/SparesPlanning/controllers/PartController.java
+/Users/derekleafgreen/CodeClan_Work/final_project/Service_Parts_Managment/Server/src/main/java/com/codeclan/com/SparesPlanning/components/DataLoader.java
+/Users/derekleafgreen/CodeClan_Work/final_project/Service_Parts_Managment/Server/src/main/java/com/codeclan/com/SparesPlanning/repositories/UnitRepo.java
