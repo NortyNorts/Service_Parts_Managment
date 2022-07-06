@@ -11,6 +11,11 @@ import UnitServices from './services/UnitsServices';
 
 import ContractsCustomerDetails from './components/ContractsCustomerDetails';
 
+import ServiceCustomer from './components/ServiceCustomer';
+import ServiceCustomerDetails from './components/ServiceCustomerDetails';
+import ServiceCustomerList from './components/ServiceCustomerList';
+import ServiceCustomers from './components/ServiceCustomers';
+
 
 function App() {
 
@@ -66,13 +71,25 @@ function App() {
         />
       </Route>
 
+      <Route exact path ="/servicecustomerdetails">
+        <ServiceCustomerDetails
+          currentCustomer={currentCustomer}
+        />
+      </Route>
 
-      {/* <Route exact path="/units">
-        <Units
+      <Route exact path="/servicecustomers">
+        <ServiceCustomer
+          customers={customers}
+          changeCustomer={changeCustomer}
+        />
+      </Route>
+
+      <Route exact path="/units">
+        <Unit
           units={units}
           setUnits={setUnits}
         />
-      </Route> */}
+      </Route>
 
 
 

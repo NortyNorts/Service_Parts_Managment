@@ -8,8 +8,8 @@ const Service = (()=>{
             <h2>
                 This the the Service container.
             </h2>
-            <Link to ='/Units'> <h1>  Units </h1>  </Link>
-            <CustomerList/>
+            <Link to ='/Customers'> <h1>  Customers </h1>  </Link>
+            
         </>
     )
 })
