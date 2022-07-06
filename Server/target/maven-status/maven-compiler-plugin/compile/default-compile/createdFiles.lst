@@ -1,0 +1,14 @@
+com/codeclan/com/SparesPlanning/models/Part.class
+com/codeclan/com/SparesPlanning/controllers/CustomerController.class
+com/codeclan/com/SparesPlanning/components/DataLoader.class
+com/codeclan/com/SparesPlanning/repositories/PartRepo.class
+com/codeclan/com/SparesPlanning/repositories/CustomerRepo.class
+com/codeclan/com/SparesPlanning/SparesPlanningApplication.class
+com/codeclan/com/SparesPlanning/models/Unit.class
+com/codeclan/com/SparesPlanning/controllers/UnitController.class
+com/codeclan/com/SparesPlanning/models/Part$PartBuilder.class
+com/codeclan/com/SparesPlanning/controllers/PartController.class
+com/codeclan/com/SparesPlanning/models/Customer$CustomerBuilder.class
+com/codeclan/com/SparesPlanning/repositories/UnitRepo.class
+com/codeclan/com/SparesPlanning/models/Unit$UnitBuilder.class
+com/codeclan/com/SparesPlanning/models/Customer.class

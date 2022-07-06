@@ -6,15 +6,20 @@ import Contracts from './containers/Contracts';
 import Service from './containers/Service';
 import CustomersService from './services/CustomersServices';
 import Customers from './components/Customers';
+import UnitServices from './services/UnitsServices';
 
 function App() {
 
   const [customers, setCustomers] = useState([])
   const [customer, setCustomer] = useState(null)
 
+  const [units, setUnits] = useState([])
+
   useEffect(()=>{
     CustomersService.getCustomers()
     .then(customers => setCustomers(customers));
+    UnitServices.getUnits()
+    .then(units=> setUnits(units));
   }, []);
 
   return (
@@ -46,6 +51,13 @@ function App() {
           setCustomer={setCustomer}
         />
       </Route>
+
+      {/* <Route exact path="/units">
+        <Units
+          units={units}
+          setUnits={setUnits}
+        />
+      </Route> */}
 
       </Switch>
 
