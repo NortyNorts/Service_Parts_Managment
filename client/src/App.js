@@ -10,6 +10,9 @@ import Customers from './components/Customers';
 import UnitServices from './services/UnitsServices';
 
 import ContractsCustomerDetails from './components/ContractsCustomerDetails';
+import AddCustomer from './components/AddCustomer';
+import NewQuote from './components/NewQuote';
+import SavedQuotes from './components/SavedQuotes';
 
 import ServiceCustomer from './components/ServiceCustomer';
 import ServiceCustomerDetails from './components/ServiceCustomerDetails';
@@ -83,6 +86,21 @@ function App() {
           changeCustomer={changeCustomer}
         />
       </Route>
+
+      <Route exact path ="/addcustomer">
+          <AddCustomer/>
+      </Route>
+
+      <Route exact path ="/savedquotes">
+          <SavedQuotes/>
+      </Route>
+
+      <Route exact path ="/newquote">
+          <NewQuote/>
+      </Route>
+
+      
+
 
       <Route exact path="/units">
         <Unit
