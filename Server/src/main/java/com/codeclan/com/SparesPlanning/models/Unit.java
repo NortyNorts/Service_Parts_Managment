@@ -49,7 +49,7 @@ public class Unit {
     @Column(name="IncreasedHours")
     private int increasedRunHours;
 
-    @JsonBackReference
+
     @ManyToMany
     @JsonIgnoreProperties({"unit"})
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
@@ -60,7 +60,7 @@ public class Unit {
     )
     private List<Part> parts;
 
-    @JsonBackReference
+
     @ManyToMany
     @JsonIgnoreProperties({"unit_history"})
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
@@ -72,7 +72,7 @@ public class Unit {
     private List<Part> parts_history;
 
 
-    @JsonBackReference
+
     @JsonIgnoreProperties({"units"})
     @ManyToOne()
     @JoinColumn(name="customer_id")

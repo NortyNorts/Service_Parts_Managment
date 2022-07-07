@@ -31,10 +31,12 @@ public class Customer{
     @Column(name="SiteAddress", nullable = false)
     private String siteAddress;
 
+    @Column(name="SitePostCode", nullable = false)
+    private String sitePostCode;
+
     @Column(name="EngineerVisitsPerYear", nullable = false)
     private int engineerVisitsPerYear;
 
-    @JsonBackReference
     @OneToMany(mappedBy = "customer")
     @JsonIgnoreProperties({"customer"})
     private List<Unit> units = new ArrayList<>();
@@ -42,4 +44,8 @@ public class Customer{
     public void addUnit(Unit unit1) {
         units.add(unit1);
     }
+
+
+
+
 }

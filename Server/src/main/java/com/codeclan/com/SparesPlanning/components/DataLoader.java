@@ -29,7 +29,7 @@ public class DataLoader implements ApplicationRunner {
     public DataLoader() {
     }
 
-    @Override
+    //@Override
     public void run(ApplicationArguments args) throws Exception {
 
         Customer codeClan = Customer
@@ -37,7 +37,8 @@ public class DataLoader implements ApplicationRunner {
                 .companyName("Service Specialists")
                 .siteName("CodeClan")
                 .engineerVisitsPerYear(2)
-                .siteAddress("EH1 2EL")
+                .siteAddress("37 Castle Terrace")
+                .sitePostCode("EH1 2EL")
                 .build();
 
         Unit RS5kg = Unit
