@@ -25,6 +25,9 @@ public class Unit {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    @Column(name="unitType", nullable = false)
+    private String unitType;
+
     @Column(name="SerialNumber", nullable = false)
     private String serialNumber;
 

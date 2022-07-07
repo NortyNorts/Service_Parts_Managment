@@ -1,17 +1,12 @@
 import React from "react"
-import {Link} from 'react-router-dom'
-import CustomerList from "../components/CustomerList"
+import ServiceCustomers from "../components/service/ServiceCustomers"
 
-const Service = (()=>{
+const Service = ({customers, changeCustomer, changeUnit})=>{
     return(
         <>
-            <h2>
-                This the the Service container.
-            </h2>
-            <Link to ='/Customers'> <h1>  Customers </h1>  </Link>
-            
+            <ServiceCustomers customers={customers} changeCustomer={changeCustomer} changeUnit={changeUnit}/>
         </>
-    )
-})
+        )
+}
 
 export default Service

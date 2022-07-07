@@ -5,19 +5,19 @@ import NavBar from './components/NavBar';
 import Contracts from './containers/Contracts';
 import Service from './containers/Service';
 import CustomersService from './services/CustomersServices';
-import Customers from './components/Customers';
 
 import UnitServices from './services/UnitsServices';
 
-import ContractsCustomerDetails from './components/ContractsCustomerDetails';
+import ContractsCustomerDetails from './components/contracts/ContractsCustomerDetails';
 import AddCustomer from './components/AddCustomer';
-import NewQuote from './components/NewQuote';
-import SavedQuotes from './components/SavedQuotes';
+import NewQuote from './components/contracts/NewQuote';
+import SavedQuotes from './components/contracts/SavedQuotes';
 
-import ServiceCustomer from './components/ServiceCustomer';
-import ServiceCustomerDetails from './components/ServiceCustomerDetails';
-import ServiceCustomerList from './components/ServiceCustomerList';
-import ServiceCustomers from './components/ServiceCustomers';
+import ServiceCustomer from './components/service/ServiceCustomer';
+import ServiceCustomerDetails from './components/service/ServiceCustomerDetails';
+import ServiceCustomerList from './components/service/ServiceCustomerList';
+import ServiceCustomers from './components/service/ServiceCustomers';
+import UnitDetails from './components/service/ServiceUnitDetails';
 
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
   const [currentCustomer, setCurrentCustomer] = useState(null)
 
   const [units, setUnits] = useState([])
+  const [currentUnit, setCurentUnit] = useState(null)
 
   useEffect(()=>{
     CustomersService.getCustomers()
@@ -36,6 +37,10 @@ function App() {
 
   const changeCustomer = function(chosenCustomer){
     setCurrentCustomer(chosenCustomer)
+  }
+
+  const changeUnit = function(selectedUnit){
+    setCurentUnit(selectedUnit)
   }
 
   return (
@@ -58,11 +63,7 @@ function App() {
       </Route>
 
       <Route exact path="/service">
-        <Service/>
-      </Route>
-
-      <Route exact path="/customers">
-        <Customers
+        <Service
           customers={customers}
           changeCustomer={changeCustomer}
         />
@@ -71,19 +72,6 @@ function App() {
       <Route exact path ="/contractscustomerdetails">
         <ContractsCustomerDetails
           currentCustomer={currentCustomer}
-        />
-      </Route>
-
-      <Route exact path ="/servicecustomerdetails">
-        <ServiceCustomerDetails
-          currentCustomer={currentCustomer}
-        />
-      </Route>
-
-      <Route exact path="/servicecustomers">
-        <ServiceCustomer
-          customers={customers}
-          changeCustomer={changeCustomer}
         />
       </Route>
 
@@ -99,11 +87,24 @@ function App() {
           <NewQuote/>
       </Route>
 
-      
+      <Route exact path ="/servicecustomerdetails">
+        <ServiceCustomerDetails
+          currentCustomer={currentCustomer}
+          units={units}
+          changeUnit={changeUnit}
+        />
+      </Route>
 
+      <Route exact path="/servicecustomers">
+        <ServiceCustomers
+          customers={customers}
+          changeCustomer={changeCustomer}
+        />
+      </Route>
 
       <Route exact path="/units">
-        <Unit
+        <UnitDetails
+          changeUnit={changeUnit}
           units={units}
           setUnits={setUnits}
         />
