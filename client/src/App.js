@@ -13,11 +13,12 @@ import AddCustomer from './components/AddCustomer';
 import NewQuote from './components/contracts/NewQuote';
 import SavedQuotes from './components/contracts/SavedQuotes';
 
-import ServiceCustomer from './components/service/ServiceCustomer';
+import ServiceCustomer from './components/service/ServiceCustomerListItem';
 import ServiceCustomerDetails from './components/service/ServiceCustomerDetails';
-import ServiceCustomerList from './components/service/ServiceCustomerList';
-import ServiceCustomers from './components/service/ServiceCustomers';
+import ServiceCustomerList from './components/service/ServiceCustomersList';
+import ServiceCustomers from './components/service/ServiceCustomersList';
 import UnitDetails from './components/service/ServiceUnitDetails';
+import ContractsCustomersSection from './components/contracts/ContractsCustomersSection';
 
 
 function App() {
@@ -45,10 +46,6 @@ function App() {
 
   return (
     <>
-      <h1>
-        This is the main App.js
-      </h1>
-
       <Router>
 
       <NavBar/>
@@ -64,6 +61,13 @@ function App() {
 
       <Route exact path="/service">
         <Service
+          customers={customers}
+          changeCustomer={changeCustomer}
+        />
+      </Route>
+
+      <Route exact path ="/contractscustomerssection">
+        <ContractsCustomersSection
           customers={customers}
           changeCustomer={changeCustomer}
         />
@@ -95,12 +99,7 @@ function App() {
         />
       </Route>
 
-      <Route exact path="/servicecustomers">
-        <ServiceCustomers
-          customers={customers}
-          changeCustomer={changeCustomer}
-        />
-      </Route>
+
 
       <Route exact path="/units">
         <UnitDetails

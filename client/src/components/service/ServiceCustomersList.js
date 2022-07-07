@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import ServiceCustomer from "./ServiceCustomer"
+import ServiceCustomerListItem from "./ServiceCustomerListItem"
 
 
 const ServiceCustomerList = ({customers, changeCustomer, changeUnit})=>{
@@ -30,7 +30,7 @@ const ServiceCustomerList = ({customers, changeCustomer, changeUnit})=>{
       
 
         const customersComponents = filteredCustomersArray.map((customer, index)=>{
-            return <ServiceCustomer value={index} customer={customer} changeCustomer={changeCustomer} key={index}/>
+            return <ServiceCustomerListItem value={index} customer={customer} changeCustomer={changeCustomer} key={index}/>
         })
 
 

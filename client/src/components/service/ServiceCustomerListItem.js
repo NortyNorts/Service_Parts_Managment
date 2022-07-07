@@ -1,7 +1,7 @@
 import React from "react"
 import {Link} from 'react-router-dom'
 
-const ServiceCustomer = ({customer, changeCustomer})=>{
+const ServiceCustomerListItem = ({customer, changeCustomer})=>{
 
 
     const handleOnClick = function(value){
@@ -27,4 +27,4 @@ const ServiceCustomer = ({customer, changeCustomer})=>{
     )
 }
 
-export default ServiceCustomer
+export default ServiceCustomerListItem

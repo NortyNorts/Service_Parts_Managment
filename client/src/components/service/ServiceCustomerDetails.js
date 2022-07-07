@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Link } from "react-router-dom";
 import ServiceUnitDetails from "./ServiceUnitDetails";
 
 const ServiceCustomerDetails = ({changeUnit, units})=>{
@@ -31,8 +32,22 @@ const ServiceCustomerDetails = ({changeUnit, units})=>{
 
     return(
         <>
+            <div className="link-button">
+            <Link to ='/nextserviceparts'>
+                <h3>Next Service Parts</h3>
+            </Link>
+            </div>
+            <div className="link-button">
+            <Link to ='/bookservice'>
+                <h3>Book Service</h3>
+            </Link>
+            </div>
+            <div className="search-bar">
             <input placeholder="Unit Search" onChange={event => setQuery(event.target.value)} />
+            </div>
+            <div className="list">
             {unitsComponents}
+            </div>
         </>
     )
 }
