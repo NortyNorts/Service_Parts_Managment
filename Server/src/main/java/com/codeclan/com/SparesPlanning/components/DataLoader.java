@@ -42,6 +42,7 @@ public class DataLoader implements ApplicationRunner {
 
         Unit RS5kg = Unit
                 .builder()
+                .unitType("RS5-10kg")
                 .serialNumber("AB123")
                 .hoursRun(0)
                 .dateInstalled(LocalDate.of(2020,05,17).atStartOfDay())

@@ -50,6 +50,7 @@ public class CustomerTest {
 
         unit1 = Unit
                 .builder()
+                .unitType("RS5kg")
                 .serialNumber("AB123")
                 .hoursRun(1000)
                 .dateInstalled(LocalDate.of(2020,05,17).atStartOfDay())

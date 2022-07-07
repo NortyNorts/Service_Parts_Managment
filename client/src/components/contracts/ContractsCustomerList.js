@@ -1,8 +1,7 @@
-import Customer from "./Customer"
 import React, {useState} from "react"
 
 
-const CustomerList = ({customers, changeCustomer})=>{
+const ContractsCustomerList = ({customers, changeCustomer})=>{
 
     const [query, setQuery] = useState("")
 
@@ -30,7 +29,7 @@ const CustomerList = ({customers, changeCustomer})=>{
       
 
         const customersComponents = filteredCustomersArray.map((customer, index)=>{
-            return <Customer value={index} customer={customer} changeCustomer={changeCustomer} key={index}/>
+            return <ContractsCustomerList value={index} customer={customer} changeCustomer={changeCustomer} key={index}/>
         })
 
 
@@ -43,4 +42,4 @@ const CustomerList = ({customers, changeCustomer})=>{
 
 }
 
-export default CustomerList
+export default ContractsCustomerList
