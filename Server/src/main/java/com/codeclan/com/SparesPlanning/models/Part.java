@@ -53,7 +53,7 @@ public class Part {
     @Column(name="GetDate")
     private LocalDate getDate;
 
-    @JsonBackReference
+
     @ManyToMany()
     @JsonIgnoreProperties({"parts"})
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
@@ -64,7 +64,7 @@ public class Part {
     )
     private List<Unit> units;
 
-    @JsonBackReference
+
     @ManyToMany()
     @JsonIgnoreProperties({"parts_history"})
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
