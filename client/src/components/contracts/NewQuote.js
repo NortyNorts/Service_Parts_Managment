@@ -6,7 +6,7 @@ const NewQuote = ()=>{
         <>
             <h1>This is the New Quote Page</h1>
 
-            <form id="signup">
+            <form id="quote">
                 <h1>Create Quote</h1>
                 <div class="field">
                     <label for="customerName">Customer Name:</label>

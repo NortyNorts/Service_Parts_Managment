@@ -1,10 +1,10 @@
 import React from "react"
-import ServiceCustomers from "../components/service/ServiceCustomers"
+import ServiceCustomersList from "../components/service/ServiceCustomersList"
 
 const Service = ({customers, changeCustomer, changeUnit})=>{
     return(
         <>
-            <ServiceCustomers customers={customers} changeCustomer={changeCustomer} changeUnit={changeUnit}/>
+            <ServiceCustomersList customers={customers} changeCustomer={changeCustomer} changeUnit={changeUnit}/>
         </>
         )
 }
