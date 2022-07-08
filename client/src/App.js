@@ -7,12 +7,14 @@ import Service from './containers/Service';
 import UnitServices from './services/UnitsServices';
 import ContractsCustomerDetails from './components/contracts/ContractsCustomerDetails';
 import AddCustomer from './components/AddCustomer';
-import NewQuote from './components/contracts/NewQuote';
-import SavedQuotes from './components/contracts/SavedQuotes';
 import ServiceCustomerDetails from './components/service/ServiceCustomerDetails';
-import UnitDetails from './components/service/ServiceUnitDetails';
 import ContractsCustomersSection from './components/contracts/ContractsCustomersSection';
 import CustomersServices from './services/CustomersServices';
+import ServiceUnitDetails from './components/service/ServiceUnitDetails';
+import ContractsUnitDetails from './components/contracts/ContractsUnitDetails';
+import AddUnit from './components/AddUnit';
+import PartsForecast from './containers/PartsForecast';
+import CustomerPartsForecast from './components/contracts/CustomerPartsForecast';
 
 
 function App() {
@@ -42,70 +44,75 @@ function App() {
     <>
       <Router>
 
-      <NavBar/>
+        <NavBar/>
 
-      <Switch>
+        <Switch>
 
-      <Route exact path="/"> <Home/></Route>
+          <Route exact path="/"> 
+            <Home/>
+          </Route>
 
-      <Route exact path="/contracts">
-        <Contracts 
-        />
-      </Route>
+          <Route exact path="/contracts">
+            <Contracts />
+          </Route>
 
-      <Route exact path="/service">
-        <Service
-          customers={customers}
-          changeCustomer={changeCustomer}
-        />
-      </Route>
+          <Route exact path="/service">
+            <Service
+              customers={customers}
+              changeCustomer={changeCustomer}
+            />
+          </Route>
 
-      <Route exact path ="/contractscustomerssection">
-        <ContractsCustomersSection
-          customers={customers}
-          changeCustomer={changeCustomer}
-        />
-      </Route>
+          <Route exact path="/partsforecast">
+            <PartsForecast />
+          </Route>
 
-      <Route exact path ="/contractscustomerdetails">
-        <ContractsCustomerDetails
-          currentCustomer={currentCustomer}
-        />
-      </Route>
+          <Route exact path="/customerpartsforecast">
+            <CustomerPartsForecast/>
+          </Route>
 
-      <Route exact path ="/addcustomer">
-          <AddCustomer/>
-      </Route>
+          <Route exact path ="/addcustomer">
+              <AddCustomer/>
+          </Route>
 
-      <Route exact path ="/savedquotes">
-          <SavedQuotes/>
-      </Route>
+          <Route exact path ="/addunit">
+              <AddUnit/>
+          </Route>
 
-      <Route exact path ="/newquote">
-          <NewQuote/>
-      </Route>
+          <Route exact path ="/contractscustomerssection">
+            <ContractsCustomersSection
+              customers={customers}
+              changeCustomer={changeCustomer}
+            />
+          </Route>
 
-      <Route exact path ="/servicecustomerdetails">
-        <ServiceCustomerDetails
-          currentCustomer={currentCustomer}
-          units={units}
-          changeUnit={changeUnit}
-        />
-      </Route>
+          <Route exact path ="/contractscustomerdetails">
+            <ContractsCustomerDetails
+              currentCustomer={currentCustomer}
+              changeUnit={changeUnit}
+            />
+          </Route>
 
+          <Route exact path ="/servicecustomerdetails">
+            <ServiceCustomerDetails
+              currentCustomer={currentCustomer}
+              changeUnit={changeUnit}
+            />
+          </Route>
 
+          <Route exact path="/serviceunitdetails">
+            <ServiceUnitDetails
+              currentUnit={currentUnit}
+            />
+          </Route>
 
-      <Route exact path="/units">
-        <UnitDetails
-          changeUnit={changeUnit}
-          units={units}
-          setUnits={setUnits}
-        />
-      </Route>
+          <Route exact path="/contractsunitdetails">
+            <ContractsUnitDetails
+              currentUnit={currentUnit}
+            />
+          </Route>
 
-
-
-      </Switch>
+        </Switch>
 
       </Router>
     </>

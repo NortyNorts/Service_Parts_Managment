@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import ServiceUnitDetails from "./ServiceUnitDetails";
+import ServiceUnitListItem from "./ServiceUnitListItem";
 
-const ServiceCustomerDetails = ({changeUnit, units})=>{
+const ServiceCustomerDetails = ({currentCustomer, changeUnit})=>{
     
     const [query, setQuery] = useState("")
 
-    const filteredUnitsArray = units.filter(unit=>{
+    const filteredUnitsArray = currentCustomer.units.filter(unit=>{
         if (query === '') {
             return true;
           } 
@@ -26,7 +26,7 @@ const ServiceCustomerDetails = ({changeUnit, units})=>{
       
 
         const unitsComponents = filteredUnitsArray.map((unit, index)=>{
-            return <ServiceUnitDetails value={index} unit={unit} changeUnit={changeUnit} key={index}/>
+            return <ServiceUnitListItem value={index} unit={unit} changeUnit={changeUnit} key={index}/>
         })
 
 
@@ -37,14 +37,23 @@ const ServiceCustomerDetails = ({changeUnit, units})=>{
                 <h3>Next Service Parts</h3>
             </Link>
             </div>
+
             <div className="link-button">
             <Link to ='/bookservice'>
                 <h3>Book Service</h3>
             </Link>
             </div>
+
+            <div className="link-button">
+            <Link to ='/addunit'>
+                <h3>Add Unit</h3>
+            </Link>
+            </div>
+
             <div className="search-bar">
             <input placeholder="Unit Search" onChange={event => setQuery(event.target.value)} />
             </div>
+
             <div className="list">
             {unitsComponents}
             </div>

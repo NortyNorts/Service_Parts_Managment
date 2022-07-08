@@ -8,12 +8,11 @@ const CustomersServices = {
     },
 
   addCustomer(newCustomer){
+    console.log(newCustomer)
     return fetch(baseURL,{
     method:'POST',
-    body: newCustomer,
-    headers:{
-      'Content-Type':'applcations/json'
-      }
+    body: JSON.stringify(newCustomer),
+    headers:{'Content-Type':'application/json'}
     })
     .then(res => res.json());
   }
