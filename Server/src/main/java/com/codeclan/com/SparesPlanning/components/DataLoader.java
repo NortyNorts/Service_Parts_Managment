@@ -29,7 +29,7 @@ public class DataLoader implements ApplicationRunner {
     public DataLoader() {
     }
 
-    //@Override
+    @Override
     public void run(ApplicationArguments args) throws Exception {
 
         Customer codeClan = Customer
