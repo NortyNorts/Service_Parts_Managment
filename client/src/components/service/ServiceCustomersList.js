@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import ServiceCustomerListItem from "./ServiceCustomerListItem"
 
 
-const ServiceCustomerList = ({customers, changeCustomer, changeUnit})=>{
+const ServiceCustomerList = ({customers, changeCustomer})=>{
 
     const [query, setQuery] = useState("")
 

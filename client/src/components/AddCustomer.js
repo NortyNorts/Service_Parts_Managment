@@ -3,7 +3,7 @@ import CustomersServices from "../services/CustomersServices";
 
 const AddCustomer = ()=>{
 
-    const [newCustomer, setNewCustomer] = useState("")
+    // const [newCustomer, setNewCustomer] = useState("")
     
     const [companyName, setCompanyName] = useState("")
     const [siteName, setSiteName] = useState("")
@@ -42,20 +42,20 @@ const AddCustomer = ()=>{
         if (!companyNameToSubmit){
           return
         }
-        setNewCustomer({
-        companyName: companyNameToSubmit,
-        siteName: siteNameToSubmit,
-        siteAddress: addressToSubmit,
-        sitePostCode: postCodeToSubmit,
-        engineerVisitsPerYear: visitsPerYearToSubmit,
-        units: [null]
-      });
+        const newCustomerObject = {
+            companyName: companyNameToSubmit,
+            siteName: siteNameToSubmit,
+            siteAddress: addressToSubmit,
+            sitePostCode: postCodeToSubmit,
+            engineerVisitsPerYear: visitsPerYearToSubmit
+          }
+        // setNewCustomer(newCustomerObject);
         setCompanyName("");
         setSiteName("");
         setAddress("");
         setPostCode("");
         setVisitsPerYear(0);
-        CustomersServices.addCustomer(newCustomer);
+        CustomersServices.addCustomer(newCustomerObject);
     }
 
     return(

@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-const ServiceUnitDetails = ({currentUnit})=>{
+const ContractsUnitDetails = ({currentUnit})=>{
     
     return(
         <>
@@ -14,4 +14,4 @@ const ServiceUnitDetails = ({currentUnit})=>{
     )
 }
 
-export default ServiceUnitDetails
+export default ContractsUnitDetails
