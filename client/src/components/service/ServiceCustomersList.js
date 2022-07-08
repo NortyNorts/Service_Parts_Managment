@@ -19,6 +19,10 @@ const ServiceCustomerList = ({customers, changeCustomer, changeUnit})=>{
             return true;
           }
 
+          else if (customer.sitePostCode.toLowerCase().includes(query.toLowerCase())) {
+            return true;
+          }
+
           else if (customer.siteName.toLowerCase().includes(query.toLowerCase())) {
             return true;
           } 

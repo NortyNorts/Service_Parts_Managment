@@ -4,21 +4,15 @@ import Home from './components/Home';
 import NavBar from './components/NavBar';
 import Contracts from './containers/Contracts';
 import Service from './containers/Service';
-import CustomersService from './services/CustomersServices';
-
 import UnitServices from './services/UnitsServices';
-
 import ContractsCustomerDetails from './components/contracts/ContractsCustomerDetails';
 import AddCustomer from './components/AddCustomer';
 import NewQuote from './components/contracts/NewQuote';
 import SavedQuotes from './components/contracts/SavedQuotes';
-
-import ServiceCustomer from './components/service/ServiceCustomerListItem';
 import ServiceCustomerDetails from './components/service/ServiceCustomerDetails';
-import ServiceCustomerList from './components/service/ServiceCustomersList';
-import ServiceCustomers from './components/service/ServiceCustomersList';
 import UnitDetails from './components/service/ServiceUnitDetails';
 import ContractsCustomersSection from './components/contracts/ContractsCustomersSection';
+import CustomersServices from './services/CustomersServices';
 
 
 function App() {
@@ -30,7 +24,7 @@ function App() {
   const [currentUnit, setCurentUnit] = useState(null)
 
   useEffect(()=>{
-    CustomersService.getCustomers()
+    CustomersServices.getCustomers()
     .then(customers => setCustomers(customers));
     UnitServices.getUnits()
     .then(units=> setUnits(units));

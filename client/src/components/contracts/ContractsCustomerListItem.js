@@ -21,7 +21,8 @@ const ContractsCustomerListItem = ({customer, changeCustomer})=>{
                 <h3>{customer.companyName}</h3>
             </Link>
                 <p>{customer.siteName}</p> 
-                <p>{customer.siteAddress}</p> 
+                <p>{customer.siteAddress}</p>
+                <p>{customer.sitePostCode}</p>
                 <p>Visits per year: {customer.engineerVisitsPerYear}</p>
         </>
     )
