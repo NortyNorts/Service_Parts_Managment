@@ -36,13 +36,13 @@ public class UnitController {
         return new ResponseEntity<>(unit, HttpStatus.CREATED);
     }
 
-    //get one by customer ID
-    @GetMapping(value = "/units/customers/{id}")
-    public ResponseEntity<List<Unit>> findUnitsByCustomerId(
-            //@PathVariable Long id,
-            @RequestParam(name="named") Long id)
-    {
-        return new ResponseEntity<>(unitRepo.findByCustomer_Id(id), HttpStatus.OK);
-    }
+    //get all units by customer ID
+//    @GetMapping(value = "/units/customers/{id}")
+//    public ResponseEntity<List<Unit>> findUnitsByCustomerId(
+//            //@PathVariable Long id,
+//            @RequestParam(name="named") Long id)
+//    {
+//        return new ResponseEntity<>(unitRepo.findByCustomer_Id(id), HttpStatus.OK);
+//    }
 
 }

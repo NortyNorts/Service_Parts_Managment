@@ -32,6 +32,8 @@ public class DataLoader implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
+        //Add five random customers
+
         Customer codeClan = Customer
                 .builder()
                 .companyName("Service Specialists")
@@ -41,15 +43,125 @@ public class DataLoader implements ApplicationRunner {
                 .sitePostCode("EH1 2EL")
                 .build();
 
+        Customer jerrys = Customer
+                .builder()
+                .companyName("Service Specialists")
+                .siteName("Jerry's Cigar Shop")
+                .engineerVisitsPerYear(4)
+                .siteAddress("1 Royal Mile")
+                .sitePostCode("EH1 1BB")
+                .build();
+
+        Customer chanter = Customer
+                .builder()
+                .companyName("Service Specialists")
+                .siteName("The Chanter")
+                .engineerVisitsPerYear(1)
+                .siteAddress("30 Bread Street")
+                .sitePostCode("EH3 9AF")
+                .build();
+
+        Customer sainsburys = Customer
+                .builder()
+                .companyName("Service Specialists")
+                .siteName("Sainsbury's")
+                .engineerVisitsPerYear(2)
+                .siteAddress("102 West Port")
+                .sitePostCode("EH3 9HS")
+                .build();
+
+        Customer edinburghFilmhouse = Customer
+                .builder()
+                .companyName("Service Specialists")
+                .siteName("Edinburgh Filmhouse")
+                .engineerVisitsPerYear(3)
+                .siteAddress("88 Lothian Road")
+                .sitePostCode("EH3 9BZ")
+                .build();
+
+        Customer hangingBat = Customer
+                .builder()
+                .companyName("Service Specialists")
+                .siteName("The Hanging Bat")
+                .engineerVisitsPerYear(4)
+                .siteAddress("133 Lothian Road")
+                .sitePostCode("EH3 9AB")
+                .build();
+
         Unit RS5kg = Unit
                 .builder()
                 .unitType("RS5-10kg")
                 .serialNumber("AB123")
                 .hoursRun(0)
-                .dateInstalled(LocalDate.of(2020,05,17).atStartOfDay())
+                .dateInstalled(LocalDate.of(2020,5,17).atStartOfDay())
                 .expectedRunHoursPerYear(1000)
                 .nextServiceDate(LocalDate.of(2022, 8, 01).atStartOfDay())
                 .customer(codeClan)
+                .parts(new ArrayList<>())
+                .parts_history(new ArrayList<>())
+                .build();
+
+        Unit RS16kg = Unit
+                .builder()
+                .unitType("RS16-20kg")
+                .serialNumber("AB234")
+                .hoursRun(0)
+                .dateInstalled(LocalDate.of(2020, 5, 17).atStartOfDay())
+                .expectedRunHoursPerYear(1000)
+                .nextServiceDate(LocalDate.of(2022, 8, 01).atStartOfDay())
+                .customer(jerrys)
+                .parts(new ArrayList<>())
+                .parts_history(new ArrayList<>())
+                .build();
+
+        Unit RS24kg = Unit
+                .builder()
+                .unitType("RS24-30kg")
+                .serialNumber("AB345")
+                .hoursRun(0)
+                .dateInstalled(LocalDate.of(2020, 5, 17).atStartOfDay())
+                .expectedRunHoursPerYear(1000)
+                .nextServiceDate(LocalDate.of(2022, 8, 01).atStartOfDay())
+                .customer(chanter)
+                .parts(new ArrayList<>())
+                .parts_history(new ArrayList<>())
+                .build();
+
+        Unit RS40kg = Unit
+                .builder()
+                .unitType("RS40kg")
+                .serialNumber("AB456")
+                .hoursRun(0)
+                .dateInstalled(LocalDate.of(2020,5,17).atStartOfDay())
+                .expectedRunHoursPerYear(1000)
+                .nextServiceDate(LocalDate.of(2022,8,1).atStartOfDay())
+                .customer(sainsburys)
+                .parts(new ArrayList<>())
+                .parts_history(new ArrayList<>())
+                .build();
+
+        Unit RS50kg = Unit
+                .builder()
+                .unitType("RS50kg")
+                .serialNumber("AB567")
+                .hoursRun(0)
+                .dateInstalled(LocalDate.of(2020,5,17).atStartOfDay())
+                .expectedRunHoursPerYear((1000))
+                .nextServiceDate(LocalDate.of(2022,8,1).atStartOfDay())
+                .customer(edinburghFilmhouse)
+                .parts(new ArrayList<>())
+                .parts_history(new ArrayList<>())
+                .build();
+
+        Unit RS60kg = Unit
+                .builder()
+                .unitType("RS60kg")
+                .serialNumber("AB678")
+                .hoursRun(0)
+                .dateInstalled(LocalDate.of(2020,5,17).atStartOfDay())
+                .expectedRunHoursPerYear((1000))
+                .nextServiceDate(LocalDate.of(2022,8,1).atStartOfDay())
+                .customer(hangingBat)
                 .parts(new ArrayList<>())
                 .parts_history(new ArrayList<>())
                 .build();
@@ -280,6 +392,11 @@ public class DataLoader implements ApplicationRunner {
                 .build();
 
         customerRepo.save(codeClan);
+        customerRepo.save(jerrys);
+        customerRepo.save(chanter);
+        customerRepo.save(sainsburys);
+        customerRepo.save(edinburghFilmhouse);
+        customerRepo.save(hangingBat);
 
         partRepo.save(snapRing);
         partRepo.save(sealingSetForTank);
