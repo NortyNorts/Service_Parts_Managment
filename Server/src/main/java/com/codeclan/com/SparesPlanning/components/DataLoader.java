@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-@Component
+//@Component
 public class DataLoader implements ApplicationRunner {
 
     @Autowired
