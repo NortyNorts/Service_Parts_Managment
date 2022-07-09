@@ -1,10 +1,11 @@
 import React, {useState} from "react";
+import { useHistory } from "react-router-dom";
 import CustomersServices from "../services/CustomersServices";
 
 const AddCustomer = ()=>{
-
-    // const [newCustomer, setNewCustomer] = useState("")
     
+    const history = useHistory();
+
     const [companyName, setCompanyName] = useState("")
     const [siteName, setSiteName] = useState("")
     const [address, setAddress] = useState("")
@@ -49,13 +50,17 @@ const AddCustomer = ()=>{
             sitePostCode: postCodeToSubmit,
             engineerVisitsPerYear: visitsPerYearToSubmit
           }
-        // setNewCustomer(newCustomerObject);
         setCompanyName("");
         setSiteName("");
         setAddress("");
         setPostCode("");
         setVisitsPerYear(0);
         CustomersServices.addCustomer(newCustomerObject);
+        window.location.href='/contractscustomerssection';
+    }
+
+    const handleCancelClick = ()=> {
+        history.goBack()
     }
 
     return(
@@ -122,6 +127,9 @@ const AddCustomer = ()=>{
                 <input type="submit" value={"Add Customer"}/>
 
             </form>
+
+            <button onClick={handleCancelClick}>Cancel</button>
+
         </>
     )
 }
