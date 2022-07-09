@@ -21,9 +21,12 @@ function App() {
 
   const [customers, setCustomers] = useState([])
   const [currentCustomer, setCurrentCustomer] = useState(null)
-
-  const [units, setUnits] = useState([])
   const [currentUnit, setCurentUnit] = useState(null)
+  const [nextserviceparts, setNextServiceParts] = useState([])
+  
+  
+  const [units, setUnits] = useState([])
+  
 
   useEffect(()=>{
     CustomersServices.getCustomers()
@@ -34,11 +37,20 @@ function App() {
 
   const changeCustomer = function(chosenCustomer){
     setCurrentCustomer(chosenCustomer)
+    console.log(chosenCustomer.units[0].parts[0].changePart)
   }
 
   const changeUnit = function(selectedUnit){
     setCurentUnit(selectedUnit)
   }
+
+  console.log(currentCustomer)
+
+  // const print = function(currentCustomer){
+  //   if{
+  // true}
+  // }
+  
 
   return (
     <>
@@ -72,11 +84,15 @@ function App() {
           </Route>
 
           <Route exact path ="/addcustomer">
-              <AddCustomer/>
+              <AddCustomer 
+                changeCustomer={changeCustomer}
+              />
           </Route>
 
           <Route exact path ="/addunit">
-              <AddUnit/>
+              <AddUnit
+                currentCustomer={currentCustomer}
+              />
           </Route>
 
           <Route exact path ="/contractscustomerssection">

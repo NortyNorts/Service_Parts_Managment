@@ -41,4 +41,10 @@ public class CustomerController {
 //        public ResponseEntity<List<Unit>> getUnitsForCustomer(PathVariable)
 //    }
 
+    //get all parts by unitchange
+    @GetMapping(value="/customerspartstochange/{id}")
+    public ResponseEntity<Customer>banana(@PathVariable Long id){
+        return new ResponseEntity(customerRepo.findByIdAndUnits_Parts_ChangePartTrueOrderByUnits_Parts_PartNumberAsc(id), HttpStatus.OK);
+    }
+
 }

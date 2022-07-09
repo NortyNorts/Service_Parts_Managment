@@ -55,7 +55,8 @@ public class Part {
 
 
     @ManyToMany()
-    @JsonIgnoreProperties({"parts"})
+//    @JsonIgnoreProperties({"parts"})
+    @JsonBackReference
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @JoinTable(
             name="units_parts",

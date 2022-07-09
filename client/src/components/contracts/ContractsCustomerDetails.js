@@ -24,6 +24,7 @@ const ContractsCustomerDetails = ({currentCustomer, changeUnit})=>{
           }
         })
       
+        
 
         const unitsComponents = filteredUnitsArray.map((unit, index)=>{
             return <ContractsUnitListItem value={index} unit={unit} changeUnit={changeUnit} key={index}/>
