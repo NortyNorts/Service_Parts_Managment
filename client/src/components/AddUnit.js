@@ -1,9 +1,6 @@
 import React, {useState} from "react";
-import { useHistory } from "react-router-dom";
 
 const AddUnit = (currentCustomer)=>{
-
-    const history = useHistory();
     
     const [unitType, setUnitType] = useState("")
     const [serialNumber, setSerialNumber] = useState("")
@@ -51,21 +48,14 @@ const AddUnit = (currentCustomer)=>{
             dateInstalled: dateInstalled,
             expectedRunHoursPerYear: expectedRunHoursPerYear,
             nextServiceDate: nextServiceDate,
-            customer: currentCustomer.id //
+            customer: currentCustomer.currentCustomer.id //
           }
         setUnitType("");
         setSerialNumber("");
         setHoursRun(0);
         setDateInstalled("");
-        setExpectedRunHoursPerYear(0)
-        setNextServiceDate("")
-
-        console.log(newUnitObject)
-        console.log(currentCustomer)
-    }
-
-    const handleCancelClick = ()=> {
-        history.goBack()
+        setExpectedRunHoursPerYear(0);
+        setNextServiceDate("");
     }
 
     return(
@@ -149,7 +139,6 @@ const AddUnit = (currentCustomer)=>{
 
             </form>
 
-            <button onClick={handleCancelClick}>Cancel</button>
         </>
     )
 }
