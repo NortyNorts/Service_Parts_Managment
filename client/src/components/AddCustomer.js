@@ -1,10 +1,7 @@
 import React, {useState} from "react";
-import { useHistory } from "react-router-dom";
 import CustomersServices from "../services/CustomersServices";
 
 const AddCustomer = ()=>{
-    
-    const history = useHistory();
 
     const [companyName, setCompanyName] = useState("")
     const [siteName, setSiteName] = useState("")
@@ -57,10 +54,6 @@ const AddCustomer = ()=>{
         setVisitsPerYear(0);
         CustomersServices.addCustomer(newCustomerObject);
         window.location.href='/contractscustomerssection';
-    }
-
-    const handleCancelClick = ()=> {
-        history.goBack()
     }
 
     return(
@@ -127,8 +120,6 @@ const AddCustomer = ()=>{
                 <input type="submit" value={"Add Customer"}/>
 
             </form>
-
-            <button onClick={handleCancelClick}>Cancel</button>
 
         </>
     )

@@ -15,6 +15,8 @@ import ContractsUnitDetails from './components/contracts/ContractsUnitDetails';
 import AddUnit from './components/AddUnit';
 import PartsForecast from './containers/PartsForecast';
 import CustomerPartsForecast from './components/contracts/CustomerPartsForecast';
+import BookService from './components/service/BookService';
+import NextServiceParts from './components/service/NextServiceParts';
 
 
 function App() {
@@ -37,14 +39,11 @@ function App() {
 
   const changeCustomer = function(chosenCustomer){
     setCurrentCustomer(chosenCustomer)
-    console.log(chosenCustomer.units[0].parts[0].changePart)
   }
 
   const changeUnit = function(selectedUnit){
     setCurentUnit(selectedUnit)
   }
-
-  console.log(currentCustomer)
 
   // const print = function(currentCustomer){
   //   if{
@@ -91,6 +90,18 @@ function App() {
 
           <Route exact path ="/addunit">
               <AddUnit
+                currentCustomer={currentCustomer}
+              />
+          </Route>
+
+          <Route exact path ="/bookservice">
+              <BookService
+                currentCustomer={currentCustomer}
+              />
+          </Route>
+
+          <Route exact path ="/nextserviceparts">
+              <NextServiceParts
                 currentCustomer={currentCustomer}
               />
           </Route>
