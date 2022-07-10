@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-@Component
+//@Component
 public class DataLoader implements ApplicationRunner {
 
     @Autowired
@@ -41,15 +41,17 @@ public class DataLoader implements ApplicationRunner {
                 .engineerVisitsPerYear(2)
                 .siteAddress("37 Castle Terrace")
                 .sitePostCode("EH1 2EL")
+                .serviceState("Service Booked")
                 .build();
 
         Customer jerrys = Customer
                 .builder()
-                .companyName("Service Specialists")
+                .companyName("Servest")
                 .siteName("Jerry's Cigar Shop")
                 .engineerVisitsPerYear(4)
                 .siteAddress("1 Royal Mile")
                 .sitePostCode("EH1 1BB")
+                .serviceState("Awaiting Service Booking")
                 .build();
 
         Customer chanter = Customer
@@ -59,42 +61,47 @@ public class DataLoader implements ApplicationRunner {
                 .engineerVisitsPerYear(1)
                 .siteAddress("30 Bread Street")
                 .sitePostCode("EH3 9AF")
+                .serviceState("Awaiting Service Booking")
                 .build();
 
         Customer sainsburys = Customer
                 .builder()
-                .companyName("Service Specialists")
-                .siteName("Sainsbury's")
+                .companyName("Sainsburys")
+                .siteName("Sainsburys")
                 .engineerVisitsPerYear(2)
                 .siteAddress("102 West Port")
                 .sitePostCode("EH3 9HS")
+                .serviceState("Awaiting Service Booking")
                 .build();
 
         Customer edinburghFilmhouse = Customer
                 .builder()
-                .companyName("Service Specialists")
+                .companyName("Servest")
                 .siteName("Edinburgh Filmhouse")
                 .engineerVisitsPerYear(3)
                 .siteAddress("88 Lothian Road")
                 .sitePostCode("EH3 9BZ")
+                .serviceState("Awaiting Service Booking")
                 .build();
 
         Customer hangingBat = Customer
                 .builder()
-                .companyName("Service Specialists")
+                .companyName("Service Group")
                 .siteName("The Hanging Bat")
                 .engineerVisitsPerYear(4)
                 .siteAddress("133 Lothian Road")
                 .sitePostCode("EH3 9AB")
+                .serviceState("Awaiting Service Booking")
                 .build();
 
         Customer codeBase = Customer
                 .builder()
-                .companyName("Service Specialists")
+                .companyName("CodeBase")
                 .siteName("CodeBase")
                 .engineerVisitsPerYear(1)
                 .siteAddress("37a Castle Terrace")
                 .sitePostCode("EH1 2EL")
+                .serviceState("Service Booked")
                 .build();
 
         Unit RS5kg = Unit

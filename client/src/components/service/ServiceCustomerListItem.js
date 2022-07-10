@@ -9,7 +9,6 @@ const ServiceCustomerListItem = ({customer, changeCustomer})=>{
         onCustomerSelect(chosenCustomer)
     }
 
-    
 
     const onCustomerSelect = function(selectedCustomer){
         changeCustomer(selectedCustomer)
@@ -19,11 +18,12 @@ const ServiceCustomerListItem = ({customer, changeCustomer})=>{
         <>
             <Link to ='/servicecustomerdetails' onClick={()=>handleOnClick(customer)}>
                 <h3>{customer.companyName}</h3>
-            </Link>
                 <p>{customer.siteName}</p> 
                 <p>{customer.siteAddress}</p>
                 <p>{customer.sitePostCode}</p>
                 <p>Visits per year: {customer.engineerVisitsPerYear}</p>
+                <h4>{customer.serviceState}</h4>
+            </Link>
         </>
     )
 }

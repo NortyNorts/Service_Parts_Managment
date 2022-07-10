@@ -1,0 +1,36 @@
+.heading > p{
+    margin:10px;
+    padding: 0px;
+    color: dodgerblue;
+    text-decoration: none;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.main-links ul{
+    display: flex;
+    flex-direction:row;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    margin:0px;
+    margin-top: 30px;
+    margin-right: 20px;
+    padding: 0px;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold; 
+}
+
+.main-links ul> li >a{
+    border-radius: 10px;
+    background: dodgerblue;
+    margin:10px;
+    padding: 50px;
+    color: white;
+    display: block;
+    text-decoration: none;
+}

@@ -3,13 +3,18 @@ package com.codeclan.com.SparesPlanning.controllers;
 import com.codeclan.com.SparesPlanning.models.Customer;
 import com.codeclan.com.SparesPlanning.models.Unit;
 import com.codeclan.com.SparesPlanning.repositories.CustomerRepo;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.github.fge.jsonpatch.JsonPatch;
+import com.github.fge.jsonpatch.JsonPatchException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.xml.ws.Response;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class CustomerController {
@@ -39,6 +44,16 @@ public class CustomerController {
     //find one by unit serial number
 //    @GetMapping(value="/customers/{customerId}/units"){
 //        public ResponseEntity<List<Unit>> getUnitsForCustomer(PathVariable)
+//    }
+
+//    @PatchMapping("/customer/{id}")
+//    public ResponseEntity<Customer> updateUserPartially(
+//            @PathVariable(value = "id") Long id,
+//            @RequestBody Customer customerDetails){
+//        Customer customer = customerRepo.findById(id).orElseThrow();
+//        customer.setServiceState(customerDetails.getServiceState());
+//        final Customer updatedUser = customerRepo.save(customer);
+//        return ResponseEntity.ok(updatedUser);
 //    }
 
     //get all parts by unitchange

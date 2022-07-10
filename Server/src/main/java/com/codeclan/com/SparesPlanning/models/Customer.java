@@ -37,6 +37,9 @@ public class Customer{
     @Column(name="EngineerVisitsPerYear", nullable = false)
     private int engineerVisitsPerYear;
 
+    @Column(name="ServiceState", nullable = false)
+    private String serviceState;
+
     @OneToMany(mappedBy = "customer")
     @JsonIgnoreProperties({"customer"})
     private List<Unit> units = new ArrayList<>();
@@ -46,6 +49,8 @@ public class Customer{
     }
 
 
-
+    public Long findCustomer(Customer customer){
+        return customer.id;
+    }
 
 }
