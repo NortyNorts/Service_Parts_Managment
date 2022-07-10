@@ -5,7 +5,7 @@ const CustomerPartsForecast = ()=>{
     
     return(
         <>
-            <h1>Customer parts forecast component</h1>
+            <h1>List of required parts for next 12 months here:</h1>
         </>
     )
 }

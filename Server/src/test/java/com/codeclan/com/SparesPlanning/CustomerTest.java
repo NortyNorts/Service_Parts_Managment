@@ -71,6 +71,12 @@ public class CustomerTest {
     }
 
     @Test
+    public void canFindCustomer(){
+
+    }
+
+
+    @Test
     public void canAddPartToUnit(){
         unit1.addPart(part1);
         assertEquals(1, unit1.getParts().size());

@@ -19,6 +19,7 @@ import BookService from './components/service/BookService';
 import NextServiceParts from './components/service/NextServiceParts';
 
 
+
 function App() {
 
   const [customers, setCustomers] = useState([])
@@ -53,6 +54,8 @@ function App() {
 
   return (
     <>
+    
+
       <Router>
 
         <NavBar/>
@@ -142,6 +145,7 @@ function App() {
         </Switch>
 
       </Router>
+
     </>
   );
 }

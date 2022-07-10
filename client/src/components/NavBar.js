@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"
 import { useHistory } from "react-router-dom";
+import '../css/navbar.css'
 
 const NavBar = ({}) => {
 
@@ -12,18 +13,24 @@ const NavBar = ({}) => {
 
     return (
         <>
+        <div className="header">
+            <p className="title">Service Parts Management</p>
 
-            <nav className = "navbar" id="navbar">
+            <nav>
+                <div className="main-nav">
+                <ul>
+                    <li><Link to='/'> Home </Link></li>
 
-                <Link to='/'> Home </Link>
+                    <li><Link to='/contracts'> Contracts </Link></li>
 
-                <Link to='/contracts'> Contracts </Link>
+                    <li><Link to='/service'> Service </Link></li>
 
-                <Link to='/service'> Service </Link>
-
-                <button onClick={handleBackClick}>Back</button>
-
+                    <button onClick={handleBackClick}>Back</button>
+                </ul>
+                </div>
             </nav>
+
+        </div>
         </>
 
     )
