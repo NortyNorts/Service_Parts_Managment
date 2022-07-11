@@ -40,7 +40,7 @@ public class Customer{
     @Column(name="ServiceState", nullable = false)
     private String serviceState;
 
-    @OneToMany(mappedBy = "customer")
+    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
     @JsonIgnoreProperties({"customer"})
     private List<Unit> units = new ArrayList<>();
 

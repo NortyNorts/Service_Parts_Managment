@@ -1,26 +1,22 @@
 package com.codeclan.com.SparesPlanning.controllers;
 
 import com.codeclan.com.SparesPlanning.models.Customer;
-import com.codeclan.com.SparesPlanning.models.Unit;
-import com.codeclan.com.SparesPlanning.repositories.CustomerRepo;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.github.fge.jsonpatch.JsonPatch;
-import com.github.fge.jsonpatch.JsonPatchException;
+import com.codeclan.com.SparesPlanning.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.ws.Response;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class CustomerController {
 
     @Autowired
     CustomerRepo customerRepo;
+
+    @Autowired
+    UnitPartRepo unitPartRepo;
 
     //get all
     @GetMapping(value = "/customers")
@@ -58,8 +54,29 @@ public class CustomerController {
 
     //get all parts by unitchange
     @GetMapping(value="/customerspartstochange/{id}")
-    public ResponseEntity<Customer>banana(@PathVariable Long id){
-        return new ResponseEntity(customerRepo.findByIdAndUnits_Parts_ChangePartTrueOrderByUnits_Parts_PartNumberAsc(id), HttpStatus.OK);
+    public ResponseEntity<List<Customer>>banana(@PathVariable Long id){
+        //return new ResponseEntity(customerRepo.findByIdAndUnits_Parts_ChangePartTrueOrderByUnits_Parts_PartNumberAsc(id), HttpStatus.OK);
+        return new ResponseEntity(unitPartRepo.findByChangePartTrueAndUnit_Customer_IdOrderByPart_PartNumberAsc(id),HttpStatus.OK);
     }
 
+    @GetMapping(value="/customerspartstochange")
+    public ResponseEntity<List<Customer>>banana2(){
+        return new ResponseEntity(unitPartRepo.findByChangePartTrueOrderByPart_PartNumberAsc(),HttpStatus.OK);
+    }
+
+    @PostMapping(value="/updatecustomer")
+    public ResponseEntity<List<Customer>>banana3(@RequestBody Customer customer){
+        return new ResponseEntity(customerRepo.save(customer),HttpStatus.OK);
+    }
+
+    @DeleteMapping(value="/deletecustomer/{id}")
+    public ResponseEntity<Customer> deleteCustomer (@PathVariable Long id){
+        try {
+            customerRepo.deleteById(id);
+            return new ResponseEntity("Deleted Successfully", HttpStatus.OK);
+        }
+        catch(Exception e){
+            return new ResponseEntity("Customer NOT Deleted", HttpStatus.I_AM_A_TEAPOT);
+        }
+    }
 }
