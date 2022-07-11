@@ -88,9 +88,9 @@ public class Unit {
         this.id = id;
     }
 
-    public void addPart(Part part1) {
+    public void addPart(UnitPart part1) {
         //TODO: look here
-      //  parts.add(part1);
+        this.unitParts.add(part1);
     }
 
     public void addPartHistory(Part part1){
