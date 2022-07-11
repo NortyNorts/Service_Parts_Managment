@@ -12,6 +12,7 @@ const AddCustomer = ()=>{
     const [address, setAddress] = useState("")
     const [postCode, setPostCode] = useState("")
     const [visitsPerYear, setVisitsPerYear] = useState("")
+    const [nextServiceDate, setNextServiceDate] = useState("yyyy/mm/dd")
 
     const handleCompanyNameChange = (event) =>{
         setCompanyName(event.target.value)
@@ -33,13 +34,16 @@ const AddCustomer = ()=>{
         setVisitsPerYear(event.target.value)
     };
 
+    const handleNextServiceDateChange = (event) =>{
+        setNextServiceDate(event.target.value)
+    }
+
     const handleCustomerSubmit = (event) => {
         event.preventDefault();
         const companyNameToSubmit = companyName.trim();
         const siteNameToSubmit = siteName.trim();
         const addressToSubmit = address.trim();
         const postCodeToSubmit = postCode.trim();
-        const visitsPerYearToSubmit = visitsPerYear;
 
         if (!companyNameToSubmit){
           return
@@ -49,13 +53,16 @@ const AddCustomer = ()=>{
             siteName: siteNameToSubmit,
             siteAddress: addressToSubmit,
             sitePostCode: postCodeToSubmit,
-            engineerVisitsPerYear: visitsPerYearToSubmit
+            engineerVisitsPerYear: visitsPerYear,
+            nextServiceDate: nextServiceDate,
+            serviceState: "Awaiting Service Booking"
           }
         setCompanyName("");
         setSiteName("");
         setAddress("");
         setPostCode("");
         setVisitsPerYear("");
+        setNextServiceDate("yyyy/mm/dd")
         CustomersServices.addCustomer(newCustomerObject);
         history.goBack();
     }
@@ -121,6 +128,16 @@ const AddCustomer = ()=>{
                         required
                         />
                 </div>
+
+                <div>
+                    <label htmlFor="nextServiceDate"></label>
+                    <input 
+                        type="date"
+                        onChange={handleNextServiceDateChange} 
+                        required
+                        />
+                </div>
+
 
                 <input type="submit" value={"Add Customer"}/>
 

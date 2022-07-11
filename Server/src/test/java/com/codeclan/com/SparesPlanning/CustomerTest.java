@@ -31,7 +31,7 @@ public class CustomerTest {
                 .hoursRun(1000)
                 .changeByHour(2000)
                 .changeByNumberOfMonths(12)
-                .lastChangedDate(LocalDate.of(2020, 06, 03).atStartOfDay())
+                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(1)
                 .build();
 
@@ -42,7 +42,7 @@ public class CustomerTest {
                 .hoursRun(0)
                 .changeByHour(2000)
                 .changeByNumberOfMonths(24)
-                .lastChangedDate(LocalDate.of(2022, 06, 03).atStartOfDay())
+                .lastChangedDate(LocalDate.of(2022, 06, 03))
                 .priority(1)
                 .build();
 
@@ -51,9 +51,9 @@ public class CustomerTest {
                 .unitType("RS5kg")
                 .serialNumber("AB123")
                 .hoursRun(1000)
-                .dateInstalled(LocalDate.of(2020,05,17).atStartOfDay())
+                .dateInstalled(LocalDate.of(2020,05,17))
                 .expectedRunHoursPerYear(1000)
-                .nextServiceDate(LocalDate.of(2023, 01, 01).atStartOfDay())
+                .nextServiceDate(LocalDate.of(2023, 01, 01))
                 .unitParts(new ArrayList<>())
                 .build();
 

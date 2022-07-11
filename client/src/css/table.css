@@ -1,0 +1,27 @@
+.styled-table th{
+    background-color: dodgerblue;
+    color: #ffffff;
+    text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tr {
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+}
+
+.styled-table tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tr:last-of-type {
+    border-bottom: 10px solid dodgerblue;
+}
+
+.styled-table tr:first-of-type{
+    text-align: left;
+}

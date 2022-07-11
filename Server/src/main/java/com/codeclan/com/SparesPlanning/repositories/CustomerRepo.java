@@ -16,7 +16,7 @@ import java.util.Optional;
 @Repository
 public interface CustomerRepo extends JpaRepository<Customer, Long>{
 
-    List<Customer> findByUnits_SerialNumber(String serialNumber);
+    //List<Customer> findByUnits_SerialNumber(String serialNumber);
 
 //    @Query(value="select c.* from customers as c\n" +
 //            "inner join units u on c.id=u.customer_id\n" +

@@ -47,15 +47,19 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit})=>{
             </div>
 
             <div className="link-button">
-            <Link to ='/bookservice' style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                <h3>Book Service</h3>
-            </Link>
+                <li>
+                    <Link to ='/bookservice' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                        Book Service
+                    </Link>
+                </li>
             </div>
 
             <div className="link-button">
-            <Link to ='/addunit' style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                <h3>Add Unit</h3>
-            </Link>
+                <li>
+                    <Link to ='/addunit' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                        Add Unit
+                    </Link>
+                </li>
             </div>
 
             <div className="link-button">

@@ -1,6 +1,31 @@
 import React from "react";
+import '../../css/bookservice.css'
 
-const BookService = ()=>{
+const BookService = ({currentCustomer, currentUserParts})=>{
+
+    const filteredCustomersArray = currentUserParts.filter(part=>{
+        if (part.changePart === true) {
+            return true;
+        }
+        else if(part.changePart === false){
+            return false;
+        }
+        
+
+    })
+
+    const tableData = filteredCustomersArray.map((part)=>{
+        return(
+        <tr className="styled-table">
+            <td>{part.part.partName}</td>
+            <td>{part.part.partNumber}</td>
+            <td>{part.part.hoursRun}</td>
+            <td>{part.part.changeByHour}</td>
+            <td>{part.part.lastChangedDate}</td>
+            <td>{part.part.changeByNumberOfMonths}</td>
+        </tr>
+    )
+    })
 
     const confirmService = ()=>{
         
@@ -8,11 +33,28 @@ const BookService = ()=>{
 
     return(
         <>
-            <button>Additional parts</button>
+                <ul>
+                    <button>Additional parts</button>
+                
+                    <button onClick={confirmService}>Confirm Parts and Book Service</button>
 
-            <button onClick={confirmService}>Confirm Parts and Book Service</button>
+                </ul>
 
-            <h3>Parts required for service list here:</h3>
+            <section>
+                <table className="styled-table">
+                    <tr>
+                        <th>Part Name</th>
+                        <th>Part Number</th>
+                        <th>Hours Run</th>
+                        <th>Change By Hour</th>
+                        <th>Last Changed</th>
+                        <th>Change by Months</th>
+                    </tr>
+
+                    {tableData}
+                    
+                </table>
+            </section>
         </>
     )
 }

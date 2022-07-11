@@ -1,0 +1,35 @@
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+button{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top:10px;
+    margin-left: 3px;
+    padding: 0px;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border: 0px;
+    text-align: center;
+}
+
+button{
+    border-radius: 10px;
+    background: lightseagreen;
+    padding: 10px;
+    color: white;
+    display: block;
+    width: 275px;
+}

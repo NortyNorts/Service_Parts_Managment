@@ -38,7 +38,7 @@ public class Part {
 
     //Move to unit part history
     @Column(name="LastChangedDate", nullable = false)
-    private LocalDateTime lastChangedDate;
+    private LocalDate lastChangedDate;
 
     @Column(name="ChangeByHour", nullable = false)
     private int changeByHour;
