@@ -127,7 +127,12 @@ public class DataLoader implements ApplicationRunner {
 
         UnitPart snapRingUP = new UnitPart();
         snapRingUP.setPart(snapRing);
-        unitPartRepo.save(snapRingUP);
+//
+//        UnitPart snapRingUPR16 = new UnitPart();
+//        snapRingUPRS16.setPart(snapRing);
+
+
+
 
         Part sealingSetForTank = Part
                 .builder()
@@ -143,6 +148,9 @@ public class DataLoader implements ApplicationRunner {
                 .getDate(LocalDate.now())
                 .build();
 
+        UnitPart sealingSetForTankUP = new UnitPart();
+        sealingSetForTankUP.setPart(sealingSetForTank);
+
         Part scaleCollectorAndConnectionRing = Part
                 .builder()
                 .partName("Scale collector And connection ring")
@@ -156,6 +164,10 @@ public class DataLoader implements ApplicationRunner {
                 //.units_history(new ArrayList<>())
                 .getDate(LocalDate.now())
                 .build();
+
+        UnitPart scaleCollectorAndConnectionRingUP = new UnitPart();
+        scaleCollectorAndConnectionRingUP.setPart(scaleCollectorAndConnectionRing);
+//        unitPartRepo.(scaleCollectorAndConnectionRingUP);
 
         Part tankGasket = Part
                 .builder()
@@ -171,6 +183,10 @@ public class DataLoader implements ApplicationRunner {
                 .getDate(LocalDate.now())
                 .build();
 
+        UnitPart tankGasketUP = new UnitPart();
+        tankGasketUP.setPart(tankGasket);
+//        unitPartRepo.save(tankGasketUP);
+
         Part tankGasket1640 = Part
                 .builder()
                 .partName("Tank gasket 16-40")
@@ -184,6 +200,10 @@ public class DataLoader implements ApplicationRunner {
                 //.units_history(new ArrayList<>())
                 .getDate(LocalDate.now())
                 .build();
+
+        UnitPart tankGasket1640UP = new UnitPart();
+        tankGasket1640UP.setPart(tankGasket1640);
+//        unitPartRepo.save(tankGasket1640UP);
 
         Part collectorFoil = Part
                 .builder()
@@ -199,6 +219,10 @@ public class DataLoader implements ApplicationRunner {
                 .getDate(LocalDate.now())
                 .build();
 
+        UnitPart collectorFoilUP = new UnitPart();
+        collectorFoilUP.setPart(collectorFoil);
+//        unitPartRepo.save(collectorFoilUP);
+
         Part collectorFoil1640 = Part
                 .builder()
                 .partName("Collector foil 16-40")
@@ -212,6 +236,10 @@ public class DataLoader implements ApplicationRunner {
                 //.units_history(new ArrayList<>())
                 .getDate(LocalDate.now())
                 .build();
+
+        UnitPart collectorFoil1640UP = new UnitPart();
+        collectorFoil1640UP.setPart(collectorFoil1640);
+//        unitPartRepo.save(collectorFoil1640UP);
 
         Part steamOutletHose = Part
                 .builder()
@@ -227,6 +255,10 @@ public class DataLoader implements ApplicationRunner {
                 .getDate(LocalDate.now())
                 .build();
 
+        UnitPart steamOutletHoseUP = new UnitPart();
+        steamOutletHoseUP.setPart(steamOutletHose);
+//        unitPartRepo.save(steamOutletHoseUP);
+
         Part hoseSetForLevelControl = Part
                 .builder()
                 .partName("Hose set for level control")
@@ -240,6 +272,10 @@ public class DataLoader implements ApplicationRunner {
                 //.units_history(new ArrayList<>())
                 .getDate(LocalDate.now())
                 .build();
+
+        UnitPart hoseSetForLevelControlUP = new UnitPart();
+        hoseSetForLevelControlUP.setPart(hoseSetForLevelControl);
+//        unitPartRepo.save(hoseSetForLevelControlUP);
 
         Part hoseSetForLevelControl1640 = Part
                 .builder()
@@ -255,6 +291,10 @@ public class DataLoader implements ApplicationRunner {
                 .getDate(LocalDate.now())
                 .build();
 
+        UnitPart hoseSetForLevelControl1640UP = new UnitPart();
+        hoseSetForLevelControl1640UP.setPart(hoseSetForLevelControl1640);
+//        unitPartRepo.save(hoseSetForLevelControl1640UP);
+
         Part floatAssembly = Part
                 .builder()
                 .partName("Float assembly")
@@ -268,6 +308,10 @@ public class DataLoader implements ApplicationRunner {
                 //.units_history(new ArrayList<>())
                 .getDate(LocalDate.now())
                 .build();
+
+        UnitPart floatAssemblyUP = new UnitPart();
+        floatAssemblyUP.setPart(floatAssembly);
+//        unitPartRepo.save(floatAssemblyUP);
 
         Part steamHoseNipple = Part
                 .builder()
@@ -283,6 +327,10 @@ public class DataLoader implements ApplicationRunner {
                 .getDate(LocalDate.now())
                 .build();
 
+        UnitPart steamHoseNippleUP = new UnitPart();
+        steamHoseNippleUP.setPart(steamHoseNipple);
+//        unitPartRepo.save(steamHoseNippleUP);
+
         Part cylinderInsertWithFoil = Part
                 .builder()
                 .partName("Cylinder insert with foil")
@@ -296,6 +344,10 @@ public class DataLoader implements ApplicationRunner {
                 //.units_history(new ArrayList<>())
                 .getDate(LocalDate.now())
                 .build();
+
+        UnitPart cylinderInsertWithFoilUP = new UnitPart();
+        cylinderInsertWithFoilUP.setPart(cylinderInsertWithFoil);
+//        unitPartRepo.save(cylinderInsertWithFoilUP);
 
         Part cylinderInsertWithFoil1640 = Part
                 .builder()
@@ -311,6 +363,10 @@ public class DataLoader implements ApplicationRunner {
                 .getDate(LocalDate.now())
                 .build();
 
+        UnitPart cylinderInsertWithFoil1640UP = new UnitPart();
+        cylinderInsertWithFoil1640UP.setPart(cylinderInsertWithFoil1640);
+//        unitPartRepo.save(cylinderInsertWithFoil1640UP);
+
         Part mainContactor25A = Part
                 .builder()
                 .partName("Main Contactor 25A")
@@ -324,6 +380,10 @@ public class DataLoader implements ApplicationRunner {
                 //.units_history(new ArrayList<>())
                 .getDate(LocalDate.now())
                 .build();
+
+        UnitPart mainContactor25AUP = new UnitPart();
+        mainContactor25AUP.setPart(mainContactor25A);
+//        unitPartRepo.save(mainContactor25AUP);
 
         Part mainContactor32A = Part
                 .builder()
@@ -339,6 +399,10 @@ public class DataLoader implements ApplicationRunner {
                 .getDate(LocalDate.now())
                 .build();
 
+        UnitPart mainContactor32AUP = new UnitPart();
+        mainContactor32AUP.setPart(mainContactor32A);
+//        unitPartRepo.save(mainContactor32AUP);
+
         Part mainContactor50A = Part
                 .builder()
                 .partName("Main Contactor 50A")
@@ -352,6 +416,10 @@ public class DataLoader implements ApplicationRunner {
                 //.units_history(new ArrayList<>())
                 .getDate(LocalDate.now())
                 .build();
+
+        UnitPart mainContactor50AUP = new UnitPart();
+        mainContactor50AUP.setPart(mainContactor50A);
+//        unitPartRepo.save(mainContactor50AUP);
 
         Part mainContactor80A = Part
                 .builder()
@@ -367,6 +435,10 @@ public class DataLoader implements ApplicationRunner {
                 .getDate(LocalDate.now())
                 .build();
 
+        UnitPart mainContactor80AUP = new UnitPart();
+        mainContactor80AUP.setPart(mainContactor80A);
+//        unitPartRepo.save(mainContactor80AUP);
+
         Part inletValve = Part
                 .builder()
                 .partName("Inlet Valve")
@@ -380,6 +452,10 @@ public class DataLoader implements ApplicationRunner {
                 //.units_history(new ArrayList<>())
                 .getDate(LocalDate.now())
                 .build();
+
+        UnitPart inletValveUP = new UnitPart();
+        inletValveUP.setPart(inletValve);
+//        unitPartRepo.save(inletValveUP);
 
         Part inletValve1640 = Part
                 .builder()
@@ -395,6 +471,10 @@ public class DataLoader implements ApplicationRunner {
                 .getDate(LocalDate.now())
                 .build();
 
+        UnitPart inletValve1640UP = new UnitPart();
+        inletValve1640UP.setPart(inletValve1640);
+//        unitPartRepo.save(inletValve1640UP);
+
         Part waterCupCpl = Part
                 .builder()
                 .partName("Water cup cpl.")
@@ -408,6 +488,10 @@ public class DataLoader implements ApplicationRunner {
                 //.units_history(new ArrayList<>())
                 .getDate(LocalDate.now())
                 .build();
+
+        UnitPart waterCupCplUP = new UnitPart();
+        waterCupCplUP.setPart(waterCupCpl);
+//        unitPartRepo.save(waterCupCplUP);
 
         Part hoseSetForDrainPump = Part
                 .builder()
@@ -423,6 +507,10 @@ public class DataLoader implements ApplicationRunner {
                 .getDate(LocalDate.now())
                 .build();
 
+        UnitPart hoseSetForDrainPumpUP = new UnitPart();
+        hoseSetForDrainPumpUP.setPart(hoseSetForDrainPump);
+//        unitPartRepo.save(hoseSetForDrainPumpUP);
+
         Part hoseSetForDrainPump1640 = Part
                 .builder()
                 .partName("Hose set for drain pump 16-40")
@@ -436,6 +524,10 @@ public class DataLoader implements ApplicationRunner {
                 //.units_history(new ArrayList<>())
                 .getDate(LocalDate.now())
                 .build();
+
+        UnitPart hoseSetForDrainPump1640UP = new UnitPart();
+        hoseSetForDrainPump1640UP.setPart(hoseSetForDrainPump1640);
+//        unitPartRepo.save(hoseSetForDrainPump1640UP);
 
         Part hoseSetForInletAndDrain = Part
                 .builder()
@@ -451,6 +543,10 @@ public class DataLoader implements ApplicationRunner {
                 .getDate(LocalDate.now())
                 .build();
 
+        UnitPart hoseSetForInletAndDrainUP = new UnitPart();
+        hoseSetForInletAndDrainUP.setPart(hoseSetForInletAndDrain);
+//        unitPartRepo.save(hoseSetForInletAndDrainUP);
+
         Part hoseSetForInletAndDrain1640 = Part
                 .builder()
                 .partName("Hose set for inlet and drain 16-40")
@@ -465,201 +561,196 @@ public class DataLoader implements ApplicationRunner {
                 .getDate(LocalDate.now())
                 .build();
 
-        RS5kg.addPart(snapRing);
-        RS5kg.addPart(sealingSetForTank);
-        RS5kg.addPart(scaleCollectorAndConnectionRing);
-        RS5kg.addPart(tankGasket);
-        RS5kg.addPart(collectorFoil);
-        RS5kg.addPart(steamOutletHose);
-        RS5kg.addPart(hoseSetForLevelControl);
-        RS5kg.addPart(floatAssembly);
-        RS5kg.addPart(steamHoseNipple);
-        RS5kg.addPart(cylinderInsertWithFoil);
-        RS5kg.addPart(mainContactor25A);
-        RS5kg.addPart(inletValve);
-        RS5kg.addPart(waterCupCpl);
-        RS5kg.addPart(hoseSetForDrainPump);
-        RS5kg.addPart(hoseSetForInletAndDrain);
-        RS5unitParts = Arrays.asList(snapRingUP);
-        unitRepo.save(RS5kg);
+        UnitPart hoseSetForInletAndDrain1640UP = new UnitPart();
+        hoseSetForInletAndDrain1640UP.setPart(hoseSetForInletAndDrain1640);
+        //unitPartRepo.save(hoseSetForInletAndDrain1640UP);
 
-        RS16kg.addPart(snapRing);
-        RS16kg.addPart(sealingSetForTank);
-        RS16kg.addPart(scaleCollectorAndConnectionRing);
-        RS16kg.addPart(tankGasket1640);
-        RS16kg.addPart(steamOutletHose);
-        RS16kg.addPart(floatAssembly);
-        RS16kg.addPart(steamHoseNipple);
-        RS16kg.addPart(cylinderInsertWithFoil1640);
-        RS16kg.addPart(mainContactor32A);
-        RS16kg.addPart(mainContactor32A);
-        RS16kg.addPart(collectorFoil1640);
-        RS16kg.addPart(hoseSetForLevelControl1640);
-        RS16kg.addPart(inletValve1640);
-        RS16kg.addPart(waterCupCpl);
-        RS16kg.addPart(hoseSetForDrainPump1640);
-        RS16kg.addPart(hoseSetForInletAndDrain1640);
-        unitRepo.save(RS16kg);
 
-        RS24kg.addPart(snapRing);
-        RS24kg.addPart(sealingSetForTank);
-        RS24kg.addPart(scaleCollectorAndConnectionRing);
-        RS24kg.addPart(tankGasket1640);
-        RS24kg.addPart(steamOutletHose);
-        RS24kg.addPart(floatAssembly);
-        RS24kg.addPart(steamHoseNipple);
-        RS24kg.addPart(cylinderInsertWithFoil1640);
-        RS24kg.addPart(mainContactor50A);
-        RS24kg.addPart(mainContactor32A); //both are technically secondary, but have the same part number. Do we need to create a new part for it?
-        RS24kg.addPart(mainContactor32A);
-        RS24kg.addPart(collectorFoil1640);
-        RS24kg.addPart(hoseSetForLevelControl1640);
-        RS24kg.addPart(inletValve1640);
-        RS24kg.addPart(waterCupCpl);
-        RS24kg.addPart(hoseSetForDrainPump1640);
-        RS24kg.addPart(hoseSetForInletAndDrain1640);
-        unitRepo.save(RS24kg);
+        List<UnitPart> RS5unitParts = Arrays.asList(
+                snapRingUP,
+                sealingSetForTankUP,
+                scaleCollectorAndConnectionRingUP,
+                tankGasketUP,
+                collectorFoilUP,
+                steamOutletHoseUP,
+                hoseSetForLevelControlUP,
+                floatAssemblyUP,
+                steamHoseNippleUP,
+                cylinderInsertWithFoilUP,
+                mainContactor25AUP,
+                inletValveUP,
+                waterCupCplUP,
+                hoseSetForDrainPumpUP,
+                hoseSetForInletAndDrainUP);
 
-        RS40kg.addPart(snapRing);
-        RS40kg.addPart(sealingSetForTank);
-        RS40kg.addPart(scaleCollectorAndConnectionRing);
-        RS40kg.addPart(tankGasket1640);
-        RS40kg.addPart(steamOutletHose);
-        RS40kg.addPart(floatAssembly);
-        RS40kg.addPart(steamHoseNipple);
-        RS40kg.addPart(cylinderInsertWithFoil1640);
-        RS40kg.addPart(mainContactor80A);
-        RS40kg.addPart(mainContactor50A);
-        RS40kg.addPart(mainContactor50A);
-        RS40kg.addPart(collectorFoil1640);
-        RS40kg.addPart(hoseSetForLevelControl1640);
-        RS40kg.addPart(inletValve1640);
-        RS40kg.addPart(waterCupCpl);
-        RS40kg.addPart(hoseSetForDrainPump1640);
-        RS40kg.addPart(hoseSetForInletAndDrain1640);
-        unitRepo.save(RS40kg);
+        List<UnitPart> RS16unitParts = Arrays.asList(
+                snapRingUP,
+                sealingSetForTankUP,
+                scaleCollectorAndConnectionRingUP,
+                tankGasket1640UP,
+                steamOutletHoseUP,
+                floatAssemblyUP,
+                steamHoseNippleUP,
+                cylinderInsertWithFoil1640UP,
+                mainContactor32AUP,
+                mainContactor32AUP,
+                collectorFoil1640UP,
+                hoseSetForLevelControl1640UP,
+                inletValve1640UP,
+                waterCupCplUP,
+                hoseSetForDrainPump1640UP,
+                hoseSetForInletAndDrain1640UP);
 
-        RS50kg.addPart(snapRing);
-        RS50kg.addPart(snapRing);
-        RS50kg.addPart(sealingSetForTank);
-        RS50kg.addPart(sealingSetForTank);
-        RS50kg.addPart(scaleCollectorAndConnectionRing);
-        RS50kg.addPart(scaleCollectorAndConnectionRing);
-        RS50kg.addPart(tankGasket1640);
-        RS50kg.addPart(tankGasket1640);
-        RS50kg.addPart(collectorFoil1640);
-        RS50kg.addPart(collectorFoil1640);
-        RS50kg.addPart(steamOutletHose);
-        RS50kg.addPart(steamOutletHose);
-        RS50kg.addPart(floatAssembly);
-        RS50kg.addPart(floatAssembly);
-        RS50kg.addPart(hoseSetForLevelControl1640);
-        RS50kg.addPart(hoseSetForLevelControl1640);
-        RS50kg.addPart(steamHoseNipple);
-        RS50kg.addPart(steamHoseNipple);
-        RS50kg.addPart(inletValve1640);
-        RS50kg.addPart(inletValve1640);
-        RS50kg.addPart(cylinderInsertWithFoil1640);
-        RS50kg.addPart(cylinderInsertWithFoil1640);
-        RS50kg.addPart(waterCupCpl);
-        RS50kg.addPart(waterCupCpl);
-        RS50kg.addPart(hoseSetForDrainPump1640);
-        RS50kg.addPart(hoseSetForDrainPump1640);
-        RS50kg.addPart(hoseSetForInletAndDrain1640);
-        RS50kg.addPart(hoseSetForInletAndDrain1640);
-        RS50kg.addPart(mainContactor50A);
-        RS50kg.addPart(mainContactor32A);
-        RS50kg.addPart(mainContactor32A);
-        RS50kg.addPart(mainContactor32A);
-        RS50kg.addPart(mainContactor32A);
-        unitRepo.save(RS50kg);
 
-        RS60kg.addPart(snapRing);
-        RS60kg.addPart(snapRing);
-        RS60kg.addPart(sealingSetForTank);
-        RS60kg.addPart(sealingSetForTank);
-        RS60kg.addPart(scaleCollectorAndConnectionRing);
-        RS60kg.addPart(scaleCollectorAndConnectionRing);
-        RS60kg.addPart(tankGasket1640);
-        RS60kg.addPart(tankGasket1640);
-        RS60kg.addPart(collectorFoil1640);
-        RS60kg.addPart(collectorFoil1640);
-        RS60kg.addPart(steamOutletHose);
-        RS60kg.addPart(steamOutletHose);
-        RS60kg.addPart(floatAssembly);
-        RS60kg.addPart(floatAssembly);
-        RS60kg.addPart(hoseSetForLevelControl1640);
-        RS60kg.addPart(hoseSetForLevelControl1640);
-        RS60kg.addPart(steamHoseNipple);
-        RS60kg.addPart(steamHoseNipple);
-        RS60kg.addPart(inletValve1640);
-        RS60kg.addPart(inletValve1640);
-        RS60kg.addPart(cylinderInsertWithFoil1640);
-        RS60kg.addPart(cylinderInsertWithFoil1640);
-        RS60kg.addPart(waterCupCpl);
-        RS60kg.addPart(waterCupCpl);
-        RS60kg.addPart(hoseSetForDrainPump1640);
-        RS60kg.addPart(hoseSetForDrainPump1640);
-        RS60kg.addPart(hoseSetForInletAndDrain1640);
-        RS60kg.addPart(hoseSetForInletAndDrain1640);
-        RS60kg.addPart(mainContactor50A);
-        RS60kg.addPart(mainContactor50A);
-        RS60kg.addPart(mainContactor32A);
-        RS60kg.addPart(mainContactor32A);
-        RS60kg.addPart(mainContactor32A);
-        RS60kg.addPart(mainContactor32A);
-        unitRepo.save(RS60kg);
+        List<UnitPart> RS24unitParts = Arrays.asList(
+                snapRingUP,
+                sealingSetForTankUP,
+                scaleCollectorAndConnectionRingUP,
+                tankGasket1640UP,
+                steamOutletHoseUP,
+                floatAssemblyUP,
+                steamHoseNippleUP,
+                cylinderInsertWithFoil1640UP,
+                mainContactor50AUP,
+                mainContactor32AUP,
+                mainContactor32AUP,
+                collectorFoil1640UP,
+                hoseSetForLevelControl1640UP,
+                inletValve1640UP,
+                waterCupCplUP,
+                hoseSetForDrainPump1640UP,
+                hoseSetForInletAndDrain1640UP
+        );
 
-        RS80kg.addPart(snapRing);
-        RS80kg.addPart(snapRing);
-        RS80kg.addPart(sealingSetForTank);
-        RS80kg.addPart(sealingSetForTank);
-        RS80kg.addPart(scaleCollectorAndConnectionRing);
-        RS80kg.addPart(scaleCollectorAndConnectionRing);
-        RS80kg.addPart(tankGasket1640);
-        RS80kg.addPart(tankGasket1640);
-        RS80kg.addPart(collectorFoil1640);
-        RS80kg.addPart(collectorFoil1640);
-        RS80kg.addPart(steamOutletHose);
-        RS80kg.addPart(steamOutletHose);
-        RS80kg.addPart(floatAssembly);
-        RS80kg.addPart(floatAssembly);
-        RS80kg.addPart(hoseSetForLevelControl1640);
-        RS80kg.addPart(hoseSetForLevelControl1640);
-        RS80kg.addPart(steamHoseNipple);
-        RS80kg.addPart(steamHoseNipple);
-        RS80kg.addPart(inletValve1640);
-        RS80kg.addPart(inletValve1640);
-        RS80kg.addPart(cylinderInsertWithFoil1640);
-        RS80kg.addPart(cylinderInsertWithFoil1640);
-        RS80kg.addPart(waterCupCpl);
-        RS80kg.addPart(waterCupCpl);
-        RS80kg.addPart(hoseSetForDrainPump1640);
-        RS80kg.addPart(hoseSetForDrainPump1640);
-        RS80kg.addPart(hoseSetForInletAndDrain1640);
-        RS80kg.addPart(hoseSetForInletAndDrain1640);
-        RS80kg.addPart(mainContactor80A);
-        RS80kg.addPart(mainContactor80A);
-        RS80kg.addPart(mainContactor50A);
-        RS80kg.addPart(mainContactor50A);
-        RS80kg.addPart(mainContactor50A);
-        RS80kg.addPart(mainContactor50A);
-        unitRepo.save(RS80kg);
+        List<UnitPart> RS40unitParts = Arrays.asList(
+                snapRingUP,
+                sealingSetForTankUP,
+                scaleCollectorAndConnectionRingUP,
+                tankGasket1640UP,
+                steamOutletHoseUP,
+                floatAssemblyUP,
+                steamHoseNippleUP,
+                cylinderInsertWithFoil1640UP,
+                mainContactor80AUP,
+                mainContactor50AUP,
+                mainContactor50AUP,
+                collectorFoil1640UP,
+                hoseSetForLevelControl1640UP,
+                inletValve1640UP,
+                waterCupCplUP,
+                hoseSetForDrainPump1640UP,
+                hoseSetForInletAndDrain1640UP
+        );
 
-        UnitPart unitPart = new UnitPart();
-        unitPart.setPart(tankGasket1640);
-        unitPart.setUnit(RS80kg);
-        unitPartRepo.save(unitPart);
+        List<UnitPart> RS50unitParts = Arrays.asList(
+                snapRingUP,
+                snapRingUP,
+                sealingSetForTankUP,
+                sealingSetForTankUP,
+                scaleCollectorAndConnectionRingUP,
+                scaleCollectorAndConnectionRingUP,
+                tankGasket1640UP,
+                tankGasket1640UP,
+                steamOutletHoseUP,
+                steamOutletHoseUP,
+                floatAssemblyUP,
+                floatAssemblyUP,
+                steamHoseNippleUP,
+                steamHoseNippleUP,
+                cylinderInsertWithFoil1640UP,
+                cylinderInsertWithFoil1640UP,
+                mainContactor50AUP,
+                mainContactor32AUP,
+                mainContactor32AUP,
+                mainContactor32AUP,
+                mainContactor32AUP,
+                collectorFoil1640UP,
+                collectorFoil1640UP,
+                hoseSetForLevelControl1640UP,
+                hoseSetForLevelControl1640UP,
+                inletValve1640UP,
+                inletValve1640UP,
+                waterCupCplUP,
+                waterCupCplUP,
+                hoseSetForDrainPump1640UP,
+                hoseSetForDrainPump1640UP,
+                hoseSetForInletAndDrain1640UP,
+                hoseSetForInletAndDrain1640UP
+        );
 
-        UnitPart unitPart2 = new UnitPart();
-        unitPart2.setPart(mainContactor25A);
-        unitPart2.setUnit(RS80kg);
-        unitPartRepo.save(unitPart2);
+        List<UnitPart> RS60unitParts = Arrays.asList(
+                snapRingUP,
+                snapRingUP,
+                sealingSetForTankUP,
+                sealingSetForTankUP,
+                scaleCollectorAndConnectionRingUP,
+                scaleCollectorAndConnectionRingUP,
+                tankGasket1640UP,
+                tankGasket1640UP,
+                steamOutletHoseUP,
+                steamOutletHoseUP,
+                floatAssemblyUP,
+                floatAssemblyUP,
+                steamHoseNippleUP,
+                steamHoseNippleUP,
+                cylinderInsertWithFoil1640UP,
+                cylinderInsertWithFoil1640UP,
+                mainContactor50AUP,
+                mainContactor50AUP,
+                mainContactor32AUP,
+                mainContactor32AUP,
+                mainContactor32AUP,
+                mainContactor32AUP,
+                collectorFoil1640UP,
+                collectorFoil1640UP,
+                hoseSetForLevelControl1640UP,
+                hoseSetForLevelControl1640UP,
+                inletValve1640UP,
+                inletValve1640UP,
+                waterCupCplUP,
+                waterCupCplUP,
+                hoseSetForDrainPump1640UP,
+                hoseSetForDrainPump1640UP,
+                hoseSetForInletAndDrain1640UP,
+                hoseSetForInletAndDrain1640UP
+        );
 
-        UnitPart unitPart3 = new UnitPart();
-        unitPart3.setPart(mainContactor80A);
-        unitPart3.setUnit(RS5kg);
-        unitPartRepo.save(unitPart3);
+        List<UnitPart> RS80unitParts = Arrays.asList(
+                snapRingUP,
+                snapRingUP,
+                sealingSetForTankUP,
+                sealingSetForTankUP,
+                scaleCollectorAndConnectionRingUP,
+                scaleCollectorAndConnectionRingUP,
+                tankGasket1640UP,
+                tankGasket1640UP,
+                steamOutletHoseUP,
+                steamOutletHoseUP,
+                floatAssemblyUP,
+                floatAssemblyUP,
+                steamHoseNippleUP,
+                steamHoseNippleUP,
+                cylinderInsertWithFoil1640UP,
+                cylinderInsertWithFoil1640UP,
+                mainContactor80AUP,
+                mainContactor80AUP,
+                mainContactor50AUP,
+                mainContactor50AUP,
+                mainContactor50AUP,
+                mainContactor50AUP,
+                collectorFoil1640UP,
+                collectorFoil1640UP,
+                hoseSetForLevelControl1640UP,
+                hoseSetForLevelControl1640UP,
+                inletValve1640UP,
+                inletValve1640UP,
+                waterCupCplUP,
+                waterCupCplUP,
+                hoseSetForDrainPump1640UP,
+                hoseSetForDrainPump1640UP,
+                hoseSetForInletAndDrain1640UP,
+                hoseSetForInletAndDrain1640UP
+        );
 
 
         Unit RS5kg = Unit
@@ -671,7 +762,7 @@ public class DataLoader implements ApplicationRunner {
                 .expectedRunHoursPerYear(1000)
                 .nextServiceDate(LocalDate.of(2022, 8, 01).atStartOfDay())
                 .customer(codeClan)
-                .unitParts(RS5unitParts)
+                .unitParts(new ArrayList<>())
                 //.parts_history(new ArrayList<>())
                 .build();
 
@@ -755,6 +846,7 @@ public class DataLoader implements ApplicationRunner {
 
 
 
+
         customerRepo.save(codeClan);
         customerRepo.save(jerrys);
         customerRepo.save(chanter);
@@ -789,8 +881,65 @@ public class DataLoader implements ApplicationRunner {
         partRepo.save(hoseSetForInletAndDrain);
         partRepo.save(hoseSetForInletAndDrain1640);
 
+        unitRepo.save(RS5kg);
+        unitRepo.save(RS16kg);
+        unitRepo.save(RS24kg);
+        unitRepo.save(RS40kg);
+        unitRepo.save(RS50kg);
+        unitRepo.save(RS60kg);
+        unitRepo.save(RS80kg);
 
+        for (UnitPart up: RS5unitParts){
+            up.setId(null);
+            RS5kg.addPart(up);
+            up.setUnit(RS5kg);
+            unitPartRepo.save(up);
+        }
 
+        for (UnitPart up: RS16unitParts){
+            up.setId(null);
+            RS16kg.addPart(up);
+            up.setUnit(RS16kg);
+            unitPartRepo.save(up);
+        }
+
+        for (UnitPart up: RS24unitParts){
+            up.setId(null);
+            RS24kg.addPart(up);
+            up.setUnit(RS24kg);
+            unitPartRepo.save(up);
+        }
+
+        for (UnitPart up: RS40unitParts){
+            up.setId(null);
+            RS40kg.addPart(up);
+            up.setUnit(RS40kg);
+            unitPartRepo.save(up);
+        }
+
+        for (UnitPart up: RS50unitParts){
+            up.setId(null);
+            RS50kg.addPart(up);
+            up.setUnit(RS50kg);
+            unitPartRepo.save(up);
+        }
+
+        for (UnitPart up: RS60unitParts){
+            up.setId(null);
+            RS60kg.addPart(up);
+            up.setUnit(RS60kg);
+            unitPartRepo.save(up);
+        }
+
+        for (UnitPart up: RS80unitParts){
+            up.setId(null);
+            RS80kg.addPart(up);
+            up.setUnit(RS80kg);
+            unitPartRepo.save(up);
+        }
+
+//        snapRingUPRS5.setUnit(RS5kg);
+//        unitPartRepo.save(snapRingUPRS5)
 
 
     }

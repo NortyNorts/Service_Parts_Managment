@@ -1,6 +1,7 @@
 package com.codeclan.com.SparesPlanning.models;
 
 import lombok.*;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 
@@ -20,9 +21,11 @@ public class UnitPart {
 
     @ManyToOne
     @JoinColumn(name="unit_id")
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     private Unit unit;
 
     @ManyToOne
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @JoinColumn(name="part_id")
     private Part part;
 
