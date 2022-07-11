@@ -32,12 +32,11 @@ public class Part {
     @Column(name="PartNumber", nullable = false)
     private String partNumber;
 
+    //Move to unit part
     @Column(name="HoursRun")
     private int hoursRun;
 
-    @Column(name="ChangePart", nullable = false)
-    private boolean changePart;
-
+    //Move to unit part history
     @Column(name="LastChangedDate", nullable = false)
     private LocalDateTime lastChangedDate;
 
@@ -50,31 +49,27 @@ public class Part {
     @Column(name="Priority", nullable = false)
     private int priority;
 
+    //Move to unit part and rename to date installed
     @Column(name="GetDate")
     private LocalDate getDate;
 
-
-    @ManyToMany()
-//    @JsonIgnoreProperties({"parts"})
-    @JsonBackReference
+    // copy for unit part history
+    @JsonIgnoreProperties({"parts"})
+    //@JsonBackReference
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
-    @JoinTable(
-            name="units_parts",
-            joinColumns = {@JoinColumn(name="part_id", nullable = false, updatable = false)},
-            inverseJoinColumns = {@JoinColumn(name="unit_id", nullable = false, updatable = false)}
-    )
-    private List<Unit> units;
+    @OneToMany(mappedBy = "unit")
+    private List<UnitPart> unitParts;
 
 
-    @ManyToMany()
-    @JsonIgnoreProperties({"parts_history"})
-    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
-    @JoinTable(
-            name="units_parts_history",
-            joinColumns = {@JoinColumn(name="part_id", nullable = false, updatable = false)},
-            inverseJoinColumns = {@JoinColumn(name="unit_id", nullable = false, updatable = false)}
-    )
-    private List<Unit> units_history;
+//    @ManyToMany()
+//    @JsonIgnoreProperties({"parts_history"})
+//    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+//    @JoinTable(
+//            name="units_parts_history",
+//            joinColumns = {@JoinColumn(name="part_id", nullable = false, updatable = false)},
+//            inverseJoinColumns = {@JoinColumn(name="unit_id", nullable = false, updatable = false)}
+//    )
+//    private List<Unit> units_history;
 
     public Long getId() {
         return id;
@@ -89,19 +84,21 @@ public class Part {
         part1.setHoursRun(increase);
     }
 
-    public void checkPartChange(Unit unit1, Part part1) {
-        if (part1.getHoursRun() + unit1.getNextServiceHours() >= part1.changeByHour ||
-                ChronoUnit.MONTHS.between(part1.getLastChangedDate(), unit1.getNextServiceDate()) >= part1.getChangeByNumberOfMonths()){
-            part1.setChangePart(true);
-        }
-    }
+//    TODO: out this back refactored
+//    public void checkPartChange(Unit unit1, Part part1) {
+//        if (part1.getHoursRun() + unit1.getNextServiceHours() >= part1.changeByHour ||
+//                ChronoUnit.MONTHS.between(part1.getLastChangedDate(), unit1.getNextServiceDate()) >= part1.getChangeByNumberOfMonths()){
+//            part1.setChangePart(true);
+//        }
+//    }
 
     public void addUnit(Unit unit1) {
-        units.add(unit1);
+        //TODO rewrite
+       // units.add(unit1);
     }
 
     public void addUnitHistory(Unit unit1){
-        units_history.add(unit1);
+       // units_history.add(unit1);
     }
 }
 

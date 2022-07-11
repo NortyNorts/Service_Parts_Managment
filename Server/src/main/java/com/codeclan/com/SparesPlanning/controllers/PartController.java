@@ -1,8 +1,6 @@
 package com.codeclan.com.SparesPlanning.controllers;
 
-import com.codeclan.com.SparesPlanning.models.Customer;
 import com.codeclan.com.SparesPlanning.models.Part;
-import com.codeclan.com.SparesPlanning.models.Unit;
 import com.codeclan.com.SparesPlanning.repositories.PartRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,7 +16,7 @@ import java.util.List;
 public class PartController {
 
         @Autowired
-        PartRepo partRepo;
+        private PartRepo partRepo;
 
         //get all
         @GetMapping(value = "/parts")
@@ -37,7 +35,7 @@ public class PartController {
         public ResponseEntity<List<Part>> findPartsByUnitId(
                 //@PathVariable Long id,
                 @RequestParam(name="named") Long id) {
-                return new ResponseEntity<>(partRepo.findByUnits_Id(id), HttpStatus.OK);
+                return new ResponseEntity<>(partRepo.findByUnitParts_Id(id), HttpStatus.OK);
 
         }
 

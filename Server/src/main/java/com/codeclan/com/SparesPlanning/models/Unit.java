@@ -51,26 +51,27 @@ public class Unit {
     private int increasedRunHours;
 
 
-    @ManyToMany
+   // @ManyToMany
     @JsonIgnoreProperties({"unit"})
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
-    @JoinTable(
-            name="units_parts",
-            joinColumns = {@JoinColumn(name="unit_id", nullable = false, updatable = false)},
-            inverseJoinColumns = {@JoinColumn(name="part_id", nullable = false, updatable = false)}
-    )
-    private List<Part> parts;
+//    @JoinTable(
+//            name="units_parts",
+//            joinColumns = {@JoinColumn(name="unit_id", nullable = false, updatable = false)},
+//            inverseJoinColumns = {@JoinColumn(name="part_id", nullable = false, updatable = false)}
+//    )
+    @OneToMany(mappedBy = "part")
+    private List<UnitPart> unitParts;
 
 
-    @ManyToMany
-    @JsonIgnoreProperties({"unit_history"})
-    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
-    @JoinTable(
-            name="units_parts_history",
-            joinColumns = {@JoinColumn(name="unit_id", nullable = false, updatable = false)},
-            inverseJoinColumns = {@JoinColumn(name="part_id", nullable = false, updatable = false)}
-    )
-    private List<Part> parts_history;
+//    @ManyToMany
+//    @JsonIgnoreProperties({"unit_history"})
+//    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+//    @JoinTable(
+//            name="units_parts_history",
+//            joinColumns = {@JoinColumn(name="unit_id", nullable = false, updatable = false)},
+//            inverseJoinColumns = {@JoinColumn(name="part_id", nullable = false, updatable = false)}
+//    )
+//    private List<Part> parts_history;
 
 
 
@@ -88,11 +89,13 @@ public class Unit {
     }
 
     public void addPart(Part part1) {
-        parts.add(part1);
+        //TODO: look here
+      //  parts.add(part1);
     }
 
     public void addPartHistory(Part part1){
-        parts_history.add(part1);
+        //TODO: Put this back in
+       // parts_history.add(part1);
     }
 
     public void increaseHoursRun(int value, Unit unit1) {
