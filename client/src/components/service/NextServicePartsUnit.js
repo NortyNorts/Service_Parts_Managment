@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 
-const NextServiceParts = ({currentUserParts})=>{
+const NextServicePartsUnit = ({currentUnitParts})=>{
 
-    const filteredCustomersArray = currentUserParts.filter(part=>{
+    console.log(currentUnitParts)
+
+    const filteredCustomersArray = currentUnitParts.filter(part=>{
         if (part.changePart === true) {
             return true;
         }
@@ -47,4 +49,4 @@ const NextServiceParts = ({currentUserParts})=>{
     )
 }
 
-export default NextServiceParts
+export default NextServicePartsUnit

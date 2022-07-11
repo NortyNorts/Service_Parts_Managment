@@ -23,6 +23,7 @@ const ContractsCustomerListItem = ({customer, changeCustomer})=>{
                 <p>{customer.siteName}</p> 
                 <p>{customer.siteAddress}</p>
                 <p>{customer.sitePostCode}</p>
+                <p>Next service date: {customer.nextServiceDate}</p>
                 <p>Visits per year: {customer.engineerVisitsPerYear}</p>
         </>
     )

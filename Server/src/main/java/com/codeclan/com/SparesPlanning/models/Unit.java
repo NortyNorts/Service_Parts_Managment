@@ -36,13 +36,13 @@ public class Unit {
     private int hoursRun;
 
     @Column(name="DateInstalled", nullable = false)
-    private LocalDateTime dateInstalled;
+    private LocalDate dateInstalled;
 
     @Column(name="ExpectedRunHoursPerYear")
     private int expectedRunHoursPerYear;
 
     @Column(name="NextServiceDate")
-    private LocalDateTime nextServiceDate;
+    private LocalDate nextServiceDate;
 
     @Column(name="NextServiceHours")
     private int nextServiceHours;
@@ -106,7 +106,7 @@ public class Unit {
 
     public void changePart(Part part2) {
         part2.setHoursRun(0);
-        part2.setLastChangedDate(LocalDate.now().atStartOfDay());
+        part2.setLastChangedDate(LocalDate.now());
     }
 
     public void nextService(Customer customer1, Unit unit1) {

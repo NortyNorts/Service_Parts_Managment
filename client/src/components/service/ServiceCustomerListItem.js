@@ -17,12 +17,13 @@ const ServiceCustomerListItem = ({customer, changeCustomer})=>{
     return(
         <>
             <Link to ='/servicecustomerdetails' onClick={()=>handleOnClick(customer)}>
-                <h3>{customer.companyName}</h3>
+                <p>{customer.companyName}</p>
                 <p>{customer.siteName}</p> 
                 <p>{customer.siteAddress}</p>
                 <p>{customer.sitePostCode}</p>
                 <p>Visits per year: {customer.engineerVisitsPerYear}</p>
-                <h4>{customer.serviceState}</h4>
+                <p>Next service date: {customer.nextServiceDate}</p>
+                <p>{customer.serviceState}</p>
             </Link>
         </>
     )

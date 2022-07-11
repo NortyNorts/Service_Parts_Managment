@@ -21,6 +21,7 @@ public class CustomerController {
     //get all
     @GetMapping(value = "/customers")
     public List<Customer> getAllCustomers(){
+
         return customerRepo.findAll();
     }
 

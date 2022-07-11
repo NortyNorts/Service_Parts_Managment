@@ -12,4 +12,10 @@ public interface UnitPartRepo extends JpaRepository<UnitPart,Long> {
 
     List<UnitPart> findByChangePartTrueAndUnit_Customer_IdOrderByPart_PartNumberAsc(Long id);
 
+    List<UnitPart> findByUnit_Customer_IdOrderByPart_PartNumberAsc(Long id);
+
+    List<UnitPart> findByUnit_Id(Long id);
+
+
+
 }

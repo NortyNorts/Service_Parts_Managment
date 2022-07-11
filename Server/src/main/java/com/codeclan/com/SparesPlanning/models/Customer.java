@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,6 +41,9 @@ public class Customer{
 
     @Column(name="ServiceState", nullable = false)
     private String serviceState;
+
+    @Column(name="NextServiceDate")
+    private LocalDate nextServiceDate;
 
     @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
     @JsonIgnoreProperties({"customer"})

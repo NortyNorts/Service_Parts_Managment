@@ -17,15 +17,16 @@ import PartsForecast from './containers/PartsForecast';
 import CustomerPartsForecast from './components/contracts/CustomerPartsForecast';
 import BookService from './components/service/BookService';
 import NextServiceParts from './components/service/NextServiceParts';
-
-
+import PartsServices from './services/PartsServices';
+import NextServicePartsUnit from './components/service/NextServicePartsUnit';
 
 function App() {
 
   const [customers, setCustomers] = useState([])
   const [currentCustomer, setCurrentCustomer] = useState(null)
   const [currentUnit, setCurentUnit] = useState(null)
-  const [nextserviceparts, setNextServiceParts] = useState([])
+  const [currentUserParts, setCurrentUserParts] = useState([])
+  const [currentUnitParts, setCurentUnitParts] = useState([])
   
   
   const [units, setUnits] = useState([])
@@ -40,17 +41,19 @@ function App() {
 
   const changeCustomer = function(chosenCustomer){
     setCurrentCustomer(chosenCustomer)
+    PartsServices.getPartsByCustomer(chosenCustomer.id)
+    .then(parts=> setCurrentUserParts(parts));
   }
 
   const changeUnit = function(selectedUnit){
     setCurentUnit(selectedUnit)
+    getServiceParts(selectedUnit.id)
   }
-
-  // const print = function(currentCustomer){
-  //   if{
-  // true}
-  // }
-  
+    
+  const getServiceParts = function(id){
+    PartsServices.getUnitParts(id)
+    .then(parts=> setCurentUnitParts(parts))
+  }
 
   return (
     <>
@@ -100,12 +103,19 @@ function App() {
           <Route exact path ="/bookservice">
               <BookService
                 currentCustomer={currentCustomer}
+                currentUserParts={currentUserParts}
               />
           </Route>
 
           <Route exact path ="/nextserviceparts">
               <NextServiceParts
-                currentCustomer={currentCustomer}
+                currentUserParts={currentUserParts}
+              />
+          </Route>
+
+          <Route exact path ="/nextservicepartsunit">
+              <NextServicePartsUnit
+                currentUnitParts={currentUnitParts}
               />
           </Route>
 
@@ -133,12 +143,14 @@ function App() {
           <Route exact path="/serviceunitdetails">
             <ServiceUnitDetails
               currentUnit={currentUnit}
+              currentUnitParts={currentUnitParts}
             />
           </Route>
 
           <Route exact path="/contractsunitdetails">
             <ContractsUnitDetails
               currentUnit={currentUnit}
+              currentUnitParts={currentUnitParts}
             />
           </Route>
 
