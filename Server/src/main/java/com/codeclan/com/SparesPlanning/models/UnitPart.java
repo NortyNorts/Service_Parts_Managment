@@ -1,5 +1,6 @@
 package com.codeclan.com.SparesPlanning.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 import org.hibernate.annotations.Cascade;
 
@@ -21,10 +22,12 @@ public class UnitPart {
 
     @ManyToOne
     @JoinColumn(name="unit_id")
+    @JsonIgnoreProperties({"unitParts"})
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     private Unit unit;
 
     @ManyToOne
+    @JsonIgnoreProperties({"unitParts"})
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @JoinColumn(name="part_id")
     private Part part;
