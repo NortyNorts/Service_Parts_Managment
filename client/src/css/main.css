@@ -6,6 +6,9 @@
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
 }
 
 .main-links ul{
@@ -33,4 +36,33 @@
     color: white;
     display: block;
     text-decoration: none;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+.link-button >li{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: left;
+    border-radius: 10px;
+    margin-top:10px;
+    margin-left: 3px;
+    padding: 0px;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border: 0px;
+    text-align: center;
+}
+
+.link-button >li> a{
+    border-radius: 10px;
+    background: lightseagreen;
+    padding: 10px;
+    color: white;
+    display: block;
+    width: 275px;
 }

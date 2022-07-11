@@ -25,7 +25,7 @@ const NavBar = ({}) => {
 
                     <li><Link to='/service'> Service </Link></li>
 
-                    <button onClick={handleBackClick}>Back</button>
+                    <button onClick={handleBackClick} className={'button'}>Back</button>
                 </ul>
                 </div>
             </nav>

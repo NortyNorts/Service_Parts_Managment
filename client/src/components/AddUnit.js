@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import '../css/form.css'
 
 const AddUnit = (currentCustomer)=>{
     
@@ -85,7 +86,7 @@ const AddUnit = (currentCustomer)=>{
                 </div>
 
                 <div className="field">
-                    <label htmlFor="serialNumber">Serial Number:</label>
+                    <label htmlFor="serialNumber"></label>
                     <input 
                         type="text" 
                         placeholder="Serial Number"
@@ -96,7 +97,7 @@ const AddUnit = (currentCustomer)=>{
                 </div>
 
                 <div className="field">
-                    <label htmlFor="hoursRun">Hours Run:</label>
+                    <label htmlFor="hoursRun"></label>
                     <input 
                         type="number" 
                         placeholder=""
@@ -107,7 +108,7 @@ const AddUnit = (currentCustomer)=>{
                 </div>
 
                 <div className="field">
-                    <label htmlFor="expectedRunningHoursPerYear">Expected Running Hours Per Year:</label>
+                    <label htmlFor="expectedRunningHoursPerYear"></label>
                     <input 
                         type="number" 
                         placeholder=""
@@ -118,7 +119,7 @@ const AddUnit = (currentCustomer)=>{
                 </div>
 
                 <div className="field">
-                    <label htmlFor="dateInstalled">Date Installed:</label>
+                    <label htmlFor="dateInstalled"></label>
                     <input 
                         type="date" 
                         value={dateInstalled}
@@ -128,7 +129,7 @@ const AddUnit = (currentCustomer)=>{
                 </div>
 
                 <div className="field">
-                    <label htmlFor="nextServiceDate">Next Service Date:</label>
+                    <label htmlFor="nextServiceDate"></label>
                     <input 
                         type="date" 
                         value={nextServiceDate}

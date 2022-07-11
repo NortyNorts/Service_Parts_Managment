@@ -39,4 +39,32 @@
     color: dodgerblue;
     display: block;
     text-decoration: none;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+.button{
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    border-radius: 10px;
+    margin:0px;
+    padding: 0px;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.button{
+    border-radius: 10px;
+    background: white;
+    margin:0px;
+    padding: 15px;
+    color: dodgerblue;
+    display: block;
+    text-decoration: none;
 }

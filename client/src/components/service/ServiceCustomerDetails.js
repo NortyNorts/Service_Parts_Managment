@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
+import CustomersServices from "../../services/CustomersServices";
 import ServiceUnitListItem from "./ServiceUnitListItem";
+import '../../css/main.css'
 
 const ServiceCustomerDetails = ({currentCustomer, changeUnit})=>{
     
@@ -29,25 +31,35 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit})=>{
             return <ServiceUnitListItem value={index} unit={unit} changeUnit={changeUnit} key={index}/>
         })
 
+        const handleDeleteCustomer = ()=>{
+            CustomersServices.deleteCustomer(currentCustomer)
+        }
+
 
     return(
         <>
             <div className="link-button">
-            <Link to ='/nextserviceparts'>
-                <h3>Next Service Parts</h3>
-            </Link>
+              <li>
+                    <Link to ='/nextserviceparts' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                        Next Service Parts
+                    </Link>
+                </li>
             </div>
 
             <div className="link-button">
-            <Link to ='/bookservice'>
+            <Link to ='/bookservice' style={{ color: 'inherit', textDecoration: 'inherit'}}>
                 <h3>Book Service</h3>
             </Link>
             </div>
 
             <div className="link-button">
-            <Link to ='/addunit'>
+            <Link to ='/addunit' style={{ color: 'inherit', textDecoration: 'inherit'}}>
                 <h3>Add Unit</h3>
             </Link>
+            </div>
+
+            <div className="link-button">
+                <button onClick={handleDeleteCustomer}>Delete Customer</button>
             </div>
 
             <div className="search-bar">

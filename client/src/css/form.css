@@ -1,0 +1,65 @@
+.divform
+{
+    display: block;
+    text-align: center;
+}
+
+.form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.form{
+    width:200px;
+    padding:20px;
+    
+}
+
+input[type=text],[type=number]{
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+    border: 2px solid #eee;
+    margin:10px 0;
+    width: 400px;
+    font-size: 20px;
+}
+
+.delete input[type=submit]{
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+    border: 2px solid #eee;
+    margin:10px 0;
+    width: 300px;
+    background-color: lightcoral;
+    font-size: 20px;
+}
+
+input[type=submit]{
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+    border: 2px solid #eee;
+    margin:10px 0;
+    width: 425px;
+    background-color: lightgray;
+    font-size: 20px;
+}
+
+select {
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+    border: 2px solid #eee;
+    margin:10px 0;
+    width: 425px;
+    font-size: 20px;
+  }
