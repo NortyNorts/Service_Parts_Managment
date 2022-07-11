@@ -8,11 +8,19 @@ const CustomersServices = {
     },
 
   addCustomer(newCustomer){
-    console.log(newCustomer)
     return fetch(baseURL,{
     method:'POST',
     body: JSON.stringify(newCustomer),
     headers:{'Content-Type':'application/json'}
+    })
+    .then(res => res.json());
+  },
+
+  deleteCustomer(customer){
+    return fetch(baseURL,{
+      method:'DELETE',
+      body: JSON.stringify(customer),
+      headers:{'Content-Type':'application/json'}
     })
     .then(res => res.json());
   }

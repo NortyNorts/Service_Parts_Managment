@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import ContractsUnitListItem from "./ContractUnitListItem";
+import '../../css/main.css'
 
 const ContractsCustomerDetails = ({currentCustomer, changeUnit})=>{
 
@@ -34,21 +35,27 @@ const ContractsCustomerDetails = ({currentCustomer, changeUnit})=>{
     return(
         <>
             <div className="link-button">
-              <Link to ='/customerpartsforecast'>
-                  <h3>Customer Parts Forecast</h3>
-              </Link>
+              <li>
+                <Link to ='/customerpartsforecast'>
+                    Customer Parts Forecast
+                </Link>
+              </li>
             </div>
 
             <div className="link-button">
-            <Link to ='/nextserviceparts'>
-                <h3>Next Service Parts</h3>
-            </Link>
+              <li>
+                <Link to ='/nextserviceparts' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                  Next Service Parts
+                </Link>
+              </li>
             </div>
 
             <div className="link-button">
-            <Link to ='/addunit'>
-                <h3>Add Unit</h3>
-            </Link>
+              <li>
+                <Link to ='/addunit' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                    <h3>Add Unit</h3>
+                </Link>
+              </li>
             </div>
 
             <div className="search-bar">

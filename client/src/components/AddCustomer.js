@@ -1,13 +1,17 @@
 import React, {useState} from "react";
 import CustomersServices from "../services/CustomersServices";
+import { useHistory } from "react-router-dom";
+import '../css/form.css'
 
 const AddCustomer = ()=>{
+
+    const history = useHistory();
 
     const [companyName, setCompanyName] = useState("")
     const [siteName, setSiteName] = useState("")
     const [address, setAddress] = useState("")
     const [postCode, setPostCode] = useState("")
-    const [visitsPerYear, setVisitsPerYear] = useState(0)
+    const [visitsPerYear, setVisitsPerYear] = useState("")
 
     const handleCompanyNameChange = (event) =>{
         setCompanyName(event.target.value)
@@ -51,19 +55,20 @@ const AddCustomer = ()=>{
         setSiteName("");
         setAddress("");
         setPostCode("");
-        setVisitsPerYear(0);
+        setVisitsPerYear("");
         CustomersServices.addCustomer(newCustomerObject);
-        window.location.href='/contractscustomerssection';
+        history.goBack();
     }
 
     return(
         <>
             <h1>Add Customer</h1>
 
+            <div className="divform">
             <form onSubmit={handleCustomerSubmit}>
 
                 <div className="field">
-                    <label htmlFor="companyName">Company Name:</label>
+                    <label htmlFor="companyName"></label>
                     <input 
                         type="text"
                         placeholder="Company Name"
@@ -74,7 +79,7 @@ const AddCustomer = ()=>{
                 </div>
 
                 <div className="field">
-                    <label htmlFor="siteName">Site Name:</label>
+                    <label htmlFor="siteName"></label>
                     <input 
                         type="text" 
                         placeholder="Site Name"
@@ -85,7 +90,7 @@ const AddCustomer = ()=>{
                 </div>
 
                 <div className="field">
-                    <label htmlFor="address">Address:</label>
+                    <label htmlFor="address"></label>
                     <input 
                         type="text" 
                         placeholder="Site Address"
@@ -96,7 +101,7 @@ const AddCustomer = ()=>{
                 </div>
 
                 <div className="field">
-                    <label htmlFor="postCode">Postcode:</label>
+                    <label htmlFor="postCode"></label>
                     <input 
                         type="text"
                         placeholder="Site PostCode" 
@@ -107,10 +112,10 @@ const AddCustomer = ()=>{
                 </div>
 
                 <div className="field">
-                    <label htmlFor="visitsPerYear">Visits per year:</label>
+                    <label htmlFor="visitsPerYear"></label>
                     <input 
                         type="number" 
-                        placeholder=""
+                        placeholder="Visits per year"
                         value={visitsPerYear}
                         onChange={handleVisitsPerYearChange} 
                         required
@@ -120,6 +125,7 @@ const AddCustomer = ()=>{
                 <input type="submit" value={"Add Customer"}/>
 
             </form>
+            </div>
 
         </>
     )
