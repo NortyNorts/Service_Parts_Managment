@@ -4,7 +4,7 @@ import CustomersServices from "../../services/CustomersServices";
 import ServiceUnitListItem from "./ServiceUnitListItem";
 import '../../css/main.css'
 
-const ServiceCustomerDetails = ({currentCustomer, changeUnit})=>{
+const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction})=>{
     
     const [query, setQuery] = useState("")
 
@@ -35,6 +35,9 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit})=>{
             CustomersServices.deleteCustomer(currentCustomer)
         }
 
+        const handleBookServiceClick = ()=>{
+            changePartFunction(currentCustomer)
+        }
 
     return(
         <>
@@ -48,7 +51,7 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit})=>{
 
             <div className="link-button">
                 <li>
-                    <Link to ='/bookservice' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                    <Link to ='/bookservice' onClick={handleBookServiceClick} style={{ color: 'inherit', textDecoration: 'inherit'}}>
                         Book Service
                     </Link>
                 </li>

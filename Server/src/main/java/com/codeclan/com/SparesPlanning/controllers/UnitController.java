@@ -3,10 +3,13 @@ package com.codeclan.com.SparesPlanning.controllers;
 import com.codeclan.com.SparesPlanning.models.Customer;
 import com.codeclan.com.SparesPlanning.models.Part;
 import com.codeclan.com.SparesPlanning.models.Unit;
+import com.codeclan.com.SparesPlanning.models.UnitPart;
+import com.codeclan.com.SparesPlanning.repositories.UnitPartRepo;
 import com.codeclan.com.SparesPlanning.repositories.UnitRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.SerializationUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,6 +20,9 @@ public class UnitController {
 
     @Autowired
     UnitRepo unitRepo;
+
+    @Autowired
+    UnitPartRepo unitPartRepo;
 
     //get all
     @GetMapping(value = "/units")
@@ -31,10 +37,26 @@ public class UnitController {
     }
 
     //add one
-    @PostMapping(value="/units/{id}")
+    @PostMapping(value="/units")
     public ResponseEntity<Unit>postUnit(@RequestBody Unit unit){
-        unitRepo.save(unit);
-        return new ResponseEntity<>(unit, HttpStatus.CREATED);
+        try
+        {
+            unitRepo.save(unit);
+            List<UnitPart> defaultParts = unitPartRepo.findByUnit_UnitTypeAllIgnoreCase(unit.getUnitType());
+
+            for (UnitPart up: defaultParts){
+                UnitPart newPart = new UnitPart(up);
+                unit.addPart(newPart);
+                newPart.setUnit(unit);
+                unitPartRepo.save(newPart);
+            }
+            return new ResponseEntity<>(unit, HttpStatus.CREATED);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        }
     }
 
     //get all units by customer ID

@@ -38,7 +38,7 @@
     border-image: initial;
 }
 
-.link-button >li{
+.link-button >li {
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;

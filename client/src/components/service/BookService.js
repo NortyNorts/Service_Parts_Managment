@@ -5,9 +5,10 @@ import PartsServices from "../../services/PartsServices";
 const BookService = ({currentCustomer, currentUserParts, changePartFunction})=>{
 
     const handleChangePart = (part)=>{
-        console.log(part.id)
         PartsServices.changePart(part.id)
-        changePartFunction(part)
+        .then(()=>{
+            changePartFunction(currentCustomer)
+        })
     }
 
     const filteredCustomersArray = currentUserParts.filter(part=>{

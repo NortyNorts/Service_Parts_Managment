@@ -26,6 +26,7 @@ public class Unit {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    //TODO: add distinct on this column
     @Column(name="unitType", nullable = false)
     private String unitType;
 

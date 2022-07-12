@@ -40,10 +40,11 @@ function App() {
     .then(units=> setUnits(units));
   }, []);
 
+  
+
   const changePartFunction = (chosenCustomer)=>{
     PartsServices.getPartsByCustomer(chosenCustomer.id)
     .then(parts=> setCurrentUserParts(parts));
-    console.log("Change Part")
   }
 
   const changeCustomer = function(chosenCustomer){
@@ -145,6 +146,7 @@ function App() {
             <ServiceCustomerDetails
               currentCustomer={currentCustomer}
               changeUnit={changeUnit}
+              changePartFunction={changePartFunction}
             />
           </Route>
 

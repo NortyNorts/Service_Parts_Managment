@@ -44,14 +44,6 @@ const ContractsCustomerDetails = ({currentCustomer, changeUnit})=>{
 
             <div className="link-button">
               <li>
-                <Link to ='/nextserviceparts' style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                  Next Service Parts
-                </Link>
-              </li>
-            </div>
-
-            <div className="link-button">
-              <li>
                 <Link to ='/addunit' style={{ color: 'inherit', textDecoration: 'inherit'}}>
                     <h3>Add Unit</h3>
                 </Link>

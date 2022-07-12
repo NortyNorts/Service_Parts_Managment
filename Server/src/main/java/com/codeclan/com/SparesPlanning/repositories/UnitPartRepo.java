@@ -17,6 +17,10 @@ public interface UnitPartRepo extends JpaRepository<UnitPart,Long> {
 
     List<UnitPart> findByUnit_Id(Long id);
 
+    List<UnitPart> findByUnit_UnitTypeAllIgnoreCase(String unitType);
+
+
+
 
     @Override
     Optional<UnitPart> findById(Long aLong);
