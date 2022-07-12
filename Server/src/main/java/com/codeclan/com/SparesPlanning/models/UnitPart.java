@@ -34,4 +34,12 @@ public class UnitPart {
 
     @Column(name="change_part",columnDefinition = "boolean default false")
     private Boolean changePart = false;
+
+
+    //Special constructor for the clone WITHOUT an id
+    public UnitPart(UnitPart up) {
+        this.id = null;
+        this.unit = up.unit;
+        this.part = up.part;
+    }
 }
