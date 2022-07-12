@@ -7,6 +7,7 @@ import '../../css/main.css'
 const ServiceCustomerDetails = ({currentCustomer, changeUnit})=>{
     
     const [query, setQuery] = useState("")
+    const [disable, setDisable] = useState(false)
 
     const filteredUnitsArray = currentCustomer.units.filter(unit=>{
         if (query === '') {
@@ -33,6 +34,7 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit})=>{
 
         const handleDeleteCustomer = ()=>{
             CustomersServices.deleteCustomer(currentCustomer)
+            console.log("Delete customer")
         }
 
 
@@ -63,7 +65,7 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit})=>{
             </div>
 
             <div className="link-button">
-                <button onClick={handleDeleteCustomer}>Delete Customer</button>
+                <button disabled={disable} onClick={handleDeleteCustomer}{...() => setDisable(true)}>Delete Customer</button>
             </div>
 
             <div className="search-bar">
