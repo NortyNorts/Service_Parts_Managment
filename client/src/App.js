@@ -27,6 +27,7 @@ function App() {
   const [currentUnit, setCurentUnit] = useState(null)
   const [currentUserParts, setCurrentUserParts] = useState([])
   const [currentUnitParts, setCurentUnitParts] = useState([])
+  const [changePart, setChangePart] = useState(null)
   
   
   const [units, setUnits] = useState([])
@@ -38,6 +39,12 @@ function App() {
     UnitServices.getUnits()
     .then(units=> setUnits(units));
   }, []);
+
+  const changePartFunction = (chosenCustomer)=>{
+    PartsServices.getPartsByCustomer(chosenCustomer.id)
+    .then(parts=> setCurrentUserParts(parts));
+    console.log("Change Part")
+  }
 
   const changeCustomer = function(chosenCustomer){
     setCurrentCustomer(chosenCustomer)
@@ -104,6 +111,7 @@ function App() {
               <BookService
                 currentCustomer={currentCustomer}
                 currentUserParts={currentUserParts}
+                changePartFunction={changePartFunction}
               />
           </Route>
 

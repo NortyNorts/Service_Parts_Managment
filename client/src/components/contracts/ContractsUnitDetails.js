@@ -3,6 +3,9 @@ import '../../css/table.css'
 
 const ContractsUnitDetails = ({currentUnit, currentUnitParts})=>{
 
+    
+
+
     const tableData = currentUnitParts.map((part)=>{
         return(
         <tr className="styled-table">
