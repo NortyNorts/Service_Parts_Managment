@@ -1,14 +1,15 @@
 import React, {useState} from "react";
 import '../css/form.css'
+import UnitServices from "../services/UnitsServices";
 
-const AddUnit = (currentCustomer)=>{
+const AddUnit = ({currentCustomer})=>{
     
     const [unitType, setUnitType] = useState("")
     const [serialNumber, setSerialNumber] = useState("")
-    const [hoursRun, setHoursRun] = useState(0)
+    const [hoursRun, setHoursRun] = useState("")
     const [dateInstalled, setDateInstalled] = useState("")
-    const [expectedRunHoursPerYear, setExpectedRunHoursPerYear] = useState(0)
-    const [nextServiceDate, setNextServiceDate] = useState("")
+    const [expectedRunHoursPerYear, setExpectedRunHoursPerYear] = useState("")
+    // const [nextServiceDate, setNextServiceDate] = useState("")
 
 
     const handleUnitTypeChange = (event) =>{
@@ -31,9 +32,9 @@ const AddUnit = (currentCustomer)=>{
         setExpectedRunHoursPerYear(event.target.value)
     };
 
-    const handleNextServiceDateChange = (event) =>{
-        setNextServiceDate(event.target.value)
-    };
+    // const handleNextServiceDateChange = (event) =>{
+    //     setNextServiceDate(event.target.value)
+    // };
 
     const handleCustomerSubmit = (event) => {
         event.preventDefault();
@@ -48,17 +49,20 @@ const AddUnit = (currentCustomer)=>{
             hoursRun: hoursRun,
             dateInstalled: dateInstalled,
             expectedRunHoursPerYear: expectedRunHoursPerYear,
-            nextServiceDate: nextServiceDate,
-            customer: currentCustomer.currentCustomer.id //
+            nextServiceDate: currentCustomer.nextServiceDate,
+            customer: currentCustomer,
+            nextServiceHours: (expectedRunHoursPerYear/currentCustomer.engineerVisitsPerYear),
+            unitParts: [],
+            increasedRunHours: 0
+
           }
         setUnitType("");
         setSerialNumber("");
-        setHoursRun(0);
+        setHoursRun("");
         setDateInstalled("");
-        setExpectedRunHoursPerYear(0);
-        setNextServiceDate("");
+        setExpectedRunHoursPerYear("");
         console.log(newUnitObject)
-        //addUnit(newUnitObject)
+        UnitServices.addUnit(newUnitObject)
     }
 
     return(
@@ -100,7 +104,7 @@ const AddUnit = (currentCustomer)=>{
                     <label htmlFor="hoursRun"></label>
                     <input 
                         type="number" 
-                        placeholder=""
+                        placeholder="Total Unit Running Hours"
                         value={hoursRun}
                         onChange={handleHoursRunChange}
                         required
@@ -111,7 +115,7 @@ const AddUnit = (currentCustomer)=>{
                     <label htmlFor="expectedRunningHoursPerYear"></label>
                     <input 
                         type="number" 
-                        placeholder=""
+                        placeholder="Expected Running Hours"
                         value={expectedRunHoursPerYear}
                         onChange={handleExpectedRunHoursPerYearChange}
                         required
@@ -119,21 +123,11 @@ const AddUnit = (currentCustomer)=>{
                 </div>
 
                 <div className="field">
-                    <label htmlFor="dateInstalled"></label>
+                    <label htmlFor="dateInstalled">Date Installed</label>
                     <input 
                         type="date" 
                         value={dateInstalled}
                         onChange={handleDateInstalledChange}
-                        required
-                    />
-                </div>
-
-                <div className="field">
-                    <label htmlFor="nextServiceDate"></label>
-                    <input 
-                        type="date" 
-                        value={nextServiceDate}
-                        onChange={handleNextServiceDateChange}
                         required
                     />
                 </div>

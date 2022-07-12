@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 
 const ServiceUnitDetails = ({currentUnit, currentUnitParts})=>{
 
+    const handleUpdatePart = (part)=>{
+        console.log(part)
+    }
+
+
     const tableData = currentUnitParts.map((part)=>{
         return(
         <tr className="styled-table">
@@ -12,6 +17,7 @@ const ServiceUnitDetails = ({currentUnit, currentUnitParts})=>{
             <td>{part.part.changeByHour}</td>
             <td>{part.part.lastChangedDate}</td>
             <td>{part.part.changeByNumberOfMonths}</td>
+            <td><button onClick={() => handleUpdatePart(part)}>Update Part</button></td>
         </tr>
     )
     })

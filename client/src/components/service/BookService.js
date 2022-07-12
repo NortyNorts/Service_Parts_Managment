@@ -1,7 +1,14 @@
 import React from "react";
 import '../../css/bookservice.css'
+import PartsServices from "../../services/PartsServices";
 
-const BookService = ({currentCustomer, currentUserParts})=>{
+const BookService = ({currentCustomer, currentUserParts, changePartFunction})=>{
+
+    const handleChangePart = (part)=>{
+        console.log(part.id)
+        PartsServices.changePart(part.id)
+        changePartFunction(part)
+    }
 
     const filteredCustomersArray = currentUserParts.filter(part=>{
         if (part.changePart === true) {
@@ -9,9 +16,7 @@ const BookService = ({currentCustomer, currentUserParts})=>{
         }
         else if(part.changePart === false){
             return false;
-        }
-        
-
+        } 
     })
 
     const tableData = filteredCustomersArray.map((part)=>{
@@ -23,6 +28,7 @@ const BookService = ({currentCustomer, currentUserParts})=>{
             <td>{part.part.changeByHour}</td>
             <td>{part.part.lastChangedDate}</td>
             <td>{part.part.changeByNumberOfMonths}</td>
+            <td><button onClick={() => handleChangePart(part)}>Change Part</button></td>
         </tr>
     )
     })
@@ -34,9 +40,9 @@ const BookService = ({currentCustomer, currentUserParts})=>{
     return(
         <>
                 <ul>
-                    <button>Additional parts</button>
+                    {/* <button>Additional parts</button> */}
                 
-                    <button onClick={confirmService}>Confirm Parts and Book Service</button>
+                    <button onClick={confirmService}>Complete Service</button>
 
                 </ul>
 

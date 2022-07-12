@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class UnitController {
@@ -30,7 +31,7 @@ public class UnitController {
     }
 
     //add one
-    @PostMapping(value="/units")
+    @PostMapping(value="/units/{id}")
     public ResponseEntity<Unit>postUnit(@RequestBody Unit unit){
         unitRepo.save(unit);
         return new ResponseEntity<>(unit, HttpStatus.CREATED);

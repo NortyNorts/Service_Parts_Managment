@@ -13,6 +13,14 @@ const PartsServices = {
             
     },
 
+    changePart(partId){
+        return fetch(baseURL + '/changepart/' + partId,{
+        method:'POST',
+        body: JSON.stringify(),
+        headers:{'Content-Type':'application/json'}
+        })
+        .then(res => res.json());
+      },
 }
 
 export default PartsServices;
