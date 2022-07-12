@@ -19,7 +19,7 @@ const PartsServices = {
         body: JSON.stringify(),
         headers:{'Content-Type':'application/json'}
         })
-        .then(res => res.json());
+        // .then(res => res.json());
       },
 }
 
