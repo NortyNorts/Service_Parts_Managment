@@ -59,6 +59,17 @@ public class UnitController {
         }
     }
 
+    //add one
+    @PostMapping(value="/units/updaterunhours")
+    public ResponseEntity<Unit>postCustomer(@RequestBody Unit unit){
+        List<UnitPart> partsList = unitPartRepo.findByUnit_Id(unit.getId());
+        for(UnitPart uh: partsList){
+            uh.increaseHoursRun(unit, uh);
+        }
+        unitRepo.save(unit);
+        return new ResponseEntity<>(unit, HttpStatus.CREATED);
+    }
+
     //get all units by customer ID
 //    @GetMapping(value = "/units/customers/{id}")
 //    public ResponseEntity<List<Unit>> findUnitsByCustomerId(

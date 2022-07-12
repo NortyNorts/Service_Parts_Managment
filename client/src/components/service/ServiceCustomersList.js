@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import ServiceCustomerListItem from "./ServiceCustomerListItem"
 
 
-const ServiceCustomerList = ({customers, changeCustomer})=>{
+const ServiceCustomerList = ({customers, changeCustomer, changeUnit})=>{
 
     const [query, setQuery] = useState("")
 
@@ -34,7 +34,7 @@ const ServiceCustomerList = ({customers, changeCustomer})=>{
       
 
         const customersComponents = filteredCustomersArray.map((customer, index)=>{
-            return <ServiceCustomerListItem value={index} customer={customer} changeCustomer={changeCustomer} key={index}/>
+            return <ServiceCustomerListItem value={index} customer={customer} changeCustomer={changeCustomer} key={index} changeUnit={changeUnit}/>
         })
 
 

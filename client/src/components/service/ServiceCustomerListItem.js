@@ -2,7 +2,7 @@ import React from "react"
 import {Link} from 'react-router-dom'
 import '../../css/servicecustomerlist.css';
 
-const ServiceCustomerListItem = ({customer, changeCustomer})=>{
+const ServiceCustomerListItem = ({customer, changeCustomer, changeUnit})=>{
 
 
     const handleOnClick = function(value){
@@ -13,6 +13,7 @@ const ServiceCustomerListItem = ({customer, changeCustomer})=>{
 
     const onCustomerSelect = function(selectedCustomer){
         changeCustomer(selectedCustomer)
+        changeUnit(selectedCustomer.units[1])
     }
 
     return(
@@ -34,13 +35,13 @@ const ServiceCustomerListItem = ({customer, changeCustomer})=>{
         <div className="servicecustomerlistitem">
             <Link to ='/servicecustomerdetails' onClick={()=>handleOnClick(customer)}>
                 <h3>{customer.companyName}</h3>
-            </Link>
                 <p>{customer.siteName}</p> 
                 <p>{customer.siteAddress}</p>
                 <p>{customer.sitePostCode}</p>
                 <p>Next service date: {customer.nextServiceDate}</p>
                 <p>Visits per year: {customer.engineerVisitsPerYear}</p>
                 <p>{customer.serviceState}</p>
+            </Link>
         </div>
         </>
     )

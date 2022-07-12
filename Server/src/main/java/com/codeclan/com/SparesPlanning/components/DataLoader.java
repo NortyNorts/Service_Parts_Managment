@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@Component
+//@Component
 public class DataLoader implements ApplicationRunner {
 
     @Autowired
@@ -41,7 +41,7 @@ public class DataLoader implements ApplicationRunner {
 
         //Add five random customers
 
-        Customer codeClan = Customer
+        Customer serviceSpecialists = Customer
                 .builder()
                 .companyName("Service Specialists")
                 .siteName("CodeClan")
@@ -52,9 +52,9 @@ public class DataLoader implements ApplicationRunner {
                 .nextServiceDate(LocalDate.of(2022, 8, 01))
                 .build();
 
-        Customer jerrys = Customer
+        Customer engineeringMaintenance = Customer
                 .builder()
-                .companyName("Servest")
+                .companyName("Engineering Maintenance")
                 .siteName("Jerry's Cigar Shop")
                 .engineerVisitsPerYear(4)
                 .siteAddress("1 Royal Mile")
@@ -63,9 +63,9 @@ public class DataLoader implements ApplicationRunner {
                 .nextServiceDate(LocalDate.of(2022, 8, 01))
                 .build();
 
-        Customer chanter = Customer
+        Customer fes = Customer
                 .builder()
-                .companyName("Service Specialists")
+                .companyName("FES")
                 .siteName("The Chanter")
                 .engineerVisitsPerYear(1)
                 .siteAddress("30 Bread Street")
@@ -74,49 +74,49 @@ public class DataLoader implements ApplicationRunner {
                 .nextServiceDate(LocalDate.of(2022, 12, 01))
                 .build();
 
-        Customer sainsburys = Customer
-                .builder()
-                .companyName("Sainsburys")
-                .siteName("Sainsburys")
-                .engineerVisitsPerYear(2)
-                .siteAddress("102 West Port")
-                .sitePostCode("EH3 9HS")
-                .serviceState("Awaiting Service Booking")
-                .nextServiceDate(LocalDate.of(2023, 12, 01))
-                .build();
+//        Customer sainsburys = Customer
+//                .builder()
+//                .companyName("Sainsburys")
+//                .siteName("Sainsburys")
+//                .engineerVisitsPerYear(2)
+//                .siteAddress("102 West Port")
+//                .sitePostCode("EH3 9HS")
+//                .serviceState("Awaiting Service Booking")
+//                .nextServiceDate(LocalDate.of(2023, 12, 01))
+//                .build();
 
-        Customer edinburghFilmhouse = Customer
-                .builder()
-                .companyName("Servest")
-                .siteName("Edinburgh Filmhouse")
-                .engineerVisitsPerYear(3)
-                .siteAddress("88 Lothian Road")
-                .sitePostCode("EH3 9BZ")
-                .serviceState("Awaiting Service Booking")
-                .nextServiceDate(LocalDate.of(2023, 12, 01))
-                .build();
+//        Customer edinburghFilmhouse = Customer
+//                .builder()
+//                .companyName("Servest")
+//                .siteName("Edinburgh Filmhouse")
+//                .engineerVisitsPerYear(3)
+//                .siteAddress("88 Lothian Road")
+//                .sitePostCode("EH3 9BZ")
+//                .serviceState("Awaiting Service Booking")
+//                .nextServiceDate(LocalDate.of(2023, 12, 01))
+//                .build();
 
-        Customer hangingBat = Customer
-                .builder()
-                .companyName("Service Group")
-                .siteName("The Hanging Bat")
-                .engineerVisitsPerYear(4)
-                .siteAddress("133 Lothian Road")
-                .sitePostCode("EH3 9AB")
-                .serviceState("Awaiting Service Booking")
-                .nextServiceDate(LocalDate.of(2023, 02, 01))
-                .build();
+//        Customer hangingBat = Customer
+//                .builder()
+//                .companyName("Service Group")
+//                .siteName("The Hanging Bat")
+//                .engineerVisitsPerYear(4)
+//                .siteAddress("133 Lothian Road")
+//                .sitePostCode("EH3 9AB")
+//                .serviceState("Awaiting Service Booking")
+//                .nextServiceDate(LocalDate.of(2023, 02, 01))
+//                .build();
 
-        Customer codeBase = Customer
-                .builder()
-                .companyName("CodeBase")
-                .siteName("CodeBase")
-                .engineerVisitsPerYear(1)
-                .siteAddress("37a Castle Terrace")
-                .sitePostCode("EH1 2EL")
-                .serviceState("Service Booked")
-                .nextServiceDate(LocalDate.of(2023, 02, 01))
-                .build();
+//        Customer codeBase = Customer
+//                .builder()
+//                .companyName("CodeBase")
+//                .siteName("CodeBase")
+//                .engineerVisitsPerYear(1)
+//                .siteAddress("37a Castle Terrace")
+//                .sitePostCode("EH1 2EL")
+//                .serviceState("Service Booked")
+//                .nextServiceDate(LocalDate.of(2023, 02, 01))
+//                .build();
 
         Part snapRing = Part
                 .builder()
@@ -692,8 +692,8 @@ public class DataLoader implements ApplicationRunner {
                 .hoursRun(0)
                 .dateInstalled(LocalDate.of(2020, 5, 17))
                 .expectedRunHoursPerYear(1000)
-                .nextServiceDate(codeClan.getNextServiceDate())
-                .customer(codeClan)
+                .nextServiceDate(fes.getNextServiceDate())
+                .customer(fes)
                 .unitParts(new ArrayList<>())
                 //.parts_history(new ArrayList<>())
                 .build();
@@ -705,8 +705,8 @@ public class DataLoader implements ApplicationRunner {
                 .hoursRun(0)
                 .dateInstalled(LocalDate.of(2020, 5, 17))
                 .expectedRunHoursPerYear(1000)
-                .nextServiceDate(jerrys.getNextServiceDate())
-                .customer(jerrys)
+                .nextServiceDate(fes.getNextServiceDate())
+                .customer(fes)
                 .unitParts(new ArrayList<>())
                 //.parts_history(new ArrayList<>())
                 .build();
@@ -718,8 +718,8 @@ public class DataLoader implements ApplicationRunner {
                 .hoursRun(0)
                 .dateInstalled(LocalDate.of(2020, 5, 17))
                 .expectedRunHoursPerYear(1000)
-                .nextServiceDate(chanter.getNextServiceDate())
-                .customer(chanter)
+                .nextServiceDate(engineeringMaintenance.getNextServiceDate())
+                .customer(engineeringMaintenance)
                 .unitParts(new ArrayList<>())
                 //.parts_history(new ArrayList<>())
                 .build();
@@ -731,8 +731,8 @@ public class DataLoader implements ApplicationRunner {
                 .hoursRun(0)
                 .dateInstalled(LocalDate.of(2020, 5, 17))
                 .expectedRunHoursPerYear(1000)
-                .nextServiceDate(sainsburys.getNextServiceDate())
-                .customer(sainsburys)
+                .nextServiceDate(serviceSpecialists.getNextServiceDate())
+                .customer(serviceSpecialists)
                 .unitParts(new ArrayList<>())
                 //.parts_history(new ArrayList<>())
                 .build();
@@ -744,8 +744,8 @@ public class DataLoader implements ApplicationRunner {
                 .hoursRun(0)
                 .dateInstalled(LocalDate.of(2020, 5, 17))
                 .expectedRunHoursPerYear((1000))
-                .nextServiceDate(edinburghFilmhouse.getNextServiceDate())
-                .customer(edinburghFilmhouse)
+                .nextServiceDate(serviceSpecialists.getNextServiceDate())
+                .customer(serviceSpecialists)
                 .unitParts(new ArrayList<>())
                 //.parts_history(new ArrayList<>())
                 .build();
@@ -757,8 +757,8 @@ public class DataLoader implements ApplicationRunner {
                 .hoursRun(0)
                 .dateInstalled(LocalDate.of(2020, 5, 17))
                 .expectedRunHoursPerYear((1000))
-                .nextServiceDate(hangingBat.getNextServiceDate())
-                .customer(hangingBat)
+                .nextServiceDate(engineeringMaintenance.getNextServiceDate())
+                .customer(engineeringMaintenance)
                 .unitParts(new ArrayList<>())
                 //.parts_history(new ArrayList<>())
                 .build();
@@ -770,8 +770,8 @@ public class DataLoader implements ApplicationRunner {
                 .hoursRun(0)
                 .dateInstalled(LocalDate.of(2020, 5, 17))
                 .expectedRunHoursPerYear((1000))
-                .nextServiceDate(hangingBat.getNextServiceDate())
-                .customer(hangingBat)
+                .nextServiceDate(fes.getNextServiceDate())
+                .customer(fes)
                 .unitParts(new ArrayList<>())
                 //.parts_history(new ArrayList<>())
                 .build();
@@ -779,13 +779,13 @@ public class DataLoader implements ApplicationRunner {
 
 
 
-        customerRepo.save(codeClan);
-        customerRepo.save(jerrys);
-        customerRepo.save(chanter);
-        customerRepo.save(sainsburys);
-        customerRepo.save(edinburghFilmhouse);
-        customerRepo.save(hangingBat);
-        customerRepo.save(codeBase);
+        customerRepo.save(fes);
+        customerRepo.save(engineeringMaintenance);
+        customerRepo.save(serviceSpecialists);
+//        customerRepo.save(sainsburys);
+//        customerRepo.save(edinburghFilmhouse);
+//        customerRepo.save(hangingBat);
+//        customerRepo.save(codeBase);
 
         partRepo.save(snapRing);
         partRepo.save(sealingSetForTank);

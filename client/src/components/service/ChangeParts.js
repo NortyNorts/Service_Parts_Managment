@@ -2,7 +2,8 @@ import React from "react";
 import '../../css/bookservice.css'
 import PartsServices from "../../services/PartsServices";
 
-const BookService = ({currentCustomer, currentUserParts, changePartFunction})=>{
+
+const ChangeParts = ({currentCustomer, currentUserParts, changePartFunction})=>{
 
     const handleChangePart = (part)=>{
         PartsServices.changePart(part.id)
@@ -66,4 +67,4 @@ const BookService = ({currentCustomer, currentUserParts, changePartFunction})=>{
     )
 }
 
-export default BookService
+export default ChangeParts

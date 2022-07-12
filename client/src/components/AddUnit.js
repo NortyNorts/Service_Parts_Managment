@@ -61,7 +61,6 @@ const AddUnit = ({currentCustomer})=>{
         setHoursRun("");
         setDateInstalled("");
         setExpectedRunHoursPerYear("");
-        console.log(newUnitObject)
         UnitServices.addUnit(newUnitObject)
     }
 
