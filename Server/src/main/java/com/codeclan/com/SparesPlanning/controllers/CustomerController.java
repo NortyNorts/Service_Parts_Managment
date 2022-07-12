@@ -70,6 +70,11 @@ public class CustomerController {
         return new ResponseEntity(customerRepo.save(customer),HttpStatus.OK);
     }
 
+//    @RequestMapping(value="/deletecustomer/{id}", method=RequestMethod.DELETE)
+//    public void deleteCustomer(@PathVariable("id") Long id){
+//        customerRepo.deleteById(id);
+//    }
+
     @DeleteMapping(value="/deletecustomer/{id}")
     public ResponseEntity<Customer> deleteCustomer (@PathVariable Long id){
         try {
@@ -80,4 +85,6 @@ public class CustomerController {
             return new ResponseEntity("Customer NOT Deleted", HttpStatus.I_AM_A_TEAPOT);
         }
     }
+
+
 }
