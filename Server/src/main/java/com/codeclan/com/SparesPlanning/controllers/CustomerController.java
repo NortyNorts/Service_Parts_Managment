@@ -1,6 +1,8 @@
 package com.codeclan.com.SparesPlanning.controllers;
 
 import com.codeclan.com.SparesPlanning.models.Customer;
+import com.codeclan.com.SparesPlanning.models.Unit;
+import com.codeclan.com.SparesPlanning.models.UnitPart;
 import com.codeclan.com.SparesPlanning.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class CustomerController {
@@ -17,6 +20,9 @@ public class CustomerController {
 
     @Autowired
     UnitPartRepo unitPartRepo;
+
+    @Autowired
+    UnitRepo unitRepo;
 
     //get all
     @GetMapping(value = "/customers")
@@ -38,21 +44,6 @@ public class CustomerController {
         return new ResponseEntity<>(customer, HttpStatus.CREATED);
     }
 
-    //find one by unit serial number
-//    @GetMapping(value="/customers/{customerId}/units"){
-//        public ResponseEntity<List<Unit>> getUnitsForCustomer(PathVariable)
-//    }
-
-//    @PatchMapping("/customer/{id}")
-//    public ResponseEntity<Customer> updateUserPartially(
-//            @PathVariable(value = "id") Long id,
-//            @RequestBody Customer customerDetails){
-//        Customer customer = customerRepo.findById(id).orElseThrow();
-//        customer.setServiceState(customerDetails.getServiceState());
-//        final Customer updatedUser = customerRepo.save(customer);
-//        return ResponseEntity.ok(updatedUser);
-//    }
-
     //get all parts by unitchange
     @GetMapping(value="/customerspartstochange/{id}")
     public ResponseEntity<List<Customer>>banana(@PathVariable Long id){
@@ -70,9 +61,15 @@ public class CustomerController {
         return new ResponseEntity(customerRepo.save(customer),HttpStatus.OK);
     }
 
-    @DeleteMapping(value="/deletecustomer/{id}")
+    @PostMapping(value="/deletecustomer/{id}")
     public ResponseEntity<Customer> deleteCustomer (@PathVariable Long id){
         try {
+            List<UnitPart> unitParts = unitPartRepo.findByUnit_Customer_Id(id);
+            //List<Unit> customerUnits = unitParts.get(0).
+            for(UnitPart up : unitParts){
+                unitPartRepo.deleteById(up.getId());
+            }
+            //TODO: remove unit here
             customerRepo.deleteById(id);
             return new ResponseEntity("Deleted Successfully", HttpStatus.OK);
         }

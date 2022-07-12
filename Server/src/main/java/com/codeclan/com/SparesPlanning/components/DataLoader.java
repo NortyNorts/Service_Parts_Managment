@@ -122,14 +122,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Snap Ring")
                 .partNumber("DF1115497")
-                .hoursRun(0)
                 .changeByHour(2500)
                 .changeByNumberOfMonths(12)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(1)
                 .unitParts(new ArrayList<>())
                 ////.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart snapRingUP = new UnitPart();
@@ -145,14 +142,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Sealing set for tank")
                 .partNumber("RS2599191")
-                .hoursRun(0)
                 .changeByHour(2500)
                 .changeByNumberOfMonths(12)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(1)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart sealingSetForTankUP = new UnitPart();
@@ -162,14 +156,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Scale collector And connection ring")
                 .partNumber("RS2599233")
-                .hoursRun(0)
                 .changeByHour(5000)
                 .changeByNumberOfMonths(36)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(3)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart scaleCollectorAndConnectionRingUP = new UnitPart();
@@ -180,14 +171,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Tank gasket")
                 .partNumber("DF1101516")
-                .hoursRun(0)
                 .changeByHour(5000)
                 .changeByNumberOfMonths(24)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(1)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart tankGasketUP = new UnitPart();
@@ -198,14 +186,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Tank gasket 16-40")
                 .partNumber("1100966")
-                .hoursRun(0)
                 .changeByHour(5000)
                 .changeByNumberOfMonths(12)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(1)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart tankGasket1640UP = new UnitPart();
@@ -216,14 +201,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Collector foil")
                 .partNumber("RS2579858")
-                .hoursRun(0)
                 .changeByHour(2500)
                 .changeByNumberOfMonths(12)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(1)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart collectorFoilUP = new UnitPart();
@@ -234,14 +216,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Collector foil 16-40")
                 .partNumber("DF1119796")
-                .hoursRun(0)
                 .changeByHour(20000)
                 .changeByNumberOfMonths(36)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(2)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart collectorFoil1640UP = new UnitPart();
@@ -252,14 +231,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Steam outlet hose")
                 .partNumber("RS2579820")
-                .hoursRun(0)
                 .changeByHour(5000)
                 .changeByNumberOfMonths(12)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(1)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart steamOutletHoseUP = new UnitPart();
@@ -270,14 +246,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Hose set for level control")
                 .partNumber("RS2579888")
-                .hoursRun(0)
                 .changeByHour(5000)
                 .changeByNumberOfMonths(24)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(3)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart hoseSetForLevelControlUP = new UnitPart();
@@ -288,14 +261,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Hose set for level control 16-40")
                 .partNumber("RS2579899")
-                .hoursRun(0)
                 .changeByHour(20000)
                 .changeByNumberOfMonths(36)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(1)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart hoseSetForLevelControl1640UP = new UnitPart();
@@ -306,14 +276,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Float assembly")
                 .partNumber("RS2579882")
-                .hoursRun(0)
                 .changeByHour(10000)
                 .changeByNumberOfMonths(24)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(3)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart floatAssemblyUP = new UnitPart();
@@ -324,14 +291,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Steam hose nipple")
                 .partNumber("RS2579893")
-                .hoursRun(0)
                 .changeByHour(10000)
                 .changeByNumberOfMonths(36)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(2)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart steamHoseNippleUP = new UnitPart();
@@ -342,14 +306,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Cylinder insert with foil")
                 .partNumber("2579856")
-                .hoursRun(0)
                 .changeByHour(10000)
                 .changeByNumberOfMonths(36)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(2)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart cylinderInsertWithFoilUP = new UnitPart();
@@ -360,14 +321,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Cylinder insert with foil 16-40")
                 .partNumber("2557692")
-                .hoursRun(0)
                 .changeByHour(10000)
                 .changeByNumberOfMonths(24)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(3)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart cylinderInsertWithFoil1640UP = new UnitPart();
@@ -378,14 +336,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Main Contactor 25A")
                 .partNumber("1115507")
-                .hoursRun(0)
                 .changeByHour(10000)
                 .changeByNumberOfMonths(36)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(1)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart mainContactor25AUP = new UnitPart();
@@ -396,14 +351,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Main Contactor 32A")
                 .partNumber("1115509")
-                .hoursRun(0)
                 .changeByHour(10000)
                 .changeByNumberOfMonths(36)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(2)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart mainContactor32AUP = new UnitPart();
@@ -414,14 +366,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Main Contactor 50A")
                 .partNumber("1115511")
-                .hoursRun(0)
                 .changeByHour(10000)
                 .changeByNumberOfMonths(36)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(2)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart mainContactor50AUP = new UnitPart();
@@ -432,14 +381,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Main Contactor 80A")
                 .partNumber("1117502")
-                .hoursRun(0)
                 .changeByHour(10000)
                 .changeByNumberOfMonths(36)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(2)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart mainContactor80AUP = new UnitPart();
@@ -450,14 +396,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Inlet Valve")
                 .partNumber("2579874")
-                .hoursRun(0)
                 .changeByHour(20000)
                 .changeByNumberOfMonths(24)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(2)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart inletValveUP = new UnitPart();
@@ -468,14 +411,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Inlet Valve 16-40")
                 .partNumber("2579875")
-                .hoursRun(0)
                 .changeByHour(20000)
                 .changeByNumberOfMonths(24)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(2)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart inletValve1640UP = new UnitPart();
@@ -486,14 +426,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Water cup cpl.")
                 .partNumber("2579884")
-                .hoursRun(0)
                 .changeByHour(20000)
                 .changeByNumberOfMonths(36)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(3)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart waterCupCplUP = new UnitPart();
@@ -504,14 +441,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Hose set for drain pump")
                 .partNumber("2579887")
-                .hoursRun(0)
                 .changeByHour(20000)
                 .changeByNumberOfMonths(36)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(3)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart hoseSetForDrainPumpUP = new UnitPart();
@@ -522,14 +456,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Hose set for drain pump 16-40")
                 .partNumber("2579898")
-                .hoursRun(0)
                 .changeByHour(20000)
                 .changeByNumberOfMonths(36)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(3)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart hoseSetForDrainPump1640UP = new UnitPart();
@@ -540,14 +471,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Hose set for inlet and drain")
                 .partNumber("2579885")
-                .hoursRun(0)
                 .changeByHour(20000)
                 .changeByNumberOfMonths(36)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(3)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart hoseSetForInletAndDrainUP = new UnitPart();
@@ -558,14 +486,11 @@ public class DataLoader implements ApplicationRunner {
                 .builder()
                 .partName("Hose set for inlet and drain 16-40")
                 .partNumber("2579896")
-                .hoursRun(0)
                 .changeByHour(20000)
                 .changeByNumberOfMonths(36)
-                .lastChangedDate(LocalDate.of(2020, 06, 03))
                 .priority(3)
                 .unitParts(new ArrayList<>())
                 //.units_history(new ArrayList<>())
-                .getDate(LocalDate.now())
                 .build();
 
         UnitPart hoseSetForInletAndDrain1640UP = new UnitPart();

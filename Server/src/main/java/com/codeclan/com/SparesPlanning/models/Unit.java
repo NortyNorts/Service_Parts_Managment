@@ -105,10 +105,10 @@ public class Unit {
         unit1.setHoursRun(value);
     }
 
-    public void changePart(Part part2) {
-        part2.setHoursRun(0);
-        part2.setLastChangedDate(LocalDate.now());
-    }
+//    public void changePart(Part part2) {
+//        part2.setHoursRun(0);
+//        part2.setLastChangedDate(LocalDate.now());
+//    }
 
     public void nextService(Customer customer1, Unit unit1) {
         int hoursNextVisit = unit1.getExpectedRunHoursPerYear() / customer1.getEngineerVisitsPerYear();

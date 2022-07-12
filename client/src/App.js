@@ -38,7 +38,7 @@ function App() {
     .then(customers => setCustomers(customers));
     UnitServices.getUnits()
     .then(units=> setUnits(units));
-  }, []);
+  }, [customers]);
 
   
 
