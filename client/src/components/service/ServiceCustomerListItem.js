@@ -1,5 +1,6 @@
 import React from "react"
 import {Link} from 'react-router-dom'
+import '../../css/servicecustomerlist.css';
 
 const ServiceCustomerListItem = ({customer, changeCustomer})=>{
 
@@ -16,6 +17,7 @@ const ServiceCustomerListItem = ({customer, changeCustomer})=>{
 
     return(
         <>
+        <div className="servicecustomerdetails">
             <Link to ='/servicecustomerdetails' onClick={()=>handleOnClick(customer)}>
                 <p>{customer.companyName}</p>
                 <p>{customer.siteName}</p> 
@@ -25,6 +27,7 @@ const ServiceCustomerListItem = ({customer, changeCustomer})=>{
                 <p>Next service date: {customer.nextServiceDate}</p>
                 <p>{customer.serviceState}</p>
             </Link>
+        </div>
         </>
     )
 }
