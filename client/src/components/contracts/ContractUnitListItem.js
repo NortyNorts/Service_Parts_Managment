@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 
 const ContractsUnitListItem = ({unit, changeUnit})=>{
 
+    
 
     const handleOnClick = function(value){
         const chosenUnit = value
@@ -11,6 +12,7 @@ const ContractsUnitListItem = ({unit, changeUnit})=>{
 
     const onUnitSelect = function(theChosenUnit){
         changeUnit(theChosenUnit)
+        console.log(theChosenUnit)
     }
 
     return(

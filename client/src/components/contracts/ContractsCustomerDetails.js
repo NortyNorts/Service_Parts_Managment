@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import ContractsUnitListItem from "./ContractUnitListItem";
 import '../../css/main.css'
+import CustomersServices from "../../services/CustomersServices";
 
 const ContractsCustomerDetails = ({currentCustomer, changeUnit})=>{
 
@@ -31,9 +32,14 @@ const ContractsCustomerDetails = ({currentCustomer, changeUnit})=>{
             return <ContractsUnitListItem value={index} unit={unit} changeUnit={changeUnit} key={index}/>
         })
 
+        const handleDeleteCustomer = ()=>{
+          CustomersServices.deleteCustomer(currentCustomer)
+          console.log("Delete customer")
+      }
 
     return(
         <>
+
             <div className="link-button">
               <li>
                 <Link to ='/customerpartsforecast'>
@@ -49,6 +55,21 @@ const ContractsCustomerDetails = ({currentCustomer, changeUnit})=>{
                 </Link>
               </li>
             </div>
+
+            <div className="link-button">
+                <button onClick={handleDeleteCustomer}>Delete Customer</button>
+            </div>
+
+            <div>
+                <h3>{currentCustomer.companyName}</h3>
+                <p>{currentCustomer.siteName}</p> 
+                <p>{currentCustomer.siteAddress}</p>
+                <p>{currentCustomer.sitePostCode}</p>
+                <p>Next service date: {currentCustomer.nextServiceDate}</p>
+                <p>Visits per year: {currentCustomer.engineerVisitsPerYear}</p>
+            </div>
+
+            <h1>Customers Units</h1>
 
             <div className="search-bar">
             <input placeholder="Unit Search" onChange={event => setQuery(event.target.value)} />

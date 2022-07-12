@@ -32,14 +32,6 @@ public class Part {
     @Column(name="PartNumber", nullable = false)
     private String partNumber;
 
-    //Move to unit part
-    @Column(name="HoursRun")
-    private int hoursRun;
-
-    //Move to unit part history
-    @Column(name="LastChangedDate", nullable = false)
-    private LocalDate lastChangedDate;
-
     @Column(name="ChangeByHour", nullable = false)
     private int changeByHour;
 
@@ -49,9 +41,7 @@ public class Part {
     @Column(name="Priority", nullable = false)
     private int priority;
 
-    //Move to unit part and rename to date installed
-    @Column(name="GetDate")
-    private LocalDate getDate;
+
 
     // copy for unit part history
     @JsonIgnoreProperties({"parts"})
@@ -79,10 +69,10 @@ public class Part {
         this.id = id;
     }
 
-    public void increaseHoursRun(Unit unit1, Part part1) {
-        int increase = part1.hoursRun + unit1.getIncreasedRunHours();
-        part1.setHoursRun(increase);
-    }
+//    public void increaseHoursRun(Unit unit1, Part part1) {
+//        int increase = part1.hoursRun + unit1.getIncreasedRunHours();
+//        part1.setHoursRun(increase);
+//    }
 
 //    TODO: out this back refactored
 //    public void checkPartChange(Unit unit1, Part part1) {

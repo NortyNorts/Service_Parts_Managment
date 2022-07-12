@@ -11,11 +11,11 @@ const ServiceUnitDetails = ({currentUnit, currentUnitParts})=>{
     const tableData = currentUnitParts.map((part)=>{
         return(
         <tr className="styled-table">
-            <td>{part.part.partName}</td>
+           <td>{part.part.partName}</td>
             <td>{part.part.partNumber}</td>
-            <td>{part.part.hoursRun}</td>
+            <td>{part.hoursRun}</td>
+            <td>{part.lastChangedDate}</td>
             <td>{part.part.changeByHour}</td>
-            <td>{part.part.lastChangedDate}</td>
             <td>{part.part.changeByNumberOfMonths}</td>
             <td><button onClick={() => handleUpdatePart(part)}>Update Part</button></td>
         </tr>
@@ -45,11 +45,11 @@ const ServiceUnitDetails = ({currentUnit, currentUnitParts})=>{
             <section>
                 <table className="styled-table">
                     <tr>
-                        <th>Part Name</th>
+                    <th>Part Name</th>
                         <th>Part Number</th>
                         <th>Hours Run</th>
-                        <th>Change By Hour</th>
                         <th>Last Changed</th>
+                        <th>Change By Hour</th>
                         <th>Change by Months</th>
                     </tr>
 

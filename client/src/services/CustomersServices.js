@@ -17,9 +17,9 @@ const CustomersServices = {
   },
 
   deleteCustomer(customer){
-    return fetch(baseURL,{
-      method:'DELETE',
-      body: JSON.stringify(customer),
+    return fetch(baseURL + '/deletecustomer/' + customer.id,{
+      method:'POST',
+      body: JSON.stringify(),
       headers:{'Content-Type':'application/json'}
     })
     .then(res => res.json());

@@ -56,8 +56,8 @@ public class PartController {
         public ResponseEntity<Customer>changePart(@PathVariable Long id){
                 Optional<UnitPart> unitPart = unitPartRepo.findById(id);
                 unitPart.get().setChangePart(false);
-                unitPart.get().getPart().setHoursRun(0);
-                unitPart.get().getPart().setLastChangedDate(LocalDate.now());
+                unitPart.get().setHoursRun(0);
+                unitPart.get().setLastChangedDate(LocalDate.now());
                 unitPartRepo.save(unitPart.get());
                 return new ResponseEntity(unitPart, HttpStatus.CREATED);
         }

@@ -3,6 +3,7 @@ package com.codeclan.com.SparesPlanning.models;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -47,6 +48,7 @@ public class Customer{
 
     @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
     @JsonIgnoreProperties({"customer"})
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
     private List<Unit> units = new ArrayList<>();
 
     public void addUnit(Unit unit1) {

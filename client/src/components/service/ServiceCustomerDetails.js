@@ -31,11 +31,6 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction
             return <ServiceUnitListItem value={index} unit={unit} changeUnit={changeUnit} key={index}/>
         })
 
-        const handleDeleteCustomer = ()=>{
-            CustomersServices.deleteCustomer(currentCustomer)
-            console.log("Delete customer")
-        }
-
         const handleBookServiceClick = ()=>{
             changePartFunction(currentCustomer)
         }
@@ -64,10 +59,6 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction
                         Add Unit
                     </Link>
                 </li>
-            </div>
-
-            <div className="link-button">
-                <button onClick={handleDeleteCustomer}>Delete Customer</button>
             </div>
 
             <div className="search-bar">
