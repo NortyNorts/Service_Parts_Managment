@@ -55,4 +55,10 @@ public class UnitPart {
         this.unit = up.unit;
         this.part = up.part;
     }
+
+    public void increaseHoursRun(Unit unit1, UnitPart part1) {
+        int increase = part1.hoursRun + unit1.getIncreasedRunHours();
+        part1.setHoursRun(increase);
+    }
+
 }

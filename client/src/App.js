@@ -15,10 +15,11 @@ import ContractsUnitDetails from './components/contracts/ContractsUnitDetails';
 import AddUnit from './components/AddUnit';
 import PartsForecast from './containers/PartsForecast';
 import CustomerPartsForecast from './components/contracts/CustomerPartsForecast';
-import BookService from './components/service/BookService';
 import NextServiceParts from './components/service/NextServiceParts';
 import PartsServices from './services/PartsServices';
 import NextServicePartsUnit from './components/service/NextServicePartsUnit';
+import ChangeParts from './components/service/ChangeParts';
+import UpdateUnit from './components/service/UpdateUnit';
 
 function App() {
 
@@ -27,7 +28,6 @@ function App() {
   const [currentUnit, setCurentUnit] = useState(null)
   const [currentUserParts, setCurrentUserParts] = useState([])
   const [currentUnitParts, setCurentUnitParts] = useState([])
-  const [changePart, setChangePart] = useState(null)
   
   
   const [units, setUnits] = useState([])
@@ -85,6 +85,7 @@ function App() {
             <Service
               customers={customers}
               changeCustomer={changeCustomer}
+              changeUnit={changeUnit}
             />
           </Route>
 
@@ -108,8 +109,16 @@ function App() {
               />
           </Route>
 
-          <Route exact path ="/bookservice">
-              <BookService
+          <Route exact path ="/updateunit">
+              <UpdateUnit
+                currentCustomer={currentCustomer}
+                currentUnit={currentUnit}
+                currentUnitParts={currentUnitParts}
+              />
+          </Route>
+
+          <Route exact path ="/changeparts">
+              <ChangeParts
                 currentCustomer={currentCustomer}
                 currentUserParts={currentUserParts}
                 changePartFunction={changePartFunction}
@@ -147,6 +156,7 @@ function App() {
               currentCustomer={currentCustomer}
               changeUnit={changeUnit}
               changePartFunction={changePartFunction}
+              changeCustomer={changeCustomer}
             />
           </Route>
 

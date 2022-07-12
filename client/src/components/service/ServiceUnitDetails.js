@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PartsServices from "../../services/PartsServices";
 
 const ServiceUnitDetails = ({currentUnit, currentUnitParts})=>{
 
-    const handleUpdatePart = (part)=>{
-        console.log(part)
-    }
-
+    // const handleChangePart = (part)=>{
+    //     PartsServices.changePart(part.id)
+    // }
 
     const tableData = currentUnitParts.map((part)=>{
         return(
@@ -17,7 +17,7 @@ const ServiceUnitDetails = ({currentUnit, currentUnitParts})=>{
             <td>{part.lastChangedDate}</td>
             <td>{part.part.changeByHour}</td>
             <td>{part.part.changeByNumberOfMonths}</td>
-            <td><button onClick={() => handleUpdatePart(part)}>Update Part</button></td>
+            {/* <td><button onClick={() => handleChangePart(part)}>Change Part</button></td> */}
         </tr>
     )
     })
@@ -29,6 +29,14 @@ const ServiceUnitDetails = ({currentUnit, currentUnitParts})=>{
               <li>
                     <Link to ='/nextservicepartsunit' style={{ color: 'inherit', textDecoration: 'inherit'}}>
                         Next Service Parts
+                    </Link>
+                </li>
+            </div>
+
+            <div className="link-button">
+              <li>
+                    <Link to ='/updateunit' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                        Update Unit
                     </Link>
                 </li>
             </div>

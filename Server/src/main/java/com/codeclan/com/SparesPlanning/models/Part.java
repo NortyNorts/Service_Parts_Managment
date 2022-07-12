@@ -69,7 +69,7 @@ public class Part {
         this.id = id;
     }
 
-//    public void increaseHoursRun(Unit unit1, Part part1) {
+//    public void increaseHoursRun(Unit unit1, UnitPart part1) {
 //        int increase = part1.hoursRun + unit1.getIncreasedRunHours();
 //        part1.setHoursRun(increase);
 //    }

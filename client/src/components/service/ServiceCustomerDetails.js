@@ -4,7 +4,7 @@ import CustomersServices from "../../services/CustomersServices";
 import ServiceUnitListItem from "./ServiceUnitListItem";
 import '../../css/main.css'
 
-const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction})=>{
+const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction, changeCustomer})=>{
     
     const [query, setQuery] = useState("")
 
@@ -33,6 +33,7 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction
 
         const handleBookServiceClick = ()=>{
             changePartFunction(currentCustomer)
+            changeCustomer(currentCustomer)
         }
 
     return(
@@ -45,21 +46,25 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction
                 </li>
             </div>
 
-            <div className="link-button">
-                <li>
-                    <Link to ='/bookservice' onClick={handleBookServiceClick} style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                        Book Service
-                    </Link>
-                </li>
-            </div>
 
-            <div className="link-button">
+            {/* <div className="link-button">
                 <li>
                     <Link to ='/addunit' style={{ color: 'inherit', textDecoration: 'inherit'}}>
                         Add Unit
                     </Link>
                 </li>
+            </div> */}
+
+            <div>
+                <h3>{currentCustomer.companyName}</h3>
+                <p>{currentCustomer.siteName}</p> 
+                <p>{currentCustomer.siteAddress}</p>
+                <p>{currentCustomer.sitePostCode}</p>
+                <p>Next service date: {currentCustomer.nextServiceDate}</p>
+                <p>Visits per year: {currentCustomer.engineerVisitsPerYear}</p>
             </div>
+
+            <h1>Customers Units</h1>
 
             <div className="search-bar">
             <input placeholder="Unit Search" onChange={event => setQuery(event.target.value)} />

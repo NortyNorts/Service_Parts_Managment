@@ -22,6 +22,16 @@ const UnitServices = {
         .then(res => res.json());
       },
 
+      serviceUnit(unit){
+        console.log("NewUnitData", unit)
+        return fetch(baseURL + '/updaterunhours',{
+        method:'POST',
+        body: JSON.stringify(unit),
+        headers:{'Content-Type':'application/json'}
+        })
+        .then(res => res.json());
+      },
+
 }
 
 export default UnitServices;
