@@ -38,6 +38,10 @@
     border-image: initial;
 }
 
+.main-links ul>li>a:hover{
+    background-color: rgb(144, 200, 255);
+}
+
 .link-button >li {
     display: flex;
     flex-direction:row;
@@ -62,4 +66,8 @@
     color: white;
     display: block;
     width: 275px;
+}
+
+.link-button>li>a:hover{
+    background-color: #3e8e41;
 }
