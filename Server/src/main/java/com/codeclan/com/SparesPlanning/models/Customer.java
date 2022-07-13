@@ -44,7 +44,7 @@ public class Customer{
     private LocalDate nextServiceDate;
 
     @OneToMany(mappedBy = "customer")
-    @JsonIgnoreProperties({"customer"})
+    //@JsonIgnoreProperties({"customer"})
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     private List<Unit> units = new ArrayList<>();
 

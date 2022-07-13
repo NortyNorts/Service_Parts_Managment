@@ -10,6 +10,7 @@ const NextServiceParts = ({currentUserParts})=>{
             return false;
         }
         
+        
 
     })
 
@@ -18,9 +19,9 @@ const NextServiceParts = ({currentUserParts})=>{
         <tr className="styled-table">
             <td>{part.part.partName}</td>
             <td>{part.part.partNumber}</td>
-            <td>{part.part.hoursRun}</td>
+            <td>{part.hoursRun}</td>
             <td>{part.part.changeByHour}</td>
-            <td>{part.part.lastChangedDate}</td>
+            <td>{part.lastChangedDate}</td>
             <td>{part.part.changeByNumberOfMonths}</td>
         </tr>
     )
@@ -43,6 +44,7 @@ const NextServiceParts = ({currentUserParts})=>{
                     
                 </table>
             </section>
+        
         </>
     )
 }

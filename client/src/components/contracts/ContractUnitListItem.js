@@ -1,7 +1,7 @@
 import React from "react"
 import {Link} from 'react-router-dom'
 
-const ContractsUnitListItem = ({unit, changeUnit})=>{
+const ContractsUnitListItem = ({unit, changeUnit, getForecastParts})=>{
 
     
 
@@ -13,6 +13,7 @@ const ContractsUnitListItem = ({unit, changeUnit})=>{
     const onUnitSelect = function(theChosenUnit){
         changeUnit(theChosenUnit)
         console.log(theChosenUnit)
+        getForecastParts()
     }
 
     return(

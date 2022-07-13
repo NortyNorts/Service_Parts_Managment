@@ -61,10 +61,11 @@ public class UnitController {
 
     //add one
     @PostMapping(value="/units/updaterunhours")
-    public ResponseEntity<Unit>postCustomer(@RequestBody Unit unit){
+    public ResponseEntity<Unit>updateRunningHours(@RequestBody Unit unit){
         List<UnitPart> partsList = unitPartRepo.findByUnit_Id(unit.getId());
         for(UnitPart uh: partsList){
             uh.increaseHoursRun(unit, uh);
+            uh.checkPartChange(unit, uh);
         }
         unitRepo.save(unit);
         return new ResponseEntity<>(unit, HttpStatus.CREATED);

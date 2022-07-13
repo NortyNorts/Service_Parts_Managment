@@ -1,18 +1,8 @@
 import React, {useState} from "react";
 import CustomersServices from "../../services/CustomersServices";
 
-const UnitPartsForecast = ({currentCustomer, currentUnit})=>{
+const UnitPartsForecast = ({forecastParts})=>{
 
-    const [forecastParts, setForecastParts] = useState([])
-
-    const handleClick = ()=>{
-        CustomersServices.getForecastParts(currentCustomer.id, currentUnit.id)
-        .then(parts => setForecastParts(parts))
-    }
-    
-    const handleClick2 = ()=>{
-        console.log(forecastParts)
-    }
     
     const filteredCustomersArray = forecastParts.filter(part=>{
         if (part.changebyhourslapsed === true || part.servicetimeLapsed === true) {
@@ -26,8 +16,8 @@ const UnitPartsForecast = ({currentCustomer, currentUnit})=>{
     const tableData = filteredCustomersArray.map((part)=>{
         return(
         <tr className="styled-table">
-            <td>{part.part_id}</td>
-            <td>{part.nextservicedate}</td>
+            <td>{part.part_name}</td>
+            <td>{part.part_number}</td>
         </tr>
     )
     })
@@ -47,10 +37,6 @@ const UnitPartsForecast = ({currentCustomer, currentUnit})=>{
                     {tableData}
                     
                 </table>
-
-                <button onClick={handleClick}>Get data</button>
-
-                <button onClick={handleClick2}>Print data</button>
             </section>
 
             

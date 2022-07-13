@@ -6,6 +6,7 @@ import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 @Entity
 @Table(name="units_parts")
@@ -61,12 +62,11 @@ public class UnitPart {
         part1.setHoursRun(increase);
     }
 
-//    public void checkPartChange(Unit unit1, UnitPart part1) {
-////        if (part1.getHoursRun() + unit1.getNextServiceHours() >= part1.changeByHour ||
-////                ChronoUnit.MONTHS.between(part1.getLastChangedDate(), unit1.getNextServiceDate()) >= part1.getChangeByNumberOfMonths()){
-////            part1.setChangePart(true);
-////        }
-////    }
-//    }
+    public void checkPartChange(Unit unit1, UnitPart part1) {
+        if (part1.getHoursRun() + unit1.getNextServiceHours() >= part1.getPart().getChangeByHour() ||
+                ChronoUnit.MONTHS.between(part1.getLastChangedDate(), unit1.getNextServiceDate()) >= part1.getPart().getChangeByNumberOfMonths()){
+            part1.setChangePart(true);
+        }
+    }
 
 }
