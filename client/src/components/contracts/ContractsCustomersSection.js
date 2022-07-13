@@ -46,8 +46,11 @@ const ContractsCustomersSection = ({customers, changeCustomer})=>{
                     </li>
             </div>
 
-            <input placeholder="Customer Search" onChange={event => setQuery(event.target.value)} />
+            <input className="searchbar" placeholder="Customer Search" onChange={event => setQuery(event.target.value)} />
+
+            <div className="flex">
             {customersComponents}
+            </div>
 
         </>
     )

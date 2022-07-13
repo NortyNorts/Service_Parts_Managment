@@ -35,17 +35,18 @@ const ServiceCustomerListItem = ({customer, changeCustomer, changeUnit})=>{
         // </>
 
         <>
-        <div className="servicecustomerlistitem">
-            <Link to ='/servicecustomerdetails' onClick={()=>handleOnClick(customer)}>
-                <h3>{customer.companyName}</h3>
-            </Link>    
-                <p>{customer.siteName}</p> 
-                <p>{customer.siteAddress}</p>
-                <p>{customer.sitePostCode}</p>
-                <p>Next service date: {customer.nextServiceDate}</p>
-                <p>Visits per year: {customer.engineerVisitsPerYear}</p>
-                <p>{customer.serviceState}</p>
-        </div>
+            <Link to ='/servicecustomerdetails' onClick={()=>handleOnClick(customer)} className="removeUnderline">
+                <div className="servicecustomerlistitem">
+                    <h3>{customer.companyName}</h3>
+                    
+                    <p>{customer.siteName}</p> 
+                    <p>{customer.siteAddress}</p>
+                    <p>{customer.sitePostCode}</p>
+                    <p>Next service date: {customer.nextServiceDate}</p>
+                    <p>Visits per year: {customer.engineerVisitsPerYear}</p>
+                    <p>{customer.serviceState}</p>
+                </div>
+            </Link>
         </>
     )
 }

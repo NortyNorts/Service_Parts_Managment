@@ -137,3 +137,31 @@ input[type="submit"]:active {
 	position:relative;
 	top:1px;
 }
+
+.flex{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.bluebox{
+    border-radius: 10px;
+    background: rgb(163, 216, 248);
+    padding: 10px;
+    color: black;
+    height: 300px;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 30px;
+    list-style:inherit;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.searchbar{
+    width: 350px;
+    height: 30px;
+    border-radius: 10px;
+}

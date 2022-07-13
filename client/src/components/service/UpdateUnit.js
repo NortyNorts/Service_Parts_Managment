@@ -76,7 +76,7 @@ const UpdateUnit = ({currentUnit, currentCustomer, currentUnitParts})=>{
                 </div>
 
                 <div className="field">
-                    <label htmlFor="dateInstalled">Date Installed</label>
+                    <label htmlFor="dateInstalled">Date Installed: </label>
                     <input 
                         type="date" 
                         value={dateInstalled}
