@@ -28,6 +28,7 @@ function App() {
   const [currentUnit, setCurentUnit] = useState(null)
   const [currentUserParts, setCurrentUserParts] = useState([])
   const [currentUnitParts, setCurentUnitParts] = useState([])
+  const [forecastParts, setForecastParts] = useState([])
   
   
   const [units, setUnits] = useState([])
@@ -63,6 +64,12 @@ function App() {
     .then(parts=> setCurentUnitParts(parts))
   }
 
+  const getForecastParts = ()=>{
+      CustomersServices.getForecastParts(currentCustomer.id, currentUnit.id)
+      .then(parts => setForecastParts(parts))
+  }
+
+
   return (
     <>
     
@@ -91,8 +98,7 @@ function App() {
 
           <Route exact path="/unitpartsforecast">
             <UnitPartsForecast
-              currentCustomer={currentCustomer}
-              currentUnit={currentUnit}
+              forecastParts={forecastParts}
             />
           </Route>
 
@@ -153,6 +159,7 @@ function App() {
             <ContractsCustomerDetails
               currentCustomer={currentCustomer}
               changeUnit={changeUnit}
+              getForecastParts={getForecastParts}
             />
           </Route>
 

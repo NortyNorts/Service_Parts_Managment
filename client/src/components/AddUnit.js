@@ -66,6 +66,7 @@ const AddUnit = ({currentCustomer})=>{
         setExpectedRunHoursPerYear("");
         UnitServices.addUnit(newUnitObject)
         history.goBack();
+        history.goBack();
     }
 
     return(

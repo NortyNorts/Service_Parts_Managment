@@ -4,7 +4,7 @@ import ContractsUnitListItem from "./ContractUnitListItem";
 import '../../css/main.css'
 import CustomersServices from "../../services/CustomersServices";
 
-const ContractsCustomerDetails = ({currentCustomer, changeUnit})=>{
+const ContractsCustomerDetails = ({currentCustomer, changeUnit, getForecastParts})=>{
 
     const [query, setQuery] = useState("")
 
@@ -29,7 +29,7 @@ const ContractsCustomerDetails = ({currentCustomer, changeUnit})=>{
         
 
         const unitsComponents = filteredUnitsArray.map((unit, index)=>{
-            return <ContractsUnitListItem value={index} unit={unit} changeUnit={changeUnit} key={index}/>
+            return <ContractsUnitListItem value={index} unit={unit} changeUnit={changeUnit} key={index} getForecastParts={getForecastParts}/>
         })
 
     return(
@@ -41,6 +41,14 @@ const ContractsCustomerDetails = ({currentCustomer, changeUnit})=>{
                     Add Unit
                 </Link>
               </li>
+            </div>
+
+            <div className="link-button">
+              <li>
+                    <Link to ='/updatecustomer' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                        Update Customer
+                    </Link>
+                </li>
             </div>
 
             <div>
