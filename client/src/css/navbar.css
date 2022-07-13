@@ -1,6 +1,6 @@
 .header{
     background-color: DodgerBlue;
-    height: 230px;
+    min-height: 230px;
 }
 
 .title{
@@ -15,6 +15,7 @@
     margin-bottom: 20px;
     margin-left: 40px;
     padding-top: 30px;
+    text-decoration: underline;
 }
 
 .main-nav > ul {
@@ -70,5 +71,9 @@
     color: white;
     display: block;
     width: 275px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
 }
 

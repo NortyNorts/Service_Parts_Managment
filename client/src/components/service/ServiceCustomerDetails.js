@@ -38,6 +38,7 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction
 
     return(
         <>
+        <div className="link-buttons">
             <div className="link-button">
               <li>
                     <Link to ='/nextserviceparts' style={{ color: 'inherit', textDecoration: 'inherit'}}>
@@ -62,6 +63,7 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction
                 <p>Next service date: {currentCustomer.nextServiceDate}</p>
                 <p>Visits per year: {currentCustomer.engineerVisitsPerYear}</p>
             </div>
+        </div>
 
             <h1>Customers Units</h1>
 
