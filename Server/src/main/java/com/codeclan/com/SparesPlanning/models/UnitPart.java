@@ -61,11 +61,12 @@ public class UnitPart {
         part1.setHoursRun(increase);
     }
 
-    public void checkPartChange(Unit unit1, UnitPart part1) {
-//        if (part1.getHoursRun() + unit1.getNextServiceHours() >= part1.changeByHour ||
-//                ChronoUnit.MONTHS.between(part1.getLastChangedDate(), unit1.getNextServiceDate()) >= part1.getChangeByNumberOfMonths()){
-//            part1.setChangePart(true);
-//        }
+//    public void checkPartChange(Unit unit1, UnitPart part1) {
+////        if (part1.getHoursRun() + unit1.getNextServiceHours() >= part1.changeByHour ||
+////                ChronoUnit.MONTHS.between(part1.getLastChangedDate(), unit1.getNextServiceDate()) >= part1.getChangeByNumberOfMonths()){
+////            part1.setChangePart(true);
+////        }
+////    }
 //    }
 
 }
