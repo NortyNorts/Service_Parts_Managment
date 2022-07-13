@@ -15,6 +15,7 @@ const ServiceUnitDetailsListItem = ({unit, changeUnit})=>{
 
     return(
         <>
+        <div className="bluebox">
             <Link to ='/serviceunitdetails' onClick={()=>handleOnClick(unit)}>
                 <h2>{unit.unitType}</h2>
             </Link>
@@ -23,6 +24,7 @@ const ServiceUnitDetailsListItem = ({unit, changeUnit})=>{
                 <p>Date Installed: {unit.dateInstalled}</p> 
                 <p>Expected Running Hours per Year: {unit.expectedRunHoursPerYear}</p>
                 <p>Next Service Date: {unit.nextServiceDate}</p>
+        </div>
         </>
     )
 }

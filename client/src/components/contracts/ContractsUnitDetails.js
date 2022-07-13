@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import '../../css/table.css'
+import '../../css/main.css'
 
 
 const ContractsUnitDetails = ({currentUnit, currentUnitParts})=>{
@@ -36,8 +37,8 @@ const ContractsUnitDetails = ({currentUnit, currentUnitParts})=>{
                 </Link>
               </li>
             </div>
-
-            <div>
+            
+            <div className="bluebox">
                 <p>{currentUnit.unitType}</p>
                 <p>{currentUnit.serialNumber}</p>
                 <p> Hours Run: {currentUnit.hoursRun}</p> 

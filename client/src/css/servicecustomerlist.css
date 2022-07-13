@@ -1,8 +1,8 @@
-/* .servicecustomerdetails > a{
+.servicecustomerdetails > a{
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content:left;
     border-radius: 10px;
     margin-top:10px;
     margin-left: 3px;
@@ -13,32 +13,82 @@
     font-weight: bold;
     border: 0px;
     text-align: center;
+} 
+
+/* .servicecustomerlistitem > ul{
+    display: flex;
+    flex-direction:row;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    margin:0px;
+    margin-top: 30px;
+    margin-right: 20px;
+    padding: 0px;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold; 
 } */
+
+ /* .servicecustomerlistitem{
+    border-radius: 10px;
+    background: dodgerblue;
+    margin:10px;
+    padding: 50px;
+    color: white;
+    display: block;
+    text-decoration: none;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}  */
+
+
 
 .servicecustomerlistitem{
     border-radius: 10px;
     background: rgb(163, 216, 248);
     padding: 10px;
     color: black;
-    height: 400px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    height: 300px;
+    width: 300px;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
-    padding: 0px;
+    padding-top: 30px;
     list-style:inherit;
     font-size: 16px;
     text-align: center;
+    border: 1px solid black;
 }
 
 .servicecustomerlistitem>Link:hover{
     color: blue;
 }
+
+.removeUnderline{
+    text-decoration: none;
+}
+
+/* .main-links ul> li >a{
+    border-radius: 10px;
+    background: dodgerblue;
+    margin:10px;
+    padding: 50px;
+    color: white;
+    display: block;
+    text-decoration: none;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+.main-links ul>li>a:hover{
+    background-color: rgb(144, 200, 255);
+} */
 
 
 /* .link-button >li> a{

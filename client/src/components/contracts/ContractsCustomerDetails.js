@@ -51,7 +51,7 @@ const ContractsCustomerDetails = ({currentCustomer, changeUnit, getForecastParts
                 </li>
             </div>
 
-            <div>
+            <div className="bluebox">
                 <h3>{currentCustomer.companyName}</h3>
                 <p>{currentCustomer.siteName}</p> 
                 <p>{currentCustomer.siteAddress}</p>
@@ -66,7 +66,7 @@ const ContractsCustomerDetails = ({currentCustomer, changeUnit, getForecastParts
             <input placeholder="Unit Search" onChange={event => setQuery(event.target.value)} />
             </div>
 
-            <div className="list">
+            <div className="flex">
             {unitsComponents}
             </div>
         </>
