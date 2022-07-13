@@ -32,21 +32,8 @@ const ContractsCustomerDetails = ({currentCustomer, changeUnit})=>{
             return <ContractsUnitListItem value={index} unit={unit} changeUnit={changeUnit} key={index}/>
         })
 
-      //   const handleDeleteCustomer = ()=>{
-      //     CustomersServices.deleteCustomer(currentCustomer)
-      //     console.log("Delete customer")
-      // }
-
     return(
         <>
-
-            <div className="link-button">
-              <li>
-                <Link to ='/customerpartsforecast' style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                    Customer Parts Forecast
-                </Link>
-              </li>
-            </div>
 
             <div className="link-button">
               <li>

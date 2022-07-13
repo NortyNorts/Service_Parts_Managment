@@ -7,6 +7,11 @@ const CustomersServices = {
         .then(res => res.json());
     },
 
+    getForecastParts(customer_id, unit_id) {
+      return fetch(baseURL + "/" + customer_id + "/unit/" + unit_id)
+        .then(res => res.json());
+    },
+
   addCustomer(newCustomer){
     return fetch(baseURL,{
     method:'POST',

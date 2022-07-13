@@ -38,6 +38,7 @@ const ServiceCustomerList = ({customers, changeCustomer, changeUnit})=>{
         })
 
 
+
     return(
         <>
             <input placeholder="Customer Search" onChange={event => setQuery(event.target.value)} />

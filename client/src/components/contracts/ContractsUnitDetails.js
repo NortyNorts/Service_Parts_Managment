@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import '../../css/table.css'
 
 
@@ -20,6 +21,14 @@ const ContractsUnitDetails = ({currentUnit, currentUnitParts})=>{
 
     return(
         <>
+            <div className="link-button">
+              <li>
+                <Link to ='/unitpartsforecast' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                    Unit Parts Forecast
+                </Link>
+              </li>
+            </div>
+            
             <div>
                 <p>{currentUnit.unitType}</p>
                 <p>{currentUnit.serialNumber}</p>

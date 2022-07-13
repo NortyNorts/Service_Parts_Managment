@@ -1,9 +1,12 @@
 import React, {useState} from "react";
 import '../css/form.css'
 import UnitServices from "../services/UnitsServices";
+import { useHistory } from "react-router-dom";
 
 const AddUnit = ({currentCustomer})=>{
     
+    const history = useHistory();
+
     const [unitType, setUnitType] = useState("")
     const [serialNumber, setSerialNumber] = useState("")
     const [hoursRun, setHoursRun] = useState("")
@@ -62,6 +65,7 @@ const AddUnit = ({currentCustomer})=>{
         setDateInstalled("");
         setExpectedRunHoursPerYear("");
         UnitServices.addUnit(newUnitObject)
+        history.goBack();
     }
 
     return(

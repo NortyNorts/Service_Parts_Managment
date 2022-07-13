@@ -40,15 +40,12 @@ public class Customer{
     @Column(name="EngineerVisitsPerYear", nullable = false)
     private int engineerVisitsPerYear;
 
-    @Column(name="ServiceState", nullable = false)
-    private String serviceState;
-
     @Column(name="NextServiceDate")
     private LocalDate nextServiceDate;
 
-    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "customer")
     @JsonIgnoreProperties({"customer"})
-    @Cascade(org.hibernate.annotations.CascadeType.ALL)
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     private List<Unit> units = new ArrayList<>();
 
     public void addUnit(Unit unit1) {
