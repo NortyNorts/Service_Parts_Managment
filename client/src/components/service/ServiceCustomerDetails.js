@@ -37,6 +37,7 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction
 
     return(
         <>
+        <div className="link-buttons">
             <div className="link-button">
               <li>
                     <Link to ='/nextserviceparts' style={{ color: 'inherit', textDecoration: 'inherit'}}>
@@ -60,6 +61,7 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction
                     </Link>
                 </li>
             </div>
+        </div>
 
             <div className="search-bar">
             <input placeholder="Unit Search" onChange={event => setQuery(event.target.value)} />

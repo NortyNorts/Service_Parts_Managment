@@ -69,7 +69,7 @@ const AddUnit = ({currentCustomer})=>{
         <>
             <h1>Add Unit</h1>
 
-            <form onSubmit={handleCustomerSubmit}>
+            <form className="divform" onSubmit={handleCustomerSubmit}>
 
                 <div className="dropdown">
                     <p>Select Unit Type</p>
@@ -123,7 +123,7 @@ const AddUnit = ({currentCustomer})=>{
                 </div>
 
                 <div className="field">
-                    <label htmlFor="dateInstalled">Date Installed</label>
+                    <label htmlFor="dateInstalled">Date Installed: </label>
                     <input 
                         type="date" 
                         value={dateInstalled}

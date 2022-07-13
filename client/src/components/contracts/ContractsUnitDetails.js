@@ -1,6 +1,7 @@
 import React from "react"
 import '../../css/table.css'
 
+
 const ContractsUnitDetails = ({currentUnit, currentUnitParts})=>{
 
 
