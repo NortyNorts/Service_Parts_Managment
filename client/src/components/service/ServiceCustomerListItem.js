@@ -14,7 +14,10 @@ const ServiceCustomerListItem = ({customer, changeCustomer, changeUnit})=>{
     const onCustomerSelect = function(selectedCustomer){
         changeCustomer(selectedCustomer)
         changeUnit(selectedCustomer.units[1])
+        console.log(selectedCustomer.units)
     }
+
+    
 
     return(
         // <>

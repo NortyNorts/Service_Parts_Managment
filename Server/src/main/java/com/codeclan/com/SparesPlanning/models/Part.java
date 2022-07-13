@@ -75,12 +75,7 @@ public class Part {
 //    }
 
 //    TODO: out this back refactored
-//    public void checkPartChange(Unit unit1, Part part1) {
-//        if (part1.getHoursRun() + unit1.getNextServiceHours() >= part1.changeByHour ||
-//                ChronoUnit.MONTHS.between(part1.getLastChangedDate(), unit1.getNextServiceDate()) >= part1.getChangeByNumberOfMonths()){
-//            part1.setChangePart(true);
-//        }
-//    }
+//
 
     public void addUnit(Unit unit1) {
         //TODO rewrite

@@ -13,13 +13,13 @@ import CustomersServices from './services/CustomersServices';
 import ServiceUnitDetails from './components/service/ServiceUnitDetails';
 import ContractsUnitDetails from './components/contracts/ContractsUnitDetails';
 import AddUnit from './components/AddUnit';
-import PartsForecast from './containers/PartsForecast';
-import CustomerPartsForecast from './components/contracts/CustomerPartsForecast';
 import NextServiceParts from './components/service/NextServiceParts';
 import PartsServices from './services/PartsServices';
 import NextServicePartsUnit from './components/service/NextServicePartsUnit';
 import ChangeParts from './components/service/ChangeParts';
 import UpdateUnit from './components/service/UpdateUnit';
+import UnitPartsForecast from './components/contracts/UnitPartsForecast';
+import UpdateCustomer from './components/UpdateCustomer';
 
 function App() {
 
@@ -89,17 +89,22 @@ function App() {
             />
           </Route>
 
-          <Route exact path="/partsforecast">
-            <PartsForecast />
-          </Route>
-
-          <Route exact path="/customerpartsforecast">
-            <CustomerPartsForecast/>
+          <Route exact path="/unitpartsforecast">
+            <UnitPartsForecast
+              currentCustomer={currentCustomer}
+              currentUnit={currentUnit}
+            />
           </Route>
 
           <Route exact path ="/addcustomer">
               <AddCustomer 
                 changeCustomer={changeCustomer}
+              />
+          </Route>
+
+                    <Route exact path ="/updatecustomer">
+              <UpdateCustomer
+                currentCustomer={currentCustomer}
               />
           </Route>
 

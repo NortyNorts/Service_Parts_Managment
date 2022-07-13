@@ -1,6 +1,7 @@
 package com.codeclan.com.SparesPlanning.controllers;
 
 import com.codeclan.com.SparesPlanning.models.Customer;
+import com.codeclan.com.SparesPlanning.models.Forecast;
 import com.codeclan.com.SparesPlanning.models.Unit;
 import com.codeclan.com.SparesPlanning.models.UnitPart;
 import com.codeclan.com.SparesPlanning.repositories.*;
@@ -9,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,6 +25,9 @@ public class CustomerController {
 
     @Autowired
     UnitRepo unitRepo;
+
+    @Autowired
+    ForeCastRepo foreCastRepo;
 
     //get all
     @GetMapping(value = "/customers")
@@ -78,5 +83,8 @@ public class CustomerController {
         }
     }
 
-
+    @GetMapping(value="/customers/{cid}/unit/{uid}")
+    public ResponseEntity<List<Forecast>>getPartsForecast(@PathVariable Long cid, @PathVariable Long uid) {
+        return new ResponseEntity<>(foreCastRepo.findForecastByCustomerAndUnitId(cid, uid), HttpStatus.OK);
+    }
 }

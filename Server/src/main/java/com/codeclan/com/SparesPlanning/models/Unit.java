@@ -76,7 +76,7 @@ public class Unit {
 
 
 
-    @JsonIgnoreProperties({"units"})
+    //@JsonIgnoreProperties({"units"})
     @ManyToOne()
     @JoinColumn(name="customer_id")
     private Customer customer;

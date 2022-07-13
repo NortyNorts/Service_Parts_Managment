@@ -13,7 +13,6 @@ const UnitServices = {
     },
 
     addUnit(newUnit){
-        console.log("NewUnitData", newUnit)
         return fetch(baseURL,{
         method:'POST',
         body: JSON.stringify(newUnit),
@@ -23,7 +22,6 @@ const UnitServices = {
       },
 
       serviceUnit(unit){
-        console.log("NewUnitData", unit)
         return fetch(baseURL + '/updaterunhours',{
         method:'POST',
         body: JSON.stringify(unit),

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-//@Component
+@Component
 public class DataLoader implements ApplicationRunner {
 
     @Autowired
@@ -48,7 +48,6 @@ public class DataLoader implements ApplicationRunner {
                 .engineerVisitsPerYear(2)
                 .siteAddress("37 Castle Terrace")
                 .sitePostCode("EH1 2EL")
-                .serviceState("Service Booked")
                 .nextServiceDate(LocalDate.of(2022, 8, 01))
                 .build();
 
@@ -59,7 +58,6 @@ public class DataLoader implements ApplicationRunner {
                 .engineerVisitsPerYear(4)
                 .siteAddress("1 Royal Mile")
                 .sitePostCode("EH1 1BB")
-                .serviceState("Awaiting Service Booking")
                 .nextServiceDate(LocalDate.of(2022, 8, 01))
                 .build();
 
@@ -70,7 +68,6 @@ public class DataLoader implements ApplicationRunner {
                 .engineerVisitsPerYear(1)
                 .siteAddress("30 Bread Street")
                 .sitePostCode("EH3 9AF")
-                .serviceState("Awaiting Service Booking")
                 .nextServiceDate(LocalDate.of(2022, 12, 01))
                 .build();
 
