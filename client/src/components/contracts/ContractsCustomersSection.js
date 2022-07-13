@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import '../../css/main.css'
 import ContractsCustomerListItem from "./ContractsCustomerListItem"
 
-const ContractsCustomersSection = ({customers, changeCustomer})=>{
+const ContractsCustomersSection = ({customers, changeCustomer, changeUnit})=>{
 
     const [query, setQuery] = useState("")
 
@@ -35,7 +35,7 @@ const ContractsCustomersSection = ({customers, changeCustomer})=>{
       
 
         const customersComponents = filteredCustomersArray.map((customer, index)=>{
-            return <ContractsCustomerListItem value={index} customer={customer} changeCustomer={changeCustomer} key={index}/>
+            return <ContractsCustomerListItem value={index} customer={customer} changeCustomer={changeCustomer} key={index} changeUnit={changeUnit}/>
         })
 
     return(

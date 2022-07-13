@@ -1,16 +1,13 @@
 import React, {useState} from "react";
-import '../css/form.css'
-import UnitServices from "../services/UnitsServices";
-import { useHistory } from "react-router-dom";
+import '../../css/form.css'
+import UnitServices from "../../services/UnitsServices";
 
-const AddUnit = ({currentCustomer})=>{
+
+const ContractsUpdateUnit = ({currentCustomer, currentUnit, currentUnitParts})=>{
     
-    const history = useHistory();
-
     const [unitType, setUnitType] = useState("")
     const [serialNumber, setSerialNumber] = useState("")
     const [hoursRun, setHoursRun] = useState("")
-    const [dateInstalled, setDateInstalled] = useState("")
     const [expectedRunHoursPerYear, setExpectedRunHoursPerYear] = useState("")
     // const [nextServiceDate, setNextServiceDate] = useState("")
 
@@ -25,10 +22,6 @@ const AddUnit = ({currentCustomer})=>{
 
     const handleHoursRunChange = (event) =>{
         setHoursRun(event.target.value)
-    };
-
-    const handleDateInstalledChange = (event) =>{
-        setDateInstalled(event.target.value)
     };
 
     const handleExpectedRunHoursPerYearChange = (event) =>{
@@ -47,42 +40,46 @@ const AddUnit = ({currentCustomer})=>{
           return
         }
         const newUnitObject = {
+            id: currentUnit.id,
             unitType: unitType,
             serialNumber: serialNumberToSubmit,
             hoursRun: hoursRun,
-            dateInstalled: dateInstalled,
+            dateInstalled: currentUnit.dateInstalled,
             expectedRunHoursPerYear: expectedRunHoursPerYear,
             nextServiceDate: currentCustomer.nextServiceDate,
             customer: currentCustomer,
             nextServiceHours: (expectedRunHoursPerYear/currentCustomer.engineerVisitsPerYear),
-            unitParts: [],
+            unitParts: currentUnitParts,
             increasedRunHours: 0
 
           }
         setUnitType("");
         setSerialNumber("");
         setHoursRun("");
-        setDateInstalled("");
         setExpectedRunHoursPerYear("");
+        console.log(newUnitObject)
         UnitServices.addUnit(newUnitObject)
-        history.goBack();
-        history.goBack();
     }
 
     return(
         <>
-            <h1>Add Unit</h1>
 
-            <form className="divform" onSubmit={handleCustomerSubmit}>
+            <div className="divform">
+            <h1>Update Unit</h1>
+            
+            
+
+            <form onSubmit={handleCustomerSubmit}>
 
                 <div className="dropdown">
+
+                    <h3>Unit Type</h3>
                     <select 
-                        placeholder="Search.."
+                        placeholder={currentUnit.unitType}
                         value={unitType}
                         onChange={handleUnitTypeChange}
                         required
-                    >   
-                        <option value="" disabled selected>Select Unit</option>
+                    >
                         <option>RS5-10Kg</option>
                         <option>RS16-20Kg</option>
                         <option>RS24-30kg</option>
@@ -108,7 +105,7 @@ const AddUnit = ({currentCustomer})=>{
                     <label htmlFor="hoursRun"></label>
                     <input 
                         type="number" 
-                        placeholder="Total Unit Running Hours"
+                        placeholder="Hours Run"
                         value={hoursRun}
                         onChange={handleHoursRunChange}
                         required
@@ -126,27 +123,16 @@ const AddUnit = ({currentCustomer})=>{
                     />
                 </div>
 
-                <h2>Date Installed</h2>
-
-                <div className="field">
-                    <label htmlFor="dateInstalled"></label>
-                    <input 
-                        type="date" 
-                        value={dateInstalled}
-                        onChange={handleDateInstalledChange}
-                        required
-                    />
-                </div>
-
                 <input type="submit" value={"Add Unit"}/>
 
             </form>
+            </div>
 
             <br></br>
             <br></br>
             <br></br>
-            </>
+        </>
     )
 }
 
-export default AddUnit
+export default ContractsUpdateUnit

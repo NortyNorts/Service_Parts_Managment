@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import CustomersServices from "../services/CustomersServices";
+import CustomersServices from "../../services/CustomersServices";
 import { useHistory } from "react-router-dom";
-import '../css/form.css'
+import '../../css/form.css'
 
-const UpdateCustomer = ({currentCustomer})=>{
+const ContractsUpdateCustomer = ({currentCustomer})=>{
 
     const history = useHistory();
 
@@ -72,7 +72,7 @@ const UpdateCustomer = ({currentCustomer})=>{
 
     return(
         <>
-            <h1>Add Customer</h1>
+            <h1>Update Customer</h1>
 
             <div className="divform">
             <form onSubmit={handleCustomerSubmit}>
@@ -81,7 +81,7 @@ const UpdateCustomer = ({currentCustomer})=>{
                     <label htmlFor="companyName"></label>
                     <input 
                         type="text"
-                        placeholder="Company Name"
+                        placeholder={currentCustomer.companyName}
                         value={companyName}
                         onChange={handleCompanyNameChange}
                         required
@@ -92,7 +92,7 @@ const UpdateCustomer = ({currentCustomer})=>{
                     <label htmlFor="siteName"></label>
                     <input 
                         type="text" 
-                        placeholder="Site Name"
+                        placeholder={currentCustomer.siteName}
                         value={siteName}
                         onChange={handleSiteNameChange}
                         required
@@ -103,7 +103,7 @@ const UpdateCustomer = ({currentCustomer})=>{
                     <label htmlFor="address"></label>
                     <input 
                         type="text" 
-                        placeholder="Site Address"
+                        placeholder={currentCustomer.siteAddress}
                         value={address}
                         onChange={handleAddressChange}
                         required
@@ -114,7 +114,7 @@ const UpdateCustomer = ({currentCustomer})=>{
                     <label htmlFor="postCode"></label>
                     <input 
                         type="text"
-                        placeholder="Site PostCode" 
+                        placeholder={currentCustomer.sitePostCode} 
                         value={postCode}
                         onChange={handlePostCodeChange}
                         required
@@ -125,7 +125,7 @@ const UpdateCustomer = ({currentCustomer})=>{
                     <label htmlFor="visitsPerYear"></label>
                     <input 
                         type="number" 
-                        placeholder="Visits per year"
+                        placeholder='Engineer Visits Per Year'
                         value={visitsPerYear}
                         onChange={handleVisitsPerYearChange} 
                         required
@@ -136,7 +136,7 @@ const UpdateCustomer = ({currentCustomer})=>{
                     <label htmlFor="nextServiceDate"></label>
                     <input 
                         type="date"
-                        onChange={handleNextServiceDateChange} 
+                        onChange={handleNextServiceDateChange}
                         required
                         />
                 </div>
@@ -151,4 +151,4 @@ const UpdateCustomer = ({currentCustomer})=>{
     )
 }
 
-export default UpdateCustomer
+export default ContractsUpdateCustomer

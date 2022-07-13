@@ -1,8 +1,20 @@
 import React, {useState} from "react";
+import PartsServices from "../../services/PartsServices";
+import { useHistory } from "react-router-dom";
 
-const NextServicePartsUnit = ({currentUnitParts})=>{
 
-    console.log(currentUnitParts)
+const NextServicePartsUnit = ({currentUnitParts, currentCustomer, changeCustomer})=>{
+
+    const history = useHistory();
+
+    const handleChangePart = (part)=>{
+        PartsServices.changePart(part.id)
+        .then(()=>{
+            changeCustomer(currentCustomer)
+        })
+        history.goBack();
+        history.goBack();
+    }
 
     const filteredCustomersArray = currentUnitParts.filter(part=>{
         if (part.changePart === true) {
@@ -20,10 +32,11 @@ const NextServicePartsUnit = ({currentUnitParts})=>{
         <tr className="styled-table">
             <td>{part.part.partName}</td>
             <td>{part.part.partNumber}</td>
-            <td>{part.part.hoursRun}</td>
+            <td>{part.hoursRun}</td>
             <td>{part.part.changeByHour}</td>
-            <td>{part.part.lastChangedDate}</td>
+            <td>{part.lastChangedDate}</td>
             <td>{part.part.changeByNumberOfMonths}</td>
+            <td><button onClick={() => handleChangePart(part)}>Change Part</button></td>
         </tr>
     )
     })

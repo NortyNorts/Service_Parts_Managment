@@ -48,6 +48,10 @@ public class UnitController {
                 UnitPart newPart = new UnitPart(up);
                 unit.addPart(newPart);
                 newPart.setUnit(unit);
+                newPart.setHoursRun(unit.getHoursRun());
+                newPart.increaseHoursRun(unit, newPart);
+                newPart.setLastChangedDate(unit.getDateInstalled());
+                newPart.checkPartChange(unit, newPart);
                 unitPartRepo.save(newPart);
             }
             return new ResponseEntity<>(unit, HttpStatus.CREATED);

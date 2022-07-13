@@ -128,7 +128,7 @@ const AddCustomer = ()=>{
                         required
                         />
                 </div>
-
+                <h2>Next Service Date</h2>
                 <div>
                     <label htmlFor="nextServiceDate"></label>
                     <input 
@@ -144,6 +144,9 @@ const AddCustomer = ()=>{
             </form>
             </div>
 
+            <br></br>
+            <br></br>
+            <br></br>
         </>
     )
 }

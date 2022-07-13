@@ -17,9 +17,13 @@ import NextServiceParts from './components/service/NextServiceParts';
 import PartsServices from './services/PartsServices';
 import NextServicePartsUnit from './components/service/NextServicePartsUnit';
 import ChangeParts from './components/service/ChangeParts';
-import UpdateUnit from './components/service/UpdateUnit';
+import UpdateUnit from './components/service/ServiceUpdateUnit';
 import UnitPartsForecast from './components/contracts/UnitPartsForecast';
-import UpdateCustomer from './components/UpdateCustomer';
+import UpdateCustomer from './components/contracts/ContractsUpdateCustomer';
+import ServiceUpdateUnit from './components/service/ServiceUpdateUnit';
+import ContractsUpdateUnit from './components/contracts/ContractsUpdateUnit';
+import ContractsUpdateCustomer from './components/contracts/ContractsUpdateCustomer';
+import ServiceUpdateCustomer from './components/service/ServiceUpdateCustomer';
 
 function App() {
 
@@ -32,7 +36,6 @@ function App() {
   
   
   const [units, setUnits] = useState([])
-  
 
   useEffect(()=>{
     CustomersServices.getCustomers()
@@ -40,8 +43,6 @@ function App() {
     UnitServices.getUnits()
     .then(units=> setUnits(units));
   }, [customers]);
-
-  
 
   const changePartFunction = (chosenCustomer)=>{
     PartsServices.getPartsByCustomer(chosenCustomer.id)
@@ -108,8 +109,14 @@ function App() {
               />
           </Route>
 
-                    <Route exact path ="/updatecustomer">
-              <UpdateCustomer
+          <Route exact path ="/contractsupdatecustomer">
+              <ContractsUpdateCustomer
+                currentCustomer={currentCustomer}
+              />
+          </Route>
+
+          <Route exact path ="/serviceupdatecustomer">
+              <ServiceUpdateCustomer
                 currentCustomer={currentCustomer}
               />
           </Route>
@@ -120,8 +127,16 @@ function App() {
               />
           </Route>
 
-          <Route exact path ="/updateunit">
-              <UpdateUnit
+          <Route exact path ="/serviceupdateunit">
+              <ServiceUpdateUnit
+                currentCustomer={currentCustomer}
+                currentUnit={currentUnit}
+                currentUnitParts={currentUnitParts}
+              />
+          </Route>
+
+          <Route exact path ="/contractsupdateunit">
+              <ContractsUpdateUnit
                 currentCustomer={currentCustomer}
                 currentUnit={currentUnit}
                 currentUnitParts={currentUnitParts}
@@ -139,12 +154,17 @@ function App() {
           <Route exact path ="/nextserviceparts">
               <NextServiceParts
                 currentUserParts={currentUserParts}
+                changePartFunction={changePartFunction}
+                currentCustomer={currentCustomer}
               />
           </Route>
 
           <Route exact path ="/nextservicepartsunit">
               <NextServicePartsUnit
                 currentUnitParts={currentUnitParts}
+                currentCustomer={currentCustomer}
+                changePartFunction={changePartFunction}
+                changeCustomer={changeCustomer}
               />
           </Route>
 
@@ -152,6 +172,7 @@ function App() {
             <ContractsCustomersSection
               customers={customers}
               changeCustomer={changeCustomer}
+              changeUnit={changeUnit}
             />
           </Route>
 

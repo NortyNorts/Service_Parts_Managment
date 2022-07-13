@@ -28,9 +28,11 @@ public class CustomForecastRepoImpl implements CustomForecastRepo{
                         "p.part_name as part_name," +
                         "p.part_number as part_number," +
                 "((up.hours_run + u.expected_run_hours_per_year) > p.change_by_hour) changebyhourslapsed, " +
-                "1 as monthselapsed, " +
-                "(((current_date - last_changed_date)*12) + (current_date - last_changed_date)) > p.change_by_number_of_months as servicetimelapsed \n" +
-                ", (last_changed_date + interval '1 month' * p.change_by_number_of_months) as nextservicedate \n" +
+                "((DATE_PART('year', current_date) - DATE_PART('year', up.last_changed_date)) * 12 + \n" +
+                        "                    (DATE_PART('month', current_date) - DATE_PART('month', up.last_changed_date))) as monthselapsed, " +
+                "(((DATE_PART('year', current_date) - DATE_PART('year', up.last_changed_date)) * 12 + \n" +
+                        "                    (DATE_PART('month', current_date) - DATE_PART('month', up.last_changed_date))) > p.change_by_number_of_months) as servicetimelapsed, " +
+                " (up.last_changed_date + interval '1 month' * p.change_by_number_of_months) as nextservicedate \n" +
                 "    from parts p\n" +
                 "    INNER JOIN units_parts up on up.part_id = p.id\n" +
                 "    INNER JOIN units u on up.unit_id = u.id\n" +
@@ -49,7 +51,7 @@ public class CustomForecastRepoImpl implements CustomForecastRepo{
                         ,(String)field[3]
                         ,(String)field[4]
                         ,(Boolean)field[5]
-                        ,(Integer)field[6]
+                        ,(Double)field[6]
                         ,(Boolean)field[7]
                         ,(Timestamp)field[8]);
             //System.out.println(obj);
