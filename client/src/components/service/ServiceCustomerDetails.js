@@ -54,6 +54,7 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction
                     </Link>
                 </li>
             </div>
+        </div>
 
             <div>
                 <h3>{currentCustomer.companyName}</h3>
@@ -63,7 +64,7 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction
                 <p>Next service date: {currentCustomer.nextServiceDate}</p>
                 <p>Visits per year: {currentCustomer.engineerVisitsPerYear}</p>
             </div>
-        </div>
+        
 
             <h1>Customers Units</h1>
 
