@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import ServiceCustomerListItem from "./ServiceCustomerListItem"
+import '../../css/main.css'
 
 
 const ServiceCustomerList = ({customers, changeCustomer, changeUnit})=>{
@@ -41,8 +42,10 @@ const ServiceCustomerList = ({customers, changeCustomer, changeUnit})=>{
 
     return(
         <>
-            <input placeholder="Customer Search" onChange={event => setQuery(event.target.value)} />
+            <input className="searchbar" placeholder="Customer Search" onChange={event => setQuery(event.target.value)} />
+            <div className="flex">
             {customersComponents}
+            </div>
         </>
     )
 
