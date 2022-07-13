@@ -35,8 +35,8 @@ const ServiceUnitDetails = ({currentUnit, currentUnitParts})=>{
 
             <div className="link-button">
               <li>
-                    <Link to ='/updateunit' style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                        Update Unit
+                    <Link to ='/serviceupdateunit' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                        Update Running Hours
                     </Link>
                 </li>
             </div>

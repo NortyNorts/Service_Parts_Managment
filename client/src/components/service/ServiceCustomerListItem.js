@@ -2,7 +2,7 @@ import React from "react"
 import {Link} from 'react-router-dom'
 import '../../css/servicecustomerlist.css';
 
-const ServiceCustomerListItem = ({customer, changeCustomer, changeUnit})=>{
+const ServiceCustomerListItem = ({customer, changeCustomer})=>{
 
 
     const handleOnClick = function(value){
@@ -13,7 +13,6 @@ const ServiceCustomerListItem = ({customer, changeCustomer, changeUnit})=>{
 
     const onCustomerSelect = function(selectedCustomer){
         changeCustomer(selectedCustomer)
-        changeUnit(selectedCustomer.units[1])
         console.log(selectedCustomer.units)
     }
 

@@ -30,6 +30,14 @@ const ContractsUnitDetails = ({currentUnit, currentUnitParts})=>{
               </li>
             </div>
             
+            <div className="link-button">
+              <li>
+                <Link to ='/contractsupdateunit' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                    Update Unit Details
+                </Link>
+              </li>
+            </div>
+            
             <div className="bluebox">
                 <p>{currentUnit.unitType}</p>
                 <p>{currentUnit.serialNumber}</p>

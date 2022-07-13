@@ -49,8 +49,8 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction
             
             <div className="link-button">
               <li>
-                    <Link to ='/updatecustomer' style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                        Update Customer
+                    <Link to ='/serviceupdatecustomer' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                        Update Next Service Date
                     </Link>
                 </li>
             </div>

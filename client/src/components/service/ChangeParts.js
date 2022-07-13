@@ -1,5 +1,4 @@
 import React from "react";
-import '../../css/bookservice.css'
 import PartsServices from "../../services/PartsServices";
 
 

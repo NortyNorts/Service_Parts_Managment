@@ -5,12 +5,12 @@ const UnitPartsForecast = ({forecastParts})=>{
 
     
     const filteredCustomersArray = forecastParts.filter(part=>{
-        if (part.changebyhourslapsed === true || part.servicetimeLapsed === true) {
+        if (part.changebyhourslapsed === true){
             return true;
         }
-        else if(part.changebyhourslapsed === false || part.servicetimeLapsed === false){
-            return false;
-        } 
+        else if(part.servicetimeLapsed === true){
+            return true;
+        }
     })
 
     const tableData = filteredCustomersArray.map((part)=>{
@@ -25,13 +25,13 @@ const UnitPartsForecast = ({forecastParts})=>{
 
     return(
         <>
-            <h1>Unit parts required for the next 12 months:</h1>
+            <h1>12 Months Parts Forecast:</h1>
 
             <section>
                 <table className="styled-table">
                     <tr>
-                        <th>Part Id</th>
-                        <th>Next Service Date</th>
+                        <th>Part Name</th>
+                        <th>Part Number</th>
                     </tr>
 
                     {tableData}

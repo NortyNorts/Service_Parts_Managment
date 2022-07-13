@@ -34,7 +34,7 @@ public class UnitPart {
     @JoinColumn(name="part_id")
     private Part part;
 
-    @Column(name="change_part",columnDefinition = "boolean default false")
+    @Column(name="change_part")
     private Boolean changePart = false;
 
     //Move to unit part and rename to date installed
@@ -63,7 +63,7 @@ public class UnitPart {
     }
 
     public void checkPartChange(Unit unit1, UnitPart part1) {
-        if (part1.getHoursRun() + unit1.getNextServiceHours() >= part1.getPart().getChangeByHour() ||
+        if (part1.getHoursRun() + unit1.getExpectedRunHoursPerYear() >= part1.getPart().getChangeByHour() ||
                 ChronoUnit.MONTHS.between(part1.getLastChangedDate(), unit1.getNextServiceDate()) >= part1.getPart().getChangeByNumberOfMonths()){
             part1.setChangePart(true);
         }

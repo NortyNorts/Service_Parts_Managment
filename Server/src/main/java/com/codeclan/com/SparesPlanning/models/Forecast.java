@@ -26,7 +26,7 @@ public class Forecast {
     private BigInteger unit_id;
     private BigInteger part_id;
     private Boolean changebyhourslapsed;
-    private Integer monthselapsed;
+    private Double monthselapsed;
     private Boolean servicetimeLapsed;
     private Timestamp nextservicedate;
 
@@ -37,7 +37,7 @@ public class Forecast {
                     String part_name,
                     String part_number,
                     Boolean changebyhourslapsed,
-                    Integer monthselapsed,
+                    Double monthselapsed,
                     Boolean servicetimeLapsed,
                     Timestamp nextservicedate) {
         this.part_name = part_name;

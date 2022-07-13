@@ -45,8 +45,8 @@ const ContractsCustomerDetails = ({currentCustomer, changeUnit, getForecastParts
 
             <div className="link-button">
               <li>
-                    <Link to ='/updatecustomer' style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                        Update Customer
+                    <Link to ='/contractsupdatecustomer' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                        Update Customer Details
                     </Link>
                 </li>
             </div>
