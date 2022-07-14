@@ -43,6 +43,10 @@ const NextServicePartsUnit = ({currentUnitParts, currentCustomer, changeCustomer
 
     return(
         <>
+
+            <br/>
+            <br/>
+
             <section>
                 <table className="styled-table">
                     <tr>
@@ -58,6 +62,10 @@ const NextServicePartsUnit = ({currentUnitParts, currentCustomer, changeCustomer
                     
                 </table>
             </section>
+
+            <br/>
+            <br/>
+
         </>
     )
 }

@@ -64,10 +64,11 @@ const ContractsUpdateUnit = ({currentCustomer, currentUnit, currentUnitParts})=>
     return(
         <>
 
-            <div className="divform">
-            <h1>Update Unit</h1>
-            
-            
+            <br/>
+            <br/>
+            <br/>
+
+            <div className="divform">        
 
             <form onSubmit={handleCustomerSubmit}>
 

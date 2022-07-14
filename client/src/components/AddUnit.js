@@ -71,7 +71,9 @@ const AddUnit = ({currentCustomer})=>{
 
     return(
         <>
-            <h1>Add Unit</h1>
+            <br/>
+            <br/>
+            <br/>
 
             <form className="divform" onSubmit={handleCustomerSubmit}>
 

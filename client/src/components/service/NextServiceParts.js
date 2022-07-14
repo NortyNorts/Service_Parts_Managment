@@ -29,6 +29,9 @@ const NextServiceParts = ({currentUserParts})=>{
 
     return(
         <>
+            <br/>
+            <br/>
+
             <section>
                 <table className="styled-table">
                     <tr>

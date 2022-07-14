@@ -25,7 +25,8 @@ const UnitPartsForecast = ({forecastParts})=>{
 
     return(
         <>
-            <h1>12 Months Parts Forecast:</h1>
+            <br/>
+            <br/>
 
             <section>
                 <table className="styled-table">
@@ -39,7 +40,11 @@ const UnitPartsForecast = ({forecastParts})=>{
                 </table>
             </section>
 
-            
+        
+            <br/>
+            <br/>
+            <br/>
+
         </>
     )
 }
