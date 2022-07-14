@@ -35,6 +35,15 @@ const ContractsCustomerDetails = ({currentCustomer, changeUnit, getForecastParts
     return(
         <>
 
+        <div className="link-buttons">
+          <div className="link-button">
+              <li>
+                    <Link to ='/contractsupdatecustomer' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                        Update Customer Details
+                    </Link>
+                </li>
+            </div>
+
             <div className="link-button">
               <li>
                 <Link to ='/addunit' style={{ color: 'inherit', textDecoration: 'inherit'}}>
@@ -43,28 +52,21 @@ const ContractsCustomerDetails = ({currentCustomer, changeUnit, getForecastParts
               </li>
             </div>
 
-            <div className="link-button">
-              <li>
-                    <Link to ='/contractsupdatecustomer' style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                        Update Customer Details
-                    </Link>
-                </li>
-            </div>
+          </div>
 
             <div className="bluebox">
-                <h3>{currentCustomer.companyName}</h3>
-                <p>{currentCustomer.siteName}</p> 
-                <p>{currentCustomer.siteAddress}</p>
-                <p>{currentCustomer.sitePostCode}</p>
-                <p>Next service date: {currentCustomer.nextServiceDate}</p>
-                <p>Visits per year: {currentCustomer.engineerVisitsPerYear}</p>
+                <h2>{currentCustomer.companyName}</h2>
+                <h3>{currentCustomer.siteName}</h3> 
+                <h4>{currentCustomer.siteAddress}</h4>
+                <h4>{currentCustomer.sitePostCode}</h4>
+                <br></br>
+                <h4>Next service date</h4>
+                <h4>{currentCustomer.nextServiceDate}</h4>
+                <h4>Visits per year: {currentCustomer.engineerVisitsPerYear}</h4>
             </div>
 
-            <h1>Customers Units</h1>
+            <input className="searchbar" placeholder="Unit Search" onChange={event => setQuery(event.target.value)} />
 
-            <div className="search-bar">
-            <input placeholder="Unit Search" onChange={event => setQuery(event.target.value)} />
-            </div>
 
             <div className="flex">
             {unitsComponents}

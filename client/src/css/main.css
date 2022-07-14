@@ -1,11 +1,12 @@
 .heading > p{
     margin:10px;
-    padding: 0px;
+    padding: 10px;
     color: dodgerblue;
     text-decoration: none;
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    text-align: center;
 }
 
 .main-links ul{
@@ -46,7 +47,7 @@
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: left;
     border-radius: 10px;
     margin-top:10px;
     margin-left: 3px;
@@ -56,7 +57,7 @@
     font-size: 20px;
     font-weight: bold;
     border: 0px;
-    text-align: center;
+    text-align:center;
 }
 
 /* .link-button>ul{
@@ -130,8 +131,8 @@ input[type="submit"] {
     width: 300px;
 }
 input[type="submit"]:hover {
-	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
-	background-color:#476e9e;
+	background:linear-gradient(to bottom, #3e8e41 5%, #3e8e41 100%);
+	background-color:#3e8e41;
 }
 input[type="submit"]:active {
 	position:relative;
@@ -139,11 +140,13 @@ input[type="submit"]:active {
 }
 
 button, input[type="submit"], input[type="reset"] {
-	background: none;
+	background: lightseagreen;
 	color: inherit;
 	border: none;
-	padding: 0;
-	font: inherit;
+	padding: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 	cursor: pointer;
 	outline: inherit;
 }
@@ -189,9 +192,6 @@ button:active {
   transform: translateY(4px);
 }
 
-button::before{
-    background-color:yellow; 
-}
 .flex{
     display:flex;
     flex-wrap: wrap;
@@ -199,15 +199,26 @@ button::before{
 
 .bluebox{
     border-radius: 10px;
-    background: rgb(163, 216, 248);
+    background: dodgerblue;
     padding: 10px;
-    color: black;
-    height: 300px;
+    color: #FBFAF5;
+    height: 280px;
     width: 300px;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-top: 30px;
+    margin: 10px;
+    list-style:inherit;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.bluebox2{
+    border-radius: 10px;
+    background: dodgerblue;
+    padding: 10px;
+    color: #FBFAF5;
+    height: 200px;
+    width: 300px;
+    margin: 10px;
     list-style:inherit;
     font-size: 16px;
     text-align: center;
@@ -215,7 +226,73 @@ button::before{
 }
 
 .searchbar{
-    width: 350px;
+    width: 300px;
     height: 30px;
     border-radius: 10px;
+    font-size: 120%;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
 }
+
+input.searchbar{
+    margin: 10px;
+}
+
+a{
+    margin: 10px;
+}
+
+h2{
+    padding: 0px;
+    margin: 10px;
+}
+
+h4{
+    margin: 10px;
+}
+
+h3{
+    padding-top: 10px;
+    margin: 10px;
+}          
+
+hr{ 
+    background-color: dodgerblue;
+    width: 10px;
+}
+
+* {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  .page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -142px; 
+  }
+  .page-wrap:after {
+    content: "";
+    display: block;
+  }
+  .site-footer, .page-wrap:after {
+    height: 40px;
+    width:fit-content; 
+  }
+  .site-footer {
+    background: dodgerblue;
+  }
+
+  .site-footer{
+    position : absolute;
+    bottom : 0;
+    margin-top : 40px;
+    width: 100%;
+    text-align:center;
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FBFAF5;
+  }

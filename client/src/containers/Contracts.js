@@ -9,7 +9,6 @@ const Contracts = ({})=>{
 
     return(
         <>  
-            <div className="heading"><p>Contracts</p></div>
             <div className="main-links">
                 <ul>
                     <li><Link to ='/contractscustomerssection'> <h1>  Customers </h1>  </Link></li>

@@ -73,13 +73,13 @@ const ContractsUpdateUnit = ({currentCustomer, currentUnit, currentUnitParts})=>
 
                 <div className="dropdown">
 
-                    <h3>Unit Type</h3>
                     <select 
                         placeholder={currentUnit.unitType}
                         value={unitType}
                         onChange={handleUnitTypeChange}
                         required
                     >
+                        <option value="" disabled selected>Select Unit</option>
                         <option>RS5-10Kg</option>
                         <option>RS16-20Kg</option>
                         <option>RS24-30kg</option>

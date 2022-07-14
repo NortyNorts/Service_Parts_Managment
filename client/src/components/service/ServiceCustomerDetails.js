@@ -38,15 +38,7 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction
 
     return(
         <>
-        <div className="link-buttons">
-            <div className="link-button">
-              <li>
-                    <Link to ='/nextserviceparts' style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                        Next Service Parts
-                    </Link>
-                </li>
-            </div>
-            
+        <div className="link-buttons">       
             <div className="link-button">
               <li>
                     <Link to ='/serviceupdatecustomer' style={{ color: 'inherit', textDecoration: 'inherit'}}>
@@ -54,23 +46,27 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction
                     </Link>
                 </li>
             </div>
+
+            <div className="link-button">
+              <li>
+                    <Link to ='/nextserviceparts' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                        Next Service Parts
+                    </Link>
+                </li>
+            </div>
         </div>
 
             <div className="bluebox">
-                <h3>{currentCustomer.companyName}</h3>
-                <p>{currentCustomer.siteName}</p> 
-                <p>{currentCustomer.siteAddress}</p>
-                <p>{currentCustomer.sitePostCode}</p>
-                <p>Next service date: {currentCustomer.nextServiceDate}</p>
-                <p>Visits per year: {currentCustomer.engineerVisitsPerYear}</p>
+                <h2>{currentCustomer.companyName}</h2>
+                <h3>{currentCustomer.siteName}</h3>
+                <br></br> 
+                <h4>{currentCustomer.siteAddress}</h4>
+                <h4>{currentCustomer.sitePostCode}</h4>
+                <h4>Next service date: {currentCustomer.nextServiceDate}</h4>
+                <h4>Visits per year: {currentCustomer.engineerVisitsPerYear}</h4>
             </div>
-        
 
-            <h1>Customers Units</h1>
-
-            <div className="search-bar">
-            <input placeholder="Unit Search" onChange={event => setQuery(event.target.value)} />
-            </div>
+            <input className="searchbar" placeholder="Unit Search" onChange={event => setQuery(event.target.value)} />
 
             <div className="flex">
             {unitsComponents}

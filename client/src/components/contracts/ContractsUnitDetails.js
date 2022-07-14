@@ -22,6 +22,9 @@ const ContractsUnitDetails = ({currentUnit, currentUnitParts})=>{
 
     return(
         <>
+        
+        <div className="link-buttons">
+
             <div className="link-button">
               <li>
                 <Link to ='/unitpartsforecast' style={{ color: 'inherit', textDecoration: 'inherit'}}>
@@ -38,14 +41,20 @@ const ContractsUnitDetails = ({currentUnit, currentUnitParts})=>{
               </li>
             </div>
             
+        </div>
+
             <div className="bluebox">
-                <p>{currentUnit.unitType}</p>
-                <p>{currentUnit.serialNumber}</p>
-                <p> Hours Run: {currentUnit.hoursRun}</p> 
-                <p>Date Installed: {currentUnit.dateInstalled}</p> 
-                <p>Expected Running Hours per Year: {currentUnit.expectedRunHoursPerYear}</p>
-                <p>Next Service Date: {currentUnit.nextServiceDate}</p>
+                <h2>{currentUnit.serialNumber}</h2>
+                <h3>{currentUnit.unitType}</h3>
+                <br></br>
+                <h4> Hours Run: {currentUnit.hoursRun}</h4>
+                <h4>Expected Running Hours: {currentUnit.expectedRunHoursPerYear}</h4>
+                <br></br>
+                <h4>Date Installed: {currentUnit.dateInstalled}</h4> 
+                <h4>Next Service Date: {currentUnit.nextServiceDate}</h4>
             </div>
+
+            <br></br>
 
             <section>
                 <table className="styled-table">

@@ -16,14 +16,16 @@ const ServiceUnitDetailsListItem = ({unit, changeUnit})=>{
     return(
         <>
         <div className="bluebox">
-            <Link to ='/serviceunitdetails' onClick={()=>handleOnClick(unit)}>
-                <h2>{unit.unitType}</h2>
+            <Link to ='/serviceunitdetails' onClick={()=>handleOnClick(unit)} className = "removeUnderline" style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                <h2>{unit.serialNumber}</h2>
+                <h3>{unit.unitType}</h3>
+                <br></br>
+                <h4> Hours Run:{unit.hoursRun}</h4>
+                <h4>Expected Running Hours:{unit.expectedRunHoursPerYear}</h4>
+                <br></br>
+                <h4>Date Installed: {unit.dateInstalled}</h4> 
+                <h4>Next Service Date: {unit.nextServiceDate}</h4>
             </Link>
-                <h3>Serial Number: {unit.serialNumber}</h3>
-                <p> Hours Run: {unit.hoursRun}</p> 
-                <p>Date Installed: {unit.dateInstalled}</p> 
-                <p>Expected Running Hours per Year: {unit.expectedRunHoursPerYear}</p>
-                <p>Next Service Date: {unit.nextServiceDate}</p>
         </div>
         </>
     )

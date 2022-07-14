@@ -19,14 +19,15 @@ const ContractsUnitListItem = ({unit, changeUnit, getForecastParts})=>{
     return(
         <>
         <div className="bluebox">
-            <Link to ='/contractsunitdetails' onClick={()=>handleOnClick(unit)}>
+            <Link to ='/contractsunitdetails' onClick={()=>handleOnClick(unit)} style={{ color: 'inherit', textDecoration: 'inherit'}}>
                 <h2>{unit.unitType}</h2>
-            </Link>
                 <h3>Serial Number: {unit.serialNumber}</h3>
-                <p> Hours Run: {unit.hoursRun}</p> 
-                <p>Date Installed: {unit.dateInstalled}</p> 
-                <p>Expected Running Hours per Year: {unit.expectedRunHoursPerYear}</p>
-                <p>Next Service Date: {unit.nextServiceDate}</p>
+                <br></br>
+                <h4> Hours Run: {unit.hoursRun}</h4> 
+                <h4>Date Installed: {unit.dateInstalled}</h4> 
+                <h4>Running Hours per Year: {unit.expectedRunHoursPerYear}</h4>
+                <h4>Next Service Date: {unit.nextServiceDate}</h4>
+            </Link>
         </div>
         </>
     )
