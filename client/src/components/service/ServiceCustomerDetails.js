@@ -38,6 +38,17 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction
 
     return(
         <>
+
+            <div className="bluebox4">
+                <h2>{currentCustomer.companyName}</h2>
+                <h3>{currentCustomer.siteName}</h3>
+                <br></br> 
+                <h4>{currentCustomer.siteAddress}</h4>
+                <h4>{currentCustomer.sitePostCode}</h4>
+                <h4>Next service date: {currentCustomer.nextServiceDate}</h4>
+                <h4>Visits per year: {currentCustomer.engineerVisitsPerYear}</h4>
+            </div>
+
         <div className="link-buttons">       
             <div className="link-button">
               <li>
@@ -56,15 +67,7 @@ const ServiceCustomerDetails = ({currentCustomer, changeUnit, changePartFunction
             </div>
         </div>
 
-            <div className="bluebox">
-                <h2>{currentCustomer.companyName}</h2>
-                <h3>{currentCustomer.siteName}</h3>
-                <br></br> 
-                <h4>{currentCustomer.siteAddress}</h4>
-                <h4>{currentCustomer.sitePostCode}</h4>
-                <h4>Next service date: {currentCustomer.nextServiceDate}</h4>
-                <h4>Visits per year: {currentCustomer.engineerVisitsPerYear}</h4>
-            </div>
+
 
             <input className="searchbar" placeholder="Unit Search" onChange={event => setQuery(event.target.value)} />
 

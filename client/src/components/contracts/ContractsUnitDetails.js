@@ -23,6 +23,17 @@ const ContractsUnitDetails = ({currentUnit, currentUnitParts})=>{
     return(
         <>
         
+        <div className="bluebox4">
+                <h2>{currentUnit.serialNumber}</h2>
+                <h3>{currentUnit.unitType}</h3>
+                <br></br>
+                <h4> Hours Run: {currentUnit.hoursRun}</h4>
+                <h4>Expected Running Hours: {currentUnit.expectedRunHoursPerYear}</h4>
+                <br></br>
+                <h4>Date Installed: {currentUnit.dateInstalled}</h4> 
+                <h4>Next Service Date: {currentUnit.nextServiceDate}</h4>
+            </div>
+
         <div className="link-buttons">
 
             <div className="link-button">
@@ -43,16 +54,7 @@ const ContractsUnitDetails = ({currentUnit, currentUnitParts})=>{
             
         </div>
 
-            <div className="bluebox">
-                <h2>{currentUnit.serialNumber}</h2>
-                <h3>{currentUnit.unitType}</h3>
-                <br></br>
-                <h4> Hours Run: {currentUnit.hoursRun}</h4>
-                <h4>Expected Running Hours: {currentUnit.expectedRunHoursPerYear}</h4>
-                <br></br>
-                <h4>Date Installed: {currentUnit.dateInstalled}</h4> 
-                <h4>Next Service Date: {currentUnit.nextServiceDate}</h4>
-            </div>
+  
 
             <br></br>
 

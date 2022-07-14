@@ -25,6 +25,17 @@ const ServiceUnitDetails = ({currentUnit, currentUnitParts})=>{
     return(
         <>
             
+            <div className="bluebox4">
+                <h2>{currentUnit.serialNumber}</h2>
+                <h3>{currentUnit.unitType}</h3>
+                <br></br>
+                <h4> Total Hours: {currentUnit.hoursRun}</h4>
+                <h4>Expected Running: {currentUnit.expectedRunHoursPerYear}</h4>
+                <br></br>
+                <h4>Date Installed: {currentUnit.dateInstalled}</h4> 
+                <h4>Next Service Date: {currentUnit.nextServiceDate}</h4>
+            </div>
+
             <div className="link-buttons">
 
             <div className="link-button">
@@ -43,17 +54,6 @@ const ServiceUnitDetails = ({currentUnit, currentUnitParts})=>{
                 </li>
             </div>
 
-            </div>
-
-            <div className="bluebox">
-                <h2>{currentUnit.serialNumber}</h2>
-                <h3>{currentUnit.unitType}</h3>
-                <br></br>
-                <h4> Total Hours: {currentUnit.hoursRun}</h4>
-                <h4>Expected Running: {currentUnit.expectedRunHoursPerYear}</h4>
-                <br></br>
-                <h4>Date Installed: {currentUnit.dateInstalled}</h4> 
-                <h4>Next Service Date: {currentUnit.nextServiceDate}</h4>
             </div>
 
             <br></br>
