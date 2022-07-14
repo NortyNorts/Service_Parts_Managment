@@ -1,6 +1,5 @@
 import React from "react"
 import {Link} from 'react-router-dom'
-import '../../css/servicecustomerlist.css';
 
 const ServiceCustomerListItem = ({customer, changeCustomer})=>{
 
@@ -19,33 +18,19 @@ const ServiceCustomerListItem = ({customer, changeCustomer})=>{
     
 
     return(
-        // <>
-        // <div className="servicecustomerdetails">
-        //     <Link to ='/servicecustomerdetails' onClick={()=>handleOnClick(customer)}>
-        //         <p>{customer.companyName}</p>
-        //         <p>{customer.siteName}</p> 
-        //         <p>{customer.siteAddress}</p>
-        //         <p>{customer.sitePostCode}</p>
-        //         <p>Visits per year: {customer.engineerVisitsPerYear}</p>
-        //         <p>Next service date: {customer.nextServiceDate}</p>
-        //         <p>{customer.serviceState}</p>
-        //     </Link>
-        // </div>
-        // </>
-
         <>
-            <Link to ='/servicecustomerdetails' onClick={()=>handleOnClick(customer)} className="removeUnderline">
-                <div className="servicecustomerlistitem">
-                    <h3>{customer.companyName}</h3>
-                    
-                    <p>{customer.siteName}</p> 
-                    <p>{customer.siteAddress}</p>
-                    <p>{customer.sitePostCode}</p>
-                    <p>Next service date: {customer.nextServiceDate}</p>
-                    <p>Visits per year: {customer.engineerVisitsPerYear}</p>
-                    <p>{customer.serviceState}</p>
-                </div>
-            </Link>
+            <div className="bluebox2">
+                <Link to ='/servicecustomerdetails' onClick={()=>handleOnClick(customer)} className = "removeUnderline" style={{ color: 'inherit', textDecoration: 'inherit'}} >
+                        <h2>{customer.companyName}</h2>
+                        <h3>{customer.siteName}</h3> 
+                        <h4>{customer.siteAddress}</h4>
+                        <h4>{customer.sitePostCode}</h4>
+                </Link>
+            </div>
+
+            <b></b>
+            <b></b>
+            <b></b> 
         </>
     )
 }

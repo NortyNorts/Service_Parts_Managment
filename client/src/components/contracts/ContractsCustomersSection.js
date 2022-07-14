@@ -52,6 +52,9 @@ const ContractsCustomersSection = ({customers, changeCustomer, changeUnit})=>{
             {customersComponents}
             </div>
 
+          <b></b>
+          <b></b>
+          <b></b>
         </>
     )
 }

@@ -25,3 +25,7 @@
 .styled-table tr:first-of-type{
     text-align: left;
 }
+
+.styled-table{
+    margin-left: 10px;
+}
