@@ -72,7 +72,9 @@ const ContractsUpdateCustomer = ({currentCustomer})=>{
 
     return(
         <>
-            <h1>Update Customer</h1>
+            <br/>
+            <br/>
+            <br/>
 
             <div className="divform">
             <form onSubmit={handleCustomerSubmit}>
@@ -146,6 +148,10 @@ const ContractsUpdateCustomer = ({currentCustomer})=>{
 
             </form>
             </div>
+
+            <br/>
+            <br/>
+            <br/>
 
         </>
     )

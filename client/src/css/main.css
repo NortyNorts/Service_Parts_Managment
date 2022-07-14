@@ -261,7 +261,17 @@ button:active {
         border: 1px solid black;
     }
 
-
+    .searchbar{
+        width: 300px;
+        height: 30px;
+        border-radius: 10px;
+        font-size: 120%;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        font-weight: bold;
+    }
+    
 input.searchbar{
     margin: 10px;
 }

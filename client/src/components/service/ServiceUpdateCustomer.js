@@ -36,7 +36,10 @@ const ServiceUpdateCustomer = ({currentCustomer})=>{
 
     return(
         <>
-            <h1>Update Next Service Date</h1>
+
+            <br/>
+            <br/>
+            <br/>
 
             <div className="divform">
             <form onSubmit={handleCustomerSubmit}>
@@ -51,7 +54,7 @@ const ServiceUpdateCustomer = ({currentCustomer})=>{
                 </div>
 
 
-                <input type="submit" value={"Change Date"}/>
+                <input type="submit" value={"Change Service Date"}/>
 
             </form>
             </div>
