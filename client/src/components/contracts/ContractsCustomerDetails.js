@@ -35,7 +35,8 @@ const ContractsCustomerDetails = ({currentCustomer, changeUnit, getForecastParts
     return(
         <>
 
-        <div className="link-buttons">
+
+          <div className="link-buttons">
           <div className="link-button">
               <li>
                     <Link to ='/contractsupdatecustomer' style={{ color: 'inherit', textDecoration: 'inherit'}}>
@@ -43,18 +44,10 @@ const ContractsCustomerDetails = ({currentCustomer, changeUnit, getForecastParts
                     </Link>
                 </li>
             </div>
-
-            <div className="link-button">
-              <li>
-                <Link to ='/addunit' style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                    Add Unit
-                </Link>
-              </li>
             </div>
 
-          </div>
 
-            <div className="bluebox">
+            <div className="bluebox4">
                 <h2>{currentCustomer.companyName}</h2>
                 <h3>{currentCustomer.siteName}</h3> 
                 <h4>{currentCustomer.siteAddress}</h4>
@@ -64,6 +57,18 @@ const ContractsCustomerDetails = ({currentCustomer, changeUnit, getForecastParts
                 <h4>{currentCustomer.nextServiceDate}</h4>
                 <h4>Visits per year: {currentCustomer.engineerVisitsPerYear}</h4>
             </div>
+
+
+            <div className="link-buttons">
+            <div className="link-button">
+              <li>
+                <Link to ='/addunit' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                    Add Unit
+                </Link>
+              </li>
+            </div>
+
+          </div>
 
             <input className="searchbar" placeholder="Unit Search" onChange={event => setQuery(event.target.value)} />
 

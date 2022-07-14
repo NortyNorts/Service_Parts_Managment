@@ -38,7 +38,8 @@ const ServiceUpdateUnit = ({currentUnit, currentCustomer, currentUnitParts})=>{
 
     return(
         <>
-            <h1>Enter Running Hours</h1>
+            <br/>
+            <br/>
 
             <form className="divform" onSubmit={handleUpdateFormSubmit}>
 

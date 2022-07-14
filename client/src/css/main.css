@@ -225,16 +225,42 @@ button:active {
     border: 1px solid black;
 }
 
-.searchbar{
-    width: 300px;
-    height: 30px;
-    border-radius: 10px;
-    font-size: 120%;
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-    font-weight: bold;
+.bluebox:hover{
+    background-color: rgb(144, 200, 255);
 }
+
+.bluebox2:hover{
+    background-color: rgb(144, 200, 255);
+}
+
+.bluebox3{
+        border-radius: 10px;
+        background: dodgerblue;
+        padding: 10px;
+        color: #FBFAF5;
+        height: 200px;
+        width: 300px;
+        margin: 10px;
+        list-style:inherit;
+        font-size: 16px;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    .bluebox4{
+        border-radius: 10px;
+        background: dodgerblue;
+        padding: 10px;
+        color: #FBFAF5;
+        height: 280px;
+        width: 300px;
+        margin: 10px;
+        list-style:inherit;
+        font-size: 16px;
+        text-align: center;
+        border: 1px solid black;
+    }
+
 
 input.searchbar{
     margin: 10px;
@@ -262,37 +288,3 @@ hr{
     background-color: dodgerblue;
     width: 10px;
 }
-
-* {
-    margin: 0;
-  }
-  html, body {
-    height: 100%;
-  }
-  .page-wrap {
-    min-height: 100%;
-    /* equal to footer height */
-    margin-bottom: -142px; 
-  }
-  .page-wrap:after {
-    content: "";
-    display: block;
-  }
-  .site-footer, .page-wrap:after {
-    height: 40px;
-    width:fit-content; 
-  }
-  .site-footer {
-    background: dodgerblue;
-  }
-
-  .site-footer{
-    position : absolute;
-    bottom : 0;
-    margin-top : 40px;
-    width: 100%;
-    text-align:center;
-    padding-top: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #FBFAF5;
-  }
