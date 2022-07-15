@@ -6,7 +6,6 @@ This is an service contracts and parts managment app for service maintenance com
 
 - A Contracts section
 - A Service section
-- A Parts forecasting section
 
 ## Tech Stack
 
